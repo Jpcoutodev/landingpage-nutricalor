@@ -11,6 +11,7 @@ type HeaderProps = {
     home: string
     howItWorks: string
     contact: string
+    calculators?: string
     tmbCalculator?: string
   }
   ctaDict: {
@@ -23,21 +24,22 @@ type HeaderProps = {
 export default function Header({ dict, ctaDict }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false)
   const pathname = usePathname()
   
-  // Extract locale from pathname to build correct links
   const locale = pathname.split('/')[1] || 'pt'
   const isHome = pathname === `/${locale}` || pathname === '/'
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20)
-    }
+    const handleScroll = () => setIsScrolled(window.scrollY > 20)
     window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const closeMenu = () => setIsMobileMenuOpen(false)
+  const closeMenu = () => {
+    setIsMobileMenuOpen(false)
+    setIsDropdownOpen(false)
+  }
 
   return (
     <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
@@ -46,28 +48,82 @@ export default function Header({ dict, ctaDict }: HeaderProps) {
           Nutricalor <span className={styles.dot}>.</span>
         </Link>
 
-        {/* Desktop Nav */}
-        <nav className={styles.desktopNav} aria-label="Menu principal">
-          <Link
-            href={`/${locale}/como-funciona`}
-            className={pathname.includes('/como-funciona') ? styles.active : ''}
-          >
-            {dict.howItWorks}
-          </Link>
-          {dict.tmbCalculator && (
-            <Link
-              href={`/${locale}/calculadora-tmb`}
-              className={pathname.includes('/calculadora-tmb') ? styles.active : ''}
-            >
-              {dict.tmbCalculator}
-            </Link>
-          )}
-          <Link
-            href={`/${locale}/contato`}
-            className={pathname.includes('/contato') ? styles.active : ''}
-          >
-            {dict.contact}
-          </Link>
+        {/* Navigation */}
+        <nav
+          className={`${styles.nav} ${isMobileMenuOpen ? styles.navOpen : ''}`}
+          aria-label="Menu principal"
+        >
+          <ul className={styles.navList}>
+            <li className={styles.navItemMobileOnly}>
+              <Link
+                href={`/${locale}`}
+                onClick={closeMenu}
+                className={`${styles.navLink} ${isHome ? styles.active : ''}`}
+              >
+                {dict.home}
+              </Link>
+            </li>
+            <li className={styles.navItem}>
+              <Link
+                href={`/${locale}/como-funciona`}
+                onClick={closeMenu}
+                className={`${styles.navLink} ${pathname.includes('/como-funciona') ? styles.active : ''}`}
+              >
+                {dict.howItWorks}
+              </Link>
+            </li>
+
+            {/* Calculators Dropdown */}
+            {dict.calculators && (
+              <li 
+                className={styles.navItem} 
+                onMouseEnter={() => setIsDropdownOpen(true)}
+                onMouseLeave={() => setIsDropdownOpen(false)}
+              >
+                <button 
+                  className={`${styles.navLink} ${styles.dropdownTrigger} ${(pathname.includes('/calculadora-tmb') || pathname.includes('/calculadora-deficit')) ? styles.active : ''}`}
+                  onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                  aria-expanded={isDropdownOpen}
+                >
+                  {dict.calculators}
+                  <span className={styles.chevron}>▾</span>
+                </button>
+                
+                <ul className={`${styles.dropdownMenu} ${isDropdownOpen ? styles.dropdownOpen : ''}`}>
+                  {dict.tmbCalculator && (
+                    <li>
+                      <Link
+                        href={`/${locale}/calculadora-tmb`}
+                        onClick={closeMenu}
+                        className={`${styles.dropdownLink} ${pathname.includes('/calculadora-tmb') ? styles.active : ''}`}
+                      >
+                        {dict.tmbCalculator}
+                      </Link>
+                    </li>
+                  )}
+                  <li>
+                    <Link
+                      href={`/${locale}/calculadora-deficit-calorico`}
+                      onClick={closeMenu}
+                      className={`${styles.dropdownLink} ${pathname.includes('/calculadora-deficit') ? styles.active : ''}`}
+                    >
+                      Déficit Calórico
+                    </Link>
+                  </li>
+                </ul>
+              </li>
+            )}
+
+            <li className={styles.navItem}>
+              <Link
+                href={`/${locale}/contato`}
+                onClick={closeMenu}
+                className={`${styles.navLink} ${pathname.includes('/contato') ? styles.active : ''}`}
+              >
+                {dict.contact}
+              </Link>
+            </li>
+          </ul>
         </nav>
 
         {/* Actions */}
@@ -76,54 +132,16 @@ export default function Header({ dict, ctaDict }: HeaderProps) {
             <AppCTA dict={ctaDict} />
           </div>
 
-          {/* Mobile Menu Toggle */}
           <button
-            className={styles.mobileMenuBtn}
+            className={`${styles.menuButton} ${isMobileMenuOpen ? styles.menuOpen : ''}`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-expanded={isMobileMenuOpen}
             aria-label="Abrir menu"
           >
-            <span className={`${styles.hamburger} ${isMobileMenuOpen ? styles.hamburgerOpen : ''}`} />
+            <span className={styles.menuLine} />
+            <span className={styles.menuLine} />
+            <span className={styles.menuLine} />
           </button>
-        </div>
-
-        {/* Mobile Nav Overlay */}
-        <div
-          className={`${styles.mobileNav} ${isMobileMenuOpen ? styles.mobileNavOpen : ''}`}
-          aria-hidden={!isMobileMenuOpen}
-        >
-          <nav className={styles.mobileNavLinks}>
-            <Link
-              href={`/${locale}`}
-              onClick={closeMenu}
-              className={isHome ? styles.active : ''}
-            >
-              {dict.home}
-            </Link>
-            <Link
-              href={`/${locale}/como-funciona`}
-              onClick={closeMenu}
-              className={pathname.includes('/como-funciona') ? styles.active : ''}
-            >
-              {dict.howItWorks}
-            </Link>
-            {dict.tmbCalculator && (
-              <Link
-                href={`/${locale}/calculadora-tmb`}
-                onClick={closeMenu}
-                className={pathname.includes('/calculadora-tmb') ? styles.active : ''}
-              >
-                {dict.tmbCalculator}
-              </Link>
-            )}
-            <Link
-              href={`/${locale}/contato`}
-              onClick={closeMenu}
-              className={pathname.includes('/contato') ? styles.active : ''}
-            >
-              {dict.contact}
-            </Link>
-          </nav>
         </div>
       </div>
     </header>
