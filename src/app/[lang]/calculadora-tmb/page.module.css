@@ -1,0 +1,190 @@
+/* ============================================================
+   Calculadora TMB — Page Styles
+   ============================================================ */
+
+/* ---------- Hero (calculator area) ---------- */
+.hero {
+  background: var(--grad-hero);
+  padding: var(--space-12) 0 var(--space-16);
+  position: relative;
+}
+
+.heroInner {
+  max-width: 640px;
+}
+
+/* ---------- Intro ---------- */
+.intro {
+  text-align: center;
+  margin-bottom: var(--space-10);
+}
+
+.title {
+  margin-bottom: var(--space-4);
+}
+
+.subtitle {
+  font-size: var(--text-lg);
+  color: var(--cor-texto-suave);
+  line-height: 1.7;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* ---------- CTA section ---------- */
+.ctaSection {
+  padding: var(--space-12) 0;
+  background: var(--cor-superficie);
+  border-top: 1px solid var(--cor-linha);
+  border-bottom: 1px solid var(--cor-linha);
+}
+
+.ctaInner {
+  display: flex;
+  justify-content: center;
+}
+
+.ctaContent {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.ctaTitle {
+  font-size: var(--text-2xl);
+  color: var(--cor-tinta);
+}
+
+.ctaText {
+  font-size: var(--text-base);
+  color: var(--cor-texto-suave);
+  max-width: 480px;
+  line-height: 1.7;
+}
+
+.ctaBadge {
+  margin-top: var(--space-2);
+}
+
+/* ---------- SEO article ---------- */
+.article {
+  padding: var(--space-12) 0 var(--space-16);
+}
+
+.seoBlock {
+  margin-bottom: var(--space-10);
+}
+
+.seoBlock:last-of-type {
+  margin-bottom: 0;
+}
+
+.seoTitle {
+  font-size: var(--text-2xl);
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-3);
+  border-bottom: 2px solid var(--cor-primario-light);
+}
+
+.seoBlock p {
+  font-size: var(--text-base);
+  line-height: 1.8;
+  margin-bottom: var(--space-4);
+}
+
+.seoBlock p:last-child {
+  margin-bottom: 0;
+}
+
+.formulaBlock {
+  padding: var(--space-4) var(--space-5);
+  background: var(--cor-primario-light);
+  border-radius: var(--radius-lg);
+  font-family: var(--font-body);
+  font-size: var(--text-sm) !important;
+  line-height: 2 !important;
+  white-space: pre-line;
+  color: var(--cor-tinta);
+}
+
+/* ---------- FAQ ---------- */
+.faqSection {
+  margin-top: var(--space-12);
+  padding-top: var(--space-10);
+  border-top: 1px solid var(--cor-linha);
+}
+
+.faqList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.faqItem {
+  padding: var(--space-6);
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-linha);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition-fast);
+}
+
+.faqItem:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.faqQuestion {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--cor-tinta);
+  margin-bottom: var(--space-3);
+}
+
+.faqAnswer {
+  font-size: var(--text-base);
+  color: var(--cor-texto-suave);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ---------- Responsive ---------- */
+@media (min-width: 768px) {
+  .hero {
+    padding: var(--space-16) 0 var(--space-20);
+  }
+
+  .intro {
+    margin-bottom: var(--space-12);
+  }
+
+  .subtitle {
+    font-size: var(--text-xl);
+  }
+
+  .ctaSection {
+    padding: var(--space-16) 0;
+  }
+
+  .ctaTitle {
+    font-size: var(--text-3xl);
+  }
+
+  .article {
+    padding: var(--space-16) 0 var(--space-20);
+  }
+
+  .seoTitle {
+    font-size: var(--text-3xl);
+  }
+
+  .seoBlock p {
+    font-size: var(--text-lg);
+  }
+
+  .faqQuestion {
+    font-size: var(--text-xl);
+  }
+}

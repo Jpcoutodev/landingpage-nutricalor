@@ -9,14 +9,17 @@
   "nav": {
     "home": "Início",
     "howItWorks": "Como funciona",
-    "contact": "Contato"
+    "contact": "Contato",
+    "tmbCalculator": "Calculadora TMB"
   },
   "footer": {
     "tagline": "Calorias por foto, feito para a comida brasileira.",
     "privacy": "Privacidade",
     "terms": "Termos de Uso",
     "contact": "Contato",
-    "rights": "Todos os direitos reservados."
+    "rights": "Todos os direitos reservados.",
+    "tools": "Ferramentas",
+    "tmbCalculator": "Calculadora TMB"
   },
   "home": {
     "meta": {
@@ -146,6 +149,86 @@
     "meta": {
       "title": "Termos de Uso",
       "description": "Condições de uso do Nutricalor. O app fornece estimativas, não conselho médico."
+    }
+  },
+  "tmbCalculator": {
+    "meta": {
+      "title": "Calculadora de TMB — Taxa Metabólica Basal e Gasto Calórico",
+      "description": "Calcule sua Taxa Metabólica Basal (TMB), gasto calórico diário (TDEE) e meta de calorias para emagrecer, manter ou ganhar peso. Calculadora grátis com a fórmula Mifflin-St Jeor."
+    },
+    "h1": "Calculadora de TMB",
+    "subtitle": "Descubra quantas calorias seu corpo gasta em repouso, o gasto total com atividade e a meta ideal para o seu objetivo.",
+    "form": {
+      "sexLabel": "Sexo biológico",
+      "male": "Masculino",
+      "female": "Feminino",
+      "ageLabel": "Idade",
+      "agePlaceholder": "anos",
+      "heightLabel": "Altura",
+      "heightPlaceholder": "cm",
+      "weightLabel": "Peso",
+      "weightPlaceholder": "kg",
+      "activityLabel": "Nível de atividade",
+      "sedentary": "Sedentário (pouco ou nenhum exercício)",
+      "light": "Leve (exercício 1–3 dias/semana)",
+      "moderate": "Moderado (exercício 3–5 dias/semana)",
+      "intense": "Intenso (exercício 6–7 dias/semana)",
+      "calculate": "Calcular"
+    },
+    "result": {
+      "title": "Seu resultado",
+      "bmrLabel": "TMB",
+      "bmrDesc": "Metabolismo em repouso",
+      "tdeeLabel": "Gasto diário",
+      "tdeeDesc": "Com atividade física",
+      "loseLabel": "Emagrecer",
+      "loseDesc": "Déficit de 20%",
+      "maintainLabel": "Manter",
+      "maintainDesc": "Equilíbrio calórico",
+      "gainLabel": "Ganhar",
+      "gainDesc": "Superávit de 10%",
+      "kcalUnit": "kcal/dia",
+      "goalTitle": "Meta calórica por objetivo",
+      "safetyNote": "O valor de emagrecimento nunca fica abaixo do piso seguro ({floor} kcal) para evitar dietas muito restritivas."
+    },
+    "cta": {
+      "title": "Cansou de calcular na mão?",
+      "text": "O Nutricalor conta as calorias do seu prato só com uma foto. Feito para a comida brasileira de verdade."
+    },
+    "seo": {
+      "whatIsTitle": "O que é Taxa Metabólica Basal (TMB)",
+      "whatIsText": "A Taxa Metabólica Basal, ou TMB, é a quantidade mínima de energia que o seu corpo precisa para manter as funções vitais em repouso absoluto: respiração, circulação sanguínea, regulação de temperatura, funcionamento do cérebro e renovação celular. Mesmo que você passasse o dia inteiro deitado, sem se mover, o corpo continuaria gastando essa energia.\n\nA TMB representa, em média, entre 60% e 75% do gasto calórico total diário. Por isso é o ponto de partida de qualquer planejamento alimentar — seja para emagrecer, manter o peso ou ganhar massa. Sem conhecer sua TMB, qualquer meta de calorias é chute.",
+      "howCalculatedTitle": "Como a TMB é calculada",
+      "howCalculatedText": "Esta calculadora usa a equação de Mifflin-St Jeor, publicada em 1990 e considerada a mais precisa entre as fórmulas de estimativa populares. Ela leva em conta peso, altura, idade e sexo biológico:\n\n• Homem: TMB = 10 × peso (kg) + 6,25 × altura (cm) − 5 × idade (anos) + 5\n• Mulher: TMB = 10 × peso (kg) + 6,25 × altura (cm) − 5 × idade (anos) − 161\n\nA diferença entre homens e mulheres reflete, em média, a maior proporção de massa magra no corpo masculino, que demanda mais energia em repouso. A fórmula gera uma estimativa — para resultados exatos, seria necessário um exame de calorimetria indireta em laboratório.",
+      "differenceTitle": "TMB, TDEE e gasto calórico: qual a diferença",
+      "differenceText": "São três números relacionados, mas distintos:\n\n• TMB (Taxa Metabólica Basal): o gasto do corpo em repouso total, sem nenhum movimento.\n• TDEE (Total Daily Energy Expenditure, ou Gasto Energético Diário Total): o gasto real considerando tudo que você faz no dia — caminhar, trabalhar, treinar. É calculado multiplicando a TMB por um fator de atividade.\n• Meta calórica: o quanto você deveria ingerir para atingir um objetivo específico. Para emagrecer, a meta fica abaixo do TDEE (déficit). Para ganhar peso, acima (superávit).\n\nA maioria das pessoas confunde TMB com TDEE. Se você comer apenas sua TMB, vai criar um déficit — mas pode não ser saudável dependendo do seu nível de atividade. Por isso a calculadora mostra os três valores.",
+      "whatToDoTitle": "O que fazer com esse número",
+      "whatToDoText": "Agora que você tem a TMB, o TDEE e a meta por objetivo, o próximo passo é ajustar a alimentação:\n\n• Emagrecer: consuma menos que o TDEE (a calculadora sugere −20%, um déficit moderado e sustentável). Nunca abaixo do piso de segurança (1 500 kcal para homens, 1 200 kcal para mulheres) sem acompanhamento profissional.\n• Manter o peso: coma próximo do TDEE. Flutuações de 100–200 kcal são normais e esperadas.\n• Ganhar massa: coma acima do TDEE (+10% é um superávit leve, que favorece ganho de massa com menos acúmulo de gordura).\n\nLembre-se: esses números são estimativas. O corpo não é uma planilha. Use-os como ponto de partida, observe o resultado na balança e no espelho ao longo de semanas, e ajuste. E, sempre que possível, conte com a orientação de um nutricionista."
+    },
+    "faq": {
+      "title": "Perguntas frequentes",
+      "items": [
+        {
+          "question": "Qual a diferença entre TMB e TDEE?",
+          "answer": "A TMB é o gasto calórico do corpo em repouso absoluto — como se você ficasse deitado o dia inteiro. O TDEE inclui a TMB mais a energia gasta em todas as atividades do dia (caminhar, trabalhar, treinar). O TDEE é sempre maior que a TMB."
+        },
+        {
+          "question": "Com que frequência devo recalcular minha TMB?",
+          "answer": "Recalcule sempre que houver mudança significativa de peso (5 kg ou mais), a cada aniversário (a TMB cai com a idade) ou quando mudar seu nível de atividade. Na prática, uma vez a cada 2–3 meses é suficiente para a maioria das pessoas."
+        },
+        {
+          "question": "A fórmula de Mifflin-St Jeor é precisa?",
+          "answer": "É a mais precisa entre as equações de estimativa populares, com margem de erro de cerca de 10% para a maioria da população. Para resultados exatos, é necessário um exame de calorimetria indireta. Mas, para montar um plano alimentar de partida, ela é mais que suficiente."
+        },
+        {
+          "question": "Posso comer menos que a TMB para emagrecer mais rápido?",
+          "answer": "Não é recomendado. Comer consistentemente abaixo da TMB pode desacelerar o metabolismo, causar perda de massa muscular, fadiga e deficiências nutricionais. A calculadora já aplica um piso de segurança (1 500 kcal para homens, 1 200 kcal para mulheres) para evitar esse risco."
+        },
+        {
+          "question": "Como contar calorias na prática sem pesar tudo?",
+          "answer": "Use um app como o Nutricalor: basta fotografar o prato e a inteligência artificial estima as calorias e os macros em segundos. É muito mais rápido que pesar ingredientes ou procurar em tabelas."
+        }
+      ]
     }
   }
 }

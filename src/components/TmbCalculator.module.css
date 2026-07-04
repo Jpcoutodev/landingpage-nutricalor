@@ -1,0 +1,398 @@
+/* ============================================================
+   TmbCalculator — Form + Results
+   ============================================================ */
+
+/* ---------- Wrapper ---------- */
+.calculator {
+  width: 100%;
+}
+
+/* ---------- Form ---------- */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-linha);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-md);
+}
+
+/* ---------- Fieldset / Fields ---------- */
+.fieldset {
+  border: none;
+  padding: 0;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.label {
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--cor-tinta);
+  letter-spacing: 0.01em;
+}
+
+/* ---------- Sex toggle ---------- */
+.toggleGroup {
+  display: flex;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+}
+
+.toggleBtn {
+  flex: 1;
+  padding: var(--space-3) var(--space-4);
+  border: 1.5px solid var(--cor-linha);
+  border-radius: var(--radius-lg);
+  background: var(--cor-fundo);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: 500;
+  color: var(--cor-texto-suave);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.toggleBtn:hover {
+  border-color: var(--cor-primario);
+  color: var(--cor-primario);
+}
+
+.toggleActive {
+  background: var(--cor-primario-light);
+  border-color: var(--cor-primario);
+  color: var(--cor-primario);
+  font-weight: 600;
+}
+
+/* ---------- Input grid ---------- */
+.inputGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  padding-right: var(--space-12);
+  border: 1.5px solid var(--cor-linha);
+  border-radius: var(--radius-lg);
+  background: var(--cor-fundo);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: var(--cor-tinta);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  -moz-appearance: textfield;
+}
+
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--cor-primario);
+  box-shadow: 0 0 0 3px rgba(30, 107, 78, 0.1);
+}
+
+.inputUnit {
+  position: absolute;
+  right: var(--space-4);
+  font-size: var(--text-sm);
+  color: var(--cor-texto-suave);
+  pointer-events: none;
+  font-weight: 500;
+}
+
+/* ---------- Select ---------- */
+.select {
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  border: 1.5px solid var(--cor-linha);
+  border-radius: var(--radius-lg);
+  background: var(--cor-fundo);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: var(--cor-tinta);
+  cursor: pointer;
+  transition: border-color var(--transition-fast);
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7' fill='none'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%235C6B62' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right var(--space-4) center;
+  padding-right: var(--space-10);
+}
+
+.select:focus {
+  outline: none;
+  border-color: var(--cor-primario);
+  box-shadow: 0 0 0 3px rgba(30, 107, 78, 0.1);
+}
+
+/* ---------- Submit ---------- */
+.submitBtn {
+  width: 100%;
+  padding: var(--space-4) var(--space-6);
+  background: var(--grad-primario);
+  color: white;
+  border: none;
+  border-radius: var(--radius-lg);
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.submitBtn:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-lg), var(--shadow-glow-green);
+}
+
+.submitBtn:active {
+  transform: translateY(0);
+}
+
+/* ============================================================
+   Result
+   ============================================================ */
+
+.result {
+  margin-top: var(--space-10);
+  animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.resultTitle {
+  text-align: center;
+  margin-bottom: var(--space-8);
+  font-size: var(--text-2xl);
+}
+
+/* ---------- Primary cards (BMR + TDEE) ---------- */
+.primaryCards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+  margin-bottom: var(--space-8);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-8) var(--space-6);
+  border-radius: var(--radius-2xl);
+  border: 1px solid var(--cor-linha);
+  background: var(--grad-card);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.cardBmr {
+  border-color: rgba(30, 107, 78, 0.2);
+  background: linear-gradient(180deg, var(--cor-primario-light) 0%, var(--cor-superficie) 100%);
+}
+
+.cardTdee {
+  border-color: rgba(255, 107, 44, 0.2);
+  background: linear-gradient(180deg, var(--cor-acao-light) 0%, var(--cor-superficie) 100%);
+}
+
+.cardLabel {
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--cor-texto-suave);
+}
+
+.cardValue {
+  font-family: var(--font-heading);
+  font-size: var(--text-5xl);
+  font-weight: 700;
+  color: var(--cor-tinta);
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.cardBmr .cardValue {
+  color: var(--cor-primario);
+}
+
+.cardTdee .cardValue {
+  color: var(--cor-acao);
+}
+
+.cardUnit {
+  font-size: var(--text-sm);
+  color: var(--cor-texto-suave);
+  font-weight: 500;
+}
+
+.cardDesc {
+  font-size: var(--text-sm);
+  color: var(--cor-texto-suave);
+  margin-top: var(--space-1);
+}
+
+/* ---------- Goal cards ---------- */
+.goalTitle {
+  text-align: center;
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-4);
+  color: var(--cor-texto-suave);
+  font-weight: 600;
+}
+
+.goalCards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+}
+
+.goalCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-6) var(--space-4);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--cor-linha);
+  background: var(--cor-superficie);
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.goalCard:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.goalIcon {
+  font-size: 28px;
+  line-height: 1;
+}
+
+.goalLabel {
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--cor-texto-suave);
+}
+
+.goalValue {
+  font-family: var(--font-heading);
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.goalLose .goalValue {
+  color: var(--cor-proteina);
+}
+
+.goalMaintain .goalValue {
+  color: var(--cor-primario);
+}
+
+.goalGain .goalValue {
+  color: var(--cor-carbo);
+}
+
+.goalUnit {
+  font-size: var(--text-xs);
+  color: var(--cor-texto-suave);
+  font-weight: 500;
+}
+
+.goalDesc {
+  font-size: var(--text-xs);
+  color: var(--cor-texto-suave);
+}
+
+/* ---------- Safety note ---------- */
+.safetyNote {
+  margin-top: var(--space-4);
+  padding: var(--space-4) var(--space-5);
+  background: var(--cor-acao-light);
+  border-radius: var(--radius-lg);
+  border-left: 3px solid var(--cor-acao);
+  font-size: var(--text-sm);
+  color: var(--cor-tinta);
+  line-height: 1.6;
+}
+
+/* ============================================================
+   Responsive
+   ============================================================ */
+
+@media (min-width: 480px) {
+  .inputGrid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .goalCards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 768px) {
+  .form {
+    padding: var(--space-10);
+  }
+
+  .primaryCards {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .cardValue {
+    font-size: var(--text-6xl);
+  }
+
+  .resultTitle {
+    font-size: var(--text-3xl);
+  }
+
+  .goalValue {
+    font-size: var(--text-4xl);
+  }
+}

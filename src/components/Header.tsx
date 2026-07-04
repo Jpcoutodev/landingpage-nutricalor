@@ -11,6 +11,7 @@ type HeaderProps = {
     home: string
     howItWorks: string
     contact: string
+    tmbCalculator?: string
   }
   ctaDict: {
     comingSoon: string
@@ -53,6 +54,14 @@ export default function Header({ dict, ctaDict }: HeaderProps) {
           >
             {dict.howItWorks}
           </Link>
+          {dict.tmbCalculator && (
+            <Link
+              href={`/${locale}/calculadora-tmb`}
+              className={pathname.includes('/calculadora-tmb') ? styles.active : ''}
+            >
+              {dict.tmbCalculator}
+            </Link>
+          )}
           <Link
             href={`/${locale}/contato`}
             className={pathname.includes('/contato') ? styles.active : ''}
@@ -98,6 +107,15 @@ export default function Header({ dict, ctaDict }: HeaderProps) {
             >
               {dict.howItWorks}
             </Link>
+            {dict.tmbCalculator && (
+              <Link
+                href={`/${locale}/calculadora-tmb`}
+                onClick={closeMenu}
+                className={pathname.includes('/calculadora-tmb') ? styles.active : ''}
+              >
+                {dict.tmbCalculator}
+              </Link>
+            )}
             <Link
               href={`/${locale}/contato`}
               onClick={closeMenu}
@@ -111,3 +129,4 @@ export default function Header({ dict, ctaDict }: HeaderProps) {
     </header>
   )
 }
+

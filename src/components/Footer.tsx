@@ -12,6 +12,8 @@ type FooterProps = {
     terms: string
     contact: string
     rights: string
+    tools?: string
+    tmbCalculator?: string
   }
 }
 
@@ -42,6 +44,14 @@ export default function Footer({ dict }: FooterProps) {
               <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
               <Link href={`/${locale}/contato`}>Formulário</Link>
             </div>
+            {dict.tools && (
+              <div className={styles.linkGroup}>
+                <h3 className={styles.linkTitle}>{dict.tools}</h3>
+                {dict.tmbCalculator && (
+                  <Link href={`/${locale}/calculadora-tmb`}>{dict.tmbCalculator}</Link>
+                )}
+              </div>
+            )}
           </div>
         </div>
 
@@ -54,3 +64,4 @@ export default function Footer({ dict }: FooterProps) {
     </footer>
   )
 }
+

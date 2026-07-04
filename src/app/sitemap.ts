@@ -35,8 +35,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.4,
     },
-    // Futuras calculadoras serão adicionadas aqui:
-    // { url: `${SITE_URL}/calculadora-tmb`, ... },
-    // { url: `${SITE_URL}/calculadora-imc`, ... },
+    {
+      url: `${SITE_URL}/pt/calculadora-tmb`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
   ]
 }
