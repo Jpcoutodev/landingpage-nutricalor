@@ -1,0 +1,128 @@
+/* ============================================================
+   Como Funciona — page styles
+   ============================================================ */
+
+.page {
+  padding-bottom: 0;
+}
+
+/* ---------- Intro ---------- */
+.intro {
+  padding: var(--space-16) 0 var(--space-10);
+  text-align: center;
+}
+
+.title {
+  margin-bottom: var(--space-6);
+}
+
+.lead {
+  font-size: var(--text-lg);
+  color: var(--cor-texto-suave);
+  line-height: 1.8;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+/* ---------- Content blocks ---------- */
+.block {
+  padding: var(--space-10) 0;
+}
+
+.block p {
+  font-size: var(--text-lg);
+  line-height: 1.8;
+}
+
+.blockAlt {
+  background: var(--cor-superficie);
+  border-top: 1px solid var(--cor-linha);
+  border-bottom: 1px solid var(--cor-linha);
+}
+
+.blockHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.blockEmoji {
+  font-size: 32px;
+  line-height: 1;
+}
+
+.blockTitle {
+  font-size: var(--text-2xl);
+}
+
+/* ---------- Honest note ---------- */
+.honestNote {
+  background: var(--cor-primario-light);
+  border-top: 1px solid rgba(30, 107, 78, 0.15);
+  border-bottom: 1px solid rgba(30, 107, 78, 0.15);
+}
+
+.honestNote p {
+  color: var(--cor-tinta);
+}
+
+/* ---------- Methods grid ---------- */
+.methodsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+  margin-top: var(--space-6);
+}
+
+.methodCard {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-5);
+  background: var(--cor-superficie);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--cor-linha);
+  font-size: var(--text-base);
+  line-height: 1.6;
+  color: var(--cor-texto-suave);
+}
+
+.methodEmoji {
+  font-size: 24px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.methodDash {
+  color: var(--cor-linha);
+}
+
+/* ---------- CTA ---------- */
+.ctaSection {
+  padding: var(--space-12) 0 var(--space-16);
+}
+
+.ctaInner {
+  display: flex;
+  justify-content: center;
+}
+
+/* ---------- Responsive ---------- */
+@media (min-width: 768px) {
+  .intro {
+    padding: var(--space-20) 0 var(--space-12);
+  }
+
+  .block {
+    padding: var(--space-16) 0;
+  }
+
+  .methodsGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .blockTitle {
+    font-size: var(--text-3xl);
+  }
+}

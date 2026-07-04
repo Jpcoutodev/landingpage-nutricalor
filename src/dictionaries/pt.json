@@ -1,0 +1,151 @@
+{
+  "common": {
+    "appName": "Nutricalor",
+    "skipToContent": "Pular para o conteúdo",
+    "comingSoon": "Em breve no",
+    "available": "Disponível no",
+    "googlePlay": "Google Play"
+  },
+  "nav": {
+    "home": "Início",
+    "howItWorks": "Como funciona",
+    "contact": "Contato"
+  },
+  "footer": {
+    "tagline": "Calorias por foto, feito para a comida brasileira.",
+    "privacy": "Privacidade",
+    "terms": "Termos de Uso",
+    "contact": "Contato",
+    "rights": "Todos os direitos reservados."
+  },
+  "home": {
+    "meta": {
+      "title": "Nutricalor — Conte calorias por foto, feito para a comida brasileira",
+      "description": "Fotografe o prato e veja calorias e macros em segundos. O contador de calorias por foto pensado para a comida do Brasil. Em breve no Google Play."
+    },
+    "hero": {
+      "pill": "Feito para a comida brasileira",
+      "titlePart1": "Fotografou,",
+      "titlePart2": "contou.",
+      "subtitle": "Calorias e macros do seu prato em segundos. Aponte a câmera, o Nutricalor faz o resto — feito para a comida brasileira de verdade.",
+      "photoLabel": "Prato do dia",
+      "protein": "Proteína",
+      "carbs": "Carbo",
+      "fat": "Gordura",
+      "food1": "Arroz branco",
+      "food2": "Feijão carioca",
+      "food3": "Frango grelhado",
+      "badge1": "IA identificou 3 itens"
+    },
+    "steps": {
+      "badge": "Como funciona",
+      "title": "Três passos. Uma foto.",
+      "subtitle": "Sem planilha, sem busca em tabela, sem digitar. Só aponte e pronto.",
+      "items": [
+        {
+          "title": "Fotografe o prato",
+          "description": "Uma foto basta. Feijoada, PF, marmita, açaí: o Nutricalor foi feito para a comida do dia a dia brasileiro."
+        },
+        {
+          "title": "A IA identifica",
+          "description": "Em segundos, você vê os alimentos, as porções estimadas, as calorias e os macros."
+        },
+        {
+          "title": "Ajuste e pronto",
+          "description": "Corrigiu a porção, adicionou um item? Você tem a palavra final. O registro fica salvo no seu dia."
+        }
+      ]
+    },
+    "features": {
+      "badge": "Por que o Nutricalor",
+      "title": "Diferente de propósito.",
+      "subtitle": "Não é mais um app de calorias traduzido. Foi pensado daqui.",
+      "items": [
+        {
+          "title": "Feito para comida brasileira",
+          "description": "Os apps globais erram no prato caseiro. O Nutricalor nasceu com a mesa brasileira em mente: do pão na chapa à marmita de segunda."
+        },
+        {
+          "title": "Português de verdade",
+          "description": "Entende como você fala. \"Pão francês\", \"pão de sal\" ou \"cacetinho\" — é tudo a mesma coisa, e o app sabe disso."
+        },
+        {
+          "title": "Sem pegadinha",
+          "description": "Preço claro em reais, mostrado antes de você assinar. Sem cobrança surpresa, sem letra miúda."
+        }
+      ]
+    },
+    "cta": {
+      "eyebrow": "Está quase lá",
+      "titlePart1": "Comece a contar",
+      "titlePart2": "sem contar.",
+      "subtitle": "O Nutricalor está chegando ao Google Play. Registre suas refeições no tempo de tirar uma foto."
+    }
+  },
+  "howItWorks": {
+    "meta": {
+      "title": "Como funciona o Nutricalor — calorias por foto",
+      "description": "Aponte a câmera, a IA identifica os alimentos e você ajusta. Veja como o Nutricalor registra suas refeições no tempo de uma foto."
+    },
+    "title": "Como funciona",
+    "lead": "Contar calorias sempre foi chato — pesar, procurar em listas, digitar. O Nutricalor troca tudo isso por uma foto. Veja como.",
+    "section1": {
+      "title": "O registro por foto",
+      "text": "Aponte a câmera para o prato e tire a foto. O Nutricalor analisa a imagem, identifica cada alimento e estima a porção. Você recebe calorias e macronutrientes (proteína, carboidrato e gordura) na hora. Nada de planilha, nada de busca manerosa."
+    },
+    "section2": {
+      "title": "Você no controle",
+      "text": "A inteligência artificial sugere — você decide. Ajuste a porção, adicione um acompanhamento que ficou de fora, remova o que não comeu. O número final é sempre seu."
+    },
+    "section3": {
+      "title": "Mais de uma forma de registrar",
+      "text": "Nem sempre dá pra fotografar. Por isso o Nutricalor também aceita:",
+      "methods": [
+        {
+          "title": "Texto",
+          "description": "descreva o que comeu (\"PF de frango com arroz e feijão\") e deixe o app interpretar."
+        },
+        {
+          "title": "Código de barras",
+          "description": "para produtos embalados, um toque resolve."
+        },
+        {
+          "title": "Busca manual",
+          "description": "encontre o alimento na base e registre."
+        },
+        {
+          "title": "Memória de comida",
+          "description": "o que você come sempre volta com um toque só."
+        }
+      ]
+    },
+    "section4": {
+      "title": "Sua meta, do seu jeito",
+      "text": "Ao começar, o Nutricalor calcula sua meta diária de calorias com base no seu objetivo — emagrecer, manter ou ganhar. Acompanhe no painel se bateu a meta do dia num relance."
+    },
+    "section5": {
+      "title": "Uma nota honesta",
+      "text": "O Nutricalor entrega estimativas, não medições de laboratório. Nenhum app de foto acerta grama por grama — e quem promete isso está mentindo. O que oferecemos é rapidez e consistência para você entender seus hábitos e evoluir. O Nutricalor não substitui orientação de nutricionista ou médico."
+    }
+  },
+  "contact": {
+    "meta": {
+      "title": "Contato",
+      "description": "Entre em contato com o Nutricalor. Dúvidas, sugestões ou problemas — estamos ouvindo."
+    },
+    "title": "Fale com a gente",
+    "description": "Dúvida, sugestão ou problema? Escreva para nós. Lemos tudo — o Nutricalor está sendo construído ouvindo quem usa."
+  },
+  "privacy": {
+    "meta": {
+      "title": "Política de Privacidade",
+      "description": "Como o Nutricalor trata seus dados. Suas fotos de comida são processadas e descartadas."
+    }
+  },
+  "terms": {
+    "meta": {
+      "title": "Termos de Uso",
+      "description": "Condições de uso do Nutricalor. O app fornece estimativas, não conselho médico."
+    }
+  }
+}

@@ -1,0 +1,134 @@
+/* ============================================================
+   SectionFeatures — Premium cards
+   ============================================================ */
+
+.features {
+  background: var(--cor-fundo);
+  position: relative;
+  overflow: hidden;
+}
+
+.bgDecor {
+  position: absolute;
+  top: -200px;
+  right: -100px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(255, 107, 44, 0.04) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--space-12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  position: relative;
+  z-index: 1;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-5);
+  background: var(--cor-acao-light);
+  color: var(--cor-acao);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  font-family: var(--font-heading);
+  border-radius: var(--radius-full);
+  letter-spacing: 0.02em;
+}
+
+.title {
+  max-width: 480px;
+}
+
+.subtitle {
+  max-width: 420px;
+  font-size: var(--text-base);
+  color: var(--cor-texto-suave);
+}
+
+/* ---------- Cards Grid ---------- */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+  position: relative;
+  z-index: 1;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  padding: var(--space-8);
+  background: var(--cor-superficie);
+  border-radius: var(--radius-2xl);
+  border: 1px solid var(--cor-linha);
+  transition: transform var(--transition-spring), box-shadow var(--transition-base), border-color var(--transition-base);
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: var(--shadow-xl);
+  border-color: transparent;
+}
+
+.iconWrap {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-xl);
+  transition: transform var(--transition-spring);
+}
+
+.card:hover .iconWrap {
+  transform: scale(1.1) rotate(-3deg);
+}
+
+.icon {
+  font-size: 32px;
+  line-height: 1;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+.cardTitle {
+  font-size: var(--text-xl);
+  letter-spacing: -0.01em;
+}
+
+.cardDesc {
+  font-size: var(--text-base);
+  line-height: 1.7;
+}
+
+/* ---------- Responsive ---------- */
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-8);
+  }
+
+  .iconWrap {
+    width: 72px;
+    height: 72px;
+  }
+
+  .icon {
+    font-size: 36px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .card {
+    padding: var(--space-10);
+  }
+}

@@ -1,0 +1,150 @@
+/* ============================================================
+   SectionSteps — Modern, vivid
+   ============================================================ */
+
+.steps {
+  background: var(--cor-superficie);
+  position: relative;
+  overflow: hidden;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--space-12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-5);
+  background: var(--cor-primario-light);
+  color: var(--cor-primario);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  font-family: var(--font-heading);
+  border-radius: var(--radius-full);
+  letter-spacing: 0.02em;
+}
+
+.title {
+  max-width: 480px;
+}
+
+.subtitle {
+  max-width: 440px;
+  font-size: var(--text-base);
+  color: var(--cor-texto-suave);
+}
+
+/* ---------- Cards Grid ---------- */
+.grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+  position: relative;
+  z-index: 1;
+}
+
+.card {
+  position: relative;
+  background: var(--cor-superficie);
+  border-radius: var(--radius-2xl);
+  border: 1px solid var(--cor-linha);
+  overflow: hidden;
+  transition: transform var(--transition-spring), box-shadow var(--transition-base);
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: var(--shadow-xl);
+}
+
+.cardAccent {
+  height: 4px;
+  width: 100%;
+}
+
+.cardContent {
+  padding: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.cardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: var(--cor-superficie);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: var(--text-lg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.emoji {
+  font-size: 36px;
+  line-height: 1;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+.cardTitle {
+  font-size: var(--text-xl);
+  letter-spacing: -0.01em;
+}
+
+.cardDesc {
+  font-size: var(--text-base);
+  line-height: 1.7;
+}
+
+/* ---------- Connector (desktop) ---------- */
+.connector {
+  display: none;
+}
+
+/* ---------- Responsive ---------- */
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-8);
+  }
+
+  .connector {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 40px);
+    width: 60%;
+    z-index: 0;
+  }
+
+  .connectorLine {
+    height: 2px;
+    background: linear-gradient(90deg, var(--cor-primario), var(--cor-gordura), var(--cor-acao));
+    border-radius: var(--radius-full);
+    opacity: 0.2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cardContent {
+    padding: var(--space-10);
+  }
+}
