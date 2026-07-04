@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { getDictionary } from '@/dictionaries'
 import { SITE_URL, APP_NAME } from '@/lib/constants'
-import TmbCalculator from '@/components/TmbCalculator'
+import CaloriesCalculator from '@/components/CaloriesCalculator'
 import AppCTA from '@/components/AppCTA'
 import styles from './page.module.css'
 
@@ -15,34 +15,34 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const dict = await getDictionary(lang)
 
   return {
-    title: dict.tmbCalculator.meta.title,
-    description: dict.tmbCalculator.meta.description,
+    title: dict.caloriesCalculator.meta.title,
+    description: dict.caloriesCalculator.meta.description,
     alternates: {
-      canonical: `${SITE_URL}/${lang}/calculadora-tmb`,
+      canonical: `${SITE_URL}/${lang}/calculadora-calorias`,
       languages: {
-        'pt-BR': `${SITE_URL}/pt/calculadora-tmb`,
+        'pt-BR': `${SITE_URL}/pt/calculadora-calorias`,
       },
     },
     openGraph: {
       type: 'website',
       locale: lang === 'pt' ? 'pt_BR' : lang,
       siteName: APP_NAME,
-      title: dict.tmbCalculator.meta.title,
-      description: dict.tmbCalculator.meta.description,
-      url: `${SITE_URL}/${lang}/calculadora-tmb`,
+      title: dict.caloriesCalculator.meta.title,
+      description: dict.caloriesCalculator.meta.description,
+      url: `${SITE_URL}/${lang}/calculadora-calorias`,
     },
     twitter: {
       card: 'summary_large_image',
-      title: dict.tmbCalculator.meta.title,
-      description: dict.tmbCalculator.meta.description,
+      title: dict.caloriesCalculator.meta.title,
+      description: dict.caloriesCalculator.meta.description,
     },
   }
 }
 
-export default async function CalculadoraTmbPage({ params }: PageProps) {
+export default async function CalculadoraCaloriasPage({ params }: PageProps) {
   const lang = (await params).lang
   const dict = await getDictionary(lang)
-  const t = dict.tmbCalculator
+  const t = dict.caloriesCalculator
 
   // JSON-LD FAQPage schema
   const faqSchema = {
@@ -72,7 +72,7 @@ export default async function CalculadoraTmbPage({ params }: PageProps) {
             <h1 className={styles.title}>{t.h1}</h1>
             <p className={styles.subtitle}>{t.subtitle}</p>
           </header>
-          <TmbCalculator dict={{ form: t.form, result: t.result }} />
+          <CaloriesCalculator dict={{ form: t.form, result: t.result }} />
         </div>
       </div>
 
@@ -103,29 +103,27 @@ export default async function CalculadoraTmbPage({ params }: PageProps) {
 
           <section className={styles.seoBlock} aria-labelledby="sec-how-calc">
             <h2 id="sec-how-calc" className={styles.seoTitle}>
-              {t.seo.howCalculatedTitle}
+              {t.seo.howToCalcTitle}
             </h2>
-            {t.seo.howCalculatedText.split('\n\n').map((p: string, i: number) => (
-              <p key={i} className={p.startsWith('•') ? styles.formulaBlock : undefined}>
-                {p}
-              </p>
-            ))}
-          </section>
-
-          <section className={styles.seoBlock} aria-labelledby="sec-difference">
-            <h2 id="sec-difference" className={styles.seoTitle}>
-              {t.seo.differenceTitle}
-            </h2>
-            {t.seo.differenceText.split('\n\n').map((p: string, i: number) => (
+            {t.seo.howToCalcText.split('\n\n').map((p: string, i: number) => (
               <p key={i}>{p}</p>
             ))}
           </section>
 
-          <section className={styles.seoBlock} aria-labelledby="sec-what-to-do">
-            <h2 id="sec-what-to-do" className={styles.seoTitle}>
-              {t.seo.whatToDoTitle}
+          <section className={styles.seoBlock} aria-labelledby="sec-safe-deficit">
+            <h2 id="sec-safe-deficit" className={styles.seoTitle}>
+              {t.seo.safeDeficitTitle}
             </h2>
-            {t.seo.whatToDoText.split('\n\n').map((p: string, i: number) => (
+            {t.seo.safeDeficitText.split('\n\n').map((p: string, i: number) => (
+              <p key={i}>{p}</p>
+            ))}
+          </section>
+
+          <section className={styles.seoBlock} aria-labelledby="sec-weekly-loss">
+            <h2 id="sec-weekly-loss" className={styles.seoTitle}>
+              {t.seo.weeklyLossTitle}
+            </h2>
+            {t.seo.weeklyLossText.split('\n\n').map((p: string, i: number) => (
               <p key={i}>{p}</p>
             ))}
           </section>
@@ -154,6 +152,17 @@ export default async function CalculadoraTmbPage({ params }: PageProps) {
             </h2>
             <div className={styles.crossLinksGrid}>
               <Link
+                href={`/${lang}/calculadora-tmb`}
+                className={styles.crossLinkCard}
+              >
+                <span className={styles.crossLinkIcon} aria-hidden="true">⚡</span>
+                <div>
+                  <strong className={styles.crossLinkName}>{t.crossLinks.tmb.name}</strong>
+                  <p className={styles.crossLinkDesc}>{t.crossLinks.tmb.desc}</p>
+                </div>
+                <span className={styles.crossLinkArrow} aria-hidden="true">→</span>
+              </Link>
+              <Link
                 href={`/${lang}/calculadora-deficit-calorico`}
                 className={styles.crossLinkCard}
               >
@@ -161,17 +170,6 @@ export default async function CalculadoraTmbPage({ params }: PageProps) {
                 <div>
                   <strong className={styles.crossLinkName}>{t.crossLinks.deficit.name}</strong>
                   <p className={styles.crossLinkDesc}>{t.crossLinks.deficit.desc}</p>
-                </div>
-                <span className={styles.crossLinkArrow} aria-hidden="true">→</span>
-              </Link>
-              <Link
-                href={`/${lang}/calculadora-calorias`}
-                className={styles.crossLinkCard}
-              >
-                <span className={styles.crossLinkIcon} aria-hidden="true">🥗</span>
-                <div>
-                  <strong className={styles.crossLinkName}>{t.crossLinks.calories.name}</strong>
-                  <p className={styles.crossLinkDesc}>{t.crossLinks.calories.desc}</p>
                 </div>
                 <span className={styles.crossLinkArrow} aria-hidden="true">→</span>
               </Link>

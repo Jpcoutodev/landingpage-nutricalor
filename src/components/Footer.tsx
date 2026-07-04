@@ -15,6 +15,7 @@ type FooterProps = {
     tools?: string
     tmbCalculator?: string
     deficitCalculator?: string
+    caloriesCalculator?: string
   }
 }
 
@@ -53,6 +54,9 @@ export default function Footer({ dict }: FooterProps) {
                 )}
                 {dict.deficitCalculator && (
                   <Link href={`/${locale}/calculadora-deficit-calorico`}>{dict.deficitCalculator}</Link>
+                )}
+                {dict.caloriesCalculator && (
+                  <Link href={`/${locale}/calculadora-calorias`}>{dict.caloriesCalculator}</Link>
                 )}
               </div>
             )}

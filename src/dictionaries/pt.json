@@ -21,7 +21,8 @@
     "rights": "Todos os direitos reservados.",
     "tools": "Ferramentas",
     "tmbCalculator": "Calculadora TMB",
-    "deficitCalculator": "Calculadora Déficit Calórico"
+    "deficitCalculator": "Calculadora Déficit Calórico",
+    "caloriesCalculator": "Calculadora de Calorias"
   },
   "home": {
     "meta": {
@@ -202,6 +203,10 @@
       "deficit": {
         "name": "Calculadora de Déficit Calórico",
         "desc": "Descubra quantas calorias comer para emagrecer no seu ritmo."
+      },
+      "calories": {
+        "name": "Calculadora de Calorias Diárias",
+        "desc": "Descubra quantas calorias comer para emagrecer, manter ou ganhar massa."
       }
     },
     "seo": {
@@ -291,6 +296,10 @@
       "tmb": {
         "name": "Calculadora de TMB",
         "desc": "Descubra seu metabolismo basal e gasto calórico total."
+      },
+      "calories": {
+        "name": "Calculadora de Calorias Diárias",
+        "desc": "Descubra quantas calorias comer para emagrecer, manter ou ganhar massa."
       }
     },
     "seo": {
@@ -325,6 +334,97 @@
         {
           "question": "O déficit calórico funciona para todo mundo?",
           "answer": "O déficit calórico é o mecanismo universal de emagrecimento. Mas o tamanho ideal do déficit, a composição da dieta e a velocidade de perda variam de pessoa para pessoa. Condições médicas (tireoide, resistência a insulina, medicamentos) podem afetar o processo. Sempre que possível, consulte um nutricionista."
+        }
+      ]
+    }
+  },
+  "caloriesCalculator": {
+    "meta": {
+      "title": "Calculadora de Calorias Diárias — Descubra sua Meta",
+      "description": "Calcule quantas calorias você precisa comer por dia para emagrecer, manter o peso ou ganhar massa muscular. Calculadora grátis baseada na equação de Mifflin-St Jeor."
+    },
+    "h1": "Calculadora de Calorias Diárias",
+    "subtitle": "Descubra a quantidade exata de calorias que seu corpo precisa para emagrecer, manter o peso ou ganhar massa muscular.",
+    "form": {
+      "sexLabel": "Sexo biológico",
+      "male": "Masculino",
+      "female": "Feminino",
+      "ageLabel": "Idade",
+      "agePlaceholder": "anos",
+      "heightLabel": "Altura",
+      "heightPlaceholder": "cm",
+      "weightLabel": "Peso",
+      "weightPlaceholder": "kg",
+      "activityLabel": "Nível de atividade",
+      "sedentary": "Sedentário (pouco ou nenhum exercício)",
+      "light": "Leve (exercício 1–3 dias/semana)",
+      "moderate": "Moderado (exercício 3–5 dias/semana)",
+      "intense": "Intenso (exercício 6–7 dias/semana)",
+      "goalLabel": "Objetivo",
+      "goalLose": "Emagrecer",
+      "goalMaintain": "Manter o peso",
+      "goalGain": "Ganhar massa",
+      "calculate": "Calcular minhas calorias"
+    },
+    "result": {
+      "title": "Sua meta calórica diária",
+      "targetLabel": "Meta de calorias",
+      "targetDesc": "Para alcançar seu objetivo",
+      "tdeeLabel": "Gasto diário (TDEE)",
+      "tdeeDesc": "Para referência",
+      "loseLabel": "Emagrecer",
+      "maintainLabel": "Manter",
+      "gainLabel": "Ganhar",
+      "kcalUnit": "kcal/dia",
+      "safetyNote": "Por segurança, a meta de emagrecimento foi ajustada para o limite saudável de {floor} kcal por dia."
+    },
+    "cta": {
+      "title": "Agora que você sabe sua meta, a parte difícil é contar as calorias de cada refeição.",
+      "text": "O Nutricalor faz isso por foto — fotografe o prato e pronto."
+    },
+    "crossLinks": {
+      "title": "Outras calculadoras",
+      "tmb": {
+        "name": "Calculadora de TMB",
+        "desc": "Descubra seu metabolismo basal e gasto calórico total."
+      },
+      "deficit": {
+        "name": "Calculadora de Déficit Calórico",
+        "desc": "Descubra quantas calorias comer para emagrecer no seu ritmo."
+      }
+    },
+    "seo": {
+      "whatIsTitle": "Quantas calorias devo comer por dia",
+      "whatIsText": "A quantidade de calorias que você deve ingerir por dia depende de vários fatores: seu peso atual, altura, idade, sexo biológico e, principalmente, o seu nível de atividade física diária e o seu objetivo (emagrecer, manter ou ganhar massa).\n\nPara a maioria das pessoas, não existe um número mágico universal de 2.000 calorias. Uma mulher pequena e sedentária pode precisar de apenas 1.500 kcal, enquanto um homem alto e muito ativo pode precisar de mais de 3.000 kcal. Por isso é essencial usar uma calculadora personalizada que leve em conta a sua fisiologia.",
+      "howToCalcTitle": "Como calculamos sua meta",
+      "howToCalcText": "Utilizamos um método científico em três etapas:\n\n1. Primeiro, calculamos sua Taxa Metabólica Basal (TMB) usando a equação de Mifflin-St Jeor, que estima a energia que seu corpo gasta apenas para se manter vivo (respiração, circulação, etc.).\n2. Em seguida, multiplicamos a TMB pelo seu fator de atividade (sedentário, leve, moderado ou intenso) para encontrar o seu Gasto Energético Diário Total (TDEE).\n3. Finalmente, ajustamos esse valor com base no seu objetivo. Se você quer emagrecer, aplicamos um déficit de 20%. Se quer manter, mantemos o valor do TDEE. Se quer ganhar, aplicamos um superávit de 10%.",
+      "safeDeficitTitle": "Calorias para emagrecer, manter ou ganhar",
+      "safeDeficitText": "• Emagrecer: A regra de ouro é o déficit calórico sustentável. Recomendamos reduzir 20% do seu gasto diário. Isso garante uma perda de peso saudável sem sacrificar a massa muscular ou deixar você com fome o tempo todo. Mas atenção: nunca sugerimos consumir menos que o piso seguro (1.500 kcal para homens, 1.200 kcal para mulheres).\n• Manter: Ideal para quem já está no peso desejado ou quer focar apenas em recomposição corporal (trocar gordura por músculo) em ritmo lento.\n• Ganhar: Para crescer músculos (hipertrofia), você precisa de um leve excesso calórico (superávit de ~10%) aliado a treino de força. Muito acima disso, o ganho será predominantemente de gordura.",
+      "weeklyLossTitle": "Por que contar calorias funciona (e como facilitar)",
+      "weeklyLossText": "Seja qual for a dieta da moda — low carb, jejum intermitente, cetogênica — o único motivo biológico que a faz funcionar para perda de peso é se ela induz um déficit calórico no final do dia. Ao entender e rastrear suas calorias, você ganha a liberdade de comer os alimentos que gosta, desde que caibam na sua meta diária.\n\nA pior parte de contar calorias sempre foi pesar cada ingrediente e procurar em tabelas gigantescas. O Nutricalor resolve isso usando Inteligência Artificial: você só precisa tirar uma foto do seu prato, e a IA estima as calorias e macronutrientes automaticamente, reconhecendo a comida brasileira do dia a dia."
+    },
+    "faq": {
+      "title": "Perguntas frequentes",
+      "items": [
+        {
+          "question": "A meta de calorias já inclui os exercícios que faço?",
+          "answer": "Sim. O nível de atividade que você seleciona já multiplica a sua taxa basal para compensar o exercício. Se você marcou 'Moderado' ou 'Intenso', não precisa somar as calorias queimadas no treino separadamente; elas já estão na conta."
+        },
+        {
+          "question": "Posso comer abaixo de 1.200 (mulheres) ou 1.500 (homens) calorias para acelerar?",
+          "answer": "Não é recomendado. Dietas muito baixas em calorias (VLCD) podem causar perda muscular severa, deficiência de vitaminas, fadiga extrema e queda de cabelo. Além disso, quando a dieta acaba, o metabolismo lento favorece o reganho rápido de peso (efeito sanfona)."
+        },
+        {
+          "question": "Se eu bater as calorias, não importa o que eu como?",
+          "answer": "Para o peso puro na balança, a quantidade de calorias é o fator dominante. Mas para a qualidade do peso (músculo vs gordura), saciedade, saúde e energia, importa muito de onde vêm essas calorias. Você precisa de proteínas suficientes, gorduras boas, vitaminas e fibras."
+        },
+        {
+          "question": "Como sei se devo focar em emagrecer ou ganhar massa?",
+          "answer": "Se o seu percentual de gordura for alto e incomoda, o foco primário deve ser emagrecer. Se você for iniciante na academia, muitas vezes consegue ganhar massa e perder gordura ao mesmo tempo (recomposição corporal), bastando comer na meta de manutenção ou com um déficit leve."
+        },
+        {
+          "question": "A calculadora também serve para crianças e adolescentes?",
+          "answer": "Não. Esta calculadora (equação de Mifflin-St Jeor) foi validada apenas para adultos (18 anos ou mais). Crianças e adolescentes estão em fase de crescimento e têm necessidades metabólicas diferentes, necessitando de acompanhamento pediátrico ou de um nutricionista."
         }
       ]
     }

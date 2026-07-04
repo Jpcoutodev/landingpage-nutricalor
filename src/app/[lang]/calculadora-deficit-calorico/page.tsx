@@ -162,6 +162,17 @@ export default async function CalculadoraDeficitPage({ params }: PageProps) {
                 </div>
                 <span className={styles.crossLinkArrow} aria-hidden="true">→</span>
               </Link>
+              <Link
+                href={`/${lang}/calculadora-calorias`}
+                className={styles.crossLinkCard}
+              >
+                <span className={styles.crossLinkIcon} aria-hidden="true">🥗</span>
+                <div>
+                  <strong className={styles.crossLinkName}>{t.crossLinks.calories.name}</strong>
+                  <p className={styles.crossLinkDesc}>{t.crossLinks.calories.desc}</p>
+                </div>
+                <span className={styles.crossLinkArrow} aria-hidden="true">→</span>
+              </Link>
             </div>
           </section>
         </div>

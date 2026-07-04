@@ -110,6 +110,15 @@ export default function Header({ dict, ctaDict }: HeaderProps) {
                       Déficit Calórico
                     </Link>
                   </li>
+                  <li>
+                    <Link
+                      href={`/${locale}/calculadora-calorias`}
+                      onClick={closeMenu}
+                      className={`${styles.dropdownLink} ${pathname.includes('/calculadora-calorias') ? styles.active : ''}`}
+                    >
+                      Calorias Diárias
+                    </Link>
+                  </li>
                 </ul>
               </li>
             )}
