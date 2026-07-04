@@ -45,11 +45,35 @@ export const ACTIVITY_FACTORS: Record<ActivityLevel, number> = {
   intense: 1.725,
 }
 
+export type DeficitLevel = 'light' | 'moderate' | 'aggressive'
+
+export interface DeficitResult {
+  tdee: number
+  target: number
+  dailyDeficit: number
+  weeklyLossKg: number
+  isFloored: boolean
+}
+
+// ---------------------------------------------------------------------------
+// Constants
+// ---------------------------------------------------------------------------
+
 /** Safety floor — never suggest crash-diet levels */
-const SAFETY_FLOOR: Record<Sex, number> = {
+export const SAFETY_FLOOR: Record<Sex, number> = {
   male: 1500,
   female: 1200,
 }
+
+/** Deficit multipliers applied to TDEE */
+export const DEFICIT_FACTORS: Record<DeficitLevel, number> = {
+  light: 0.9,
+  moderate: 0.8,
+  aggressive: 0.75,
+}
+
+/** Approximate kcal equivalent of 1 kg of body fat */
+export const KCAL_PER_KG = 7700
 
 // ---------------------------------------------------------------------------
 // Calculations
@@ -122,4 +146,27 @@ export function calculateAll(
   const tdee = calculateTDEE(bmr, activityLevel)
   const goals = calculateGoalCalories(tdee, sex)
   return { bmr, tdee, goals }
+}
+
+/**
+ * Deficit-focused calculation: TDEE → target with chosen deficit → weekly loss.
+ *
+ * Applies safety floor: target never below 1 500 kcal (male) / 1 200 (female).
+ * Returns `isFloored = true` when the safety floor overrides the chosen deficit.
+ *
+ * Weekly loss estimate uses 7 700 kcal ≈ 1 kg of body fat.
+ */
+export function calculateDeficit(
+  tdee: number,
+  sex: Sex,
+  deficitLevel: DeficitLevel,
+): DeficitResult {
+  const rawTarget = Math.round(tdee * DEFICIT_FACTORS[deficitLevel])
+  const floor = SAFETY_FLOOR[sex]
+  const isFloored = rawTarget < floor
+  const target = isFloored ? floor : rawTarget
+  const dailyDeficit = tdee - target
+  const weeklyLossKg = parseFloat(((dailyDeficit * 7) / KCAL_PER_KG).toFixed(2))
+
+  return { tdee, target, dailyDeficit, weeklyLossKg, isFloored }
 }

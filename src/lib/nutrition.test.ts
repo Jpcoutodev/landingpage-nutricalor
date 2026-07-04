@@ -5,7 +5,11 @@ import {
   calculateTDEE,
   calculateGoalCalories,
   calculateAll,
+  calculateDeficit,
   ACTIVITY_FACTORS,
+  DEFICIT_FACTORS,
+  KCAL_PER_KG,
+  SAFETY_FLOOR,
 } from './nutrition'
 
 // ---------------------------------------------------------------------------
@@ -112,3 +116,60 @@ describe('calculateAll', () => {
     assert.equal(result.goals.lose, 1200)
   })
 })
+
+// ---------------------------------------------------------------------------
+// Deficit calculator
+// ---------------------------------------------------------------------------
+
+describe('calculateDeficit', () => {
+  it('light deficit = TDEE × 0.9', () => {
+    const r = calculateDeficit(2500, 'male', 'light')
+    assert.equal(r.target, Math.round(2500 * 0.9)) // 2250
+    assert.equal(r.dailyDeficit, 2500 - 2250) // 250
+    assert.equal(r.isFloored, false)
+  })
+
+  it('moderate deficit = TDEE × 0.8', () => {
+    const r = calculateDeficit(2500, 'male', 'moderate')
+    assert.equal(r.target, 2000)
+    assert.equal(r.dailyDeficit, 500)
+    assert.equal(r.isFloored, false)
+  })
+
+  it('aggressive deficit = TDEE × 0.75', () => {
+    const r = calculateDeficit(2500, 'male', 'aggressive')
+    assert.equal(r.target, 1875)
+    assert.equal(r.dailyDeficit, 625)
+    assert.equal(r.isFloored, false)
+  })
+
+  it('safety floor: female aggressive on low TDEE → clamped to 1200', () => {
+    // TDEE 1500, aggressive → 1500 × 0.75 = 1125 → clamped to 1200
+    const r = calculateDeficit(1500, 'female', 'aggressive')
+    assert.equal(r.target, 1200)
+    assert.equal(r.dailyDeficit, 300)
+    assert.equal(r.isFloored, true)
+  })
+
+  it('safety floor: male moderate on low TDEE → clamped to 1500', () => {
+    // TDEE 1800, moderate → 1800 × 0.8 = 1440 → clamped to 1500
+    const r = calculateDeficit(1800, 'male', 'moderate')
+    assert.equal(r.target, 1500)
+    assert.equal(r.dailyDeficit, 300)
+    assert.equal(r.isFloored, true)
+  })
+
+  it('weekly loss estimate is correct (7700 kcal ≈ 1 kg)', () => {
+    // TDEE 2500, male, moderate → deficit 500/day → 3500/week → 3500/7700 ≈ 0.45
+    const r = calculateDeficit(2500, 'male', 'moderate')
+    assert.equal(r.weeklyLossKg, parseFloat(((500 * 7) / 7700).toFixed(2)))
+  })
+
+  it('weekly loss with floored target', () => {
+    // TDEE 1500, female, aggressive → target 1200, deficit 300
+    // 300 × 7 / 7700 = 0.27
+    const r = calculateDeficit(1500, 'female', 'aggressive')
+    assert.equal(r.weeklyLossKg, parseFloat(((300 * 7) / 7700).toFixed(2)))
+  })
+})
+

@@ -1,5 +1,5 @@
 /* ============================================================
-   Calculadora TMB — Page Styles
+   Calculadora Déficit Calórico — Page Styles
    ============================================================ */
 
 /* ---------- Hero (calculator area) ---------- */
@@ -96,17 +96,6 @@
 
 .seoBlock p:last-child {
   margin-bottom: 0;
-}
-
-.formulaBlock {
-  padding: var(--space-4) var(--space-5);
-  background: var(--cor-primario-light);
-  border-radius: var(--radius-lg);
-  font-family: var(--font-body);
-  font-size: var(--text-sm) !important;
-  line-height: 2 !important;
-  white-space: pre-line;
-  color: var(--cor-tinta);
 }
 
 /* ---------- FAQ ---------- */

@@ -19,7 +19,8 @@
     "contact": "Contato",
     "rights": "Todos os direitos reservados.",
     "tools": "Ferramentas",
-    "tmbCalculator": "Calculadora TMB"
+    "tmbCalculator": "Calculadora TMB",
+    "deficitCalculator": "Calculadora Déficit Calórico"
   },
   "home": {
     "meta": {
@@ -195,6 +196,13 @@
       "title": "Cansou de calcular na mão?",
       "text": "O Nutricalor conta as calorias do seu prato só com uma foto. Feito para a comida brasileira de verdade."
     },
+    "crossLinks": {
+      "title": "Outras calculadoras",
+      "deficit": {
+        "name": "Calculadora de Déficit Calórico",
+        "desc": "Descubra quantas calorias comer para emagrecer no seu ritmo."
+      }
+    },
     "seo": {
       "whatIsTitle": "O que é Taxa Metabólica Basal (TMB)",
       "whatIsText": "A Taxa Metabólica Basal, ou TMB, é a quantidade mínima de energia que o seu corpo precisa para manter as funções vitais em repouso absoluto: respiração, circulação sanguínea, regulação de temperatura, funcionamento do cérebro e renovação celular. Mesmo que você passasse o dia inteiro deitado, sem se mover, o corpo continuaria gastando essa energia.\n\nA TMB representa, em média, entre 60% e 75% do gasto calórico total diário. Por isso é o ponto de partida de qualquer planejamento alimentar — seja para emagrecer, manter o peso ou ganhar massa. Sem conhecer sua TMB, qualquer meta de calorias é chute.",
@@ -227,6 +235,95 @@
         {
           "question": "Como contar calorias na prática sem pesar tudo?",
           "answer": "Use um app como o Nutricalor: basta fotografar o prato e a inteligência artificial estima as calorias e os macros em segundos. É muito mais rápido que pesar ingredientes ou procurar em tabelas."
+        }
+      ]
+    }
+  },
+  "deficitCalculator": {
+    "meta": {
+      "title": "Calculadora de Déficit Calórico — Calcule Quanto Comer para Emagrecer",
+      "description": "Calcule seu déficit calórico ideal para emagrecer com segurança. Descubra o gasto calórico diário (TDEE), a meta de calorias e a perda de peso estimada por semana. Calculadora grátis."
+    },
+    "h1": "Calculadora de Déficit Calórico",
+    "subtitle": "Descubra quantas calorias comer por dia para emagrecer no seu ritmo, sem passar fome e sem dieta radical.",
+    "form": {
+      "sexLabel": "Sexo biológico",
+      "male": "Masculino",
+      "female": "Feminino",
+      "ageLabel": "Idade",
+      "agePlaceholder": "anos",
+      "heightLabel": "Altura",
+      "heightPlaceholder": "cm",
+      "weightLabel": "Peso",
+      "weightPlaceholder": "kg",
+      "activityLabel": "Nível de atividade",
+      "sedentary": "Sedentário (pouco ou nenhum exercício)",
+      "light": "Leve (exercício 1–3 dias/semana)",
+      "moderate": "Moderado (exercício 3–5 dias/semana)",
+      "intense": "Intenso (exercício 6–7 dias/semana)",
+      "deficitLabel": "Objetivo de perda",
+      "deficitLight": "Leve (−10%) — perda gradual e confortável",
+      "deficitModerate": "Moderado (−20%) — ritmo sustentável",
+      "deficitAggressive": "Agressivo (−25%) — mais rápido, mais exigente",
+      "calculate": "Calcular meu déficit"
+    },
+    "result": {
+      "title": "Seu plano de déficit",
+      "tdeeLabel": "Gasto diário",
+      "tdeeDesc": "Quanto você queima por dia",
+      "targetLabel": "Meta calórica",
+      "targetDesc": "Quanto comer para emagrecer",
+      "deficitLabel": "Déficit diário",
+      "deficitDesc": "A diferença que gera a perda",
+      "weeklyLabel": "Perda estimada",
+      "weeklyUnit": "kg/semana",
+      "weeklyDesc": "Estimativa baseada em 7.700 kcal ≈ 1 kg",
+      "kcalUnit": "kcal/dia",
+      "safetyNote": "Por segurança, sua meta foi ajustada para o mínimo saudável ({floor} kcal). Déficits mais agressivos requerem acompanhamento profissional."
+    },
+    "cta": {
+      "title": "Bater o déficit é fácil quando você não precisa calcular na mão.",
+      "text": "O Nutricalor conta as calorias do seu prato só com uma foto. Feito para a comida brasileira de verdade."
+    },
+    "crossLinks": {
+      "title": "Outras calculadoras",
+      "tmb": {
+        "name": "Calculadora de TMB",
+        "desc": "Descubra seu metabolismo basal e gasto calórico total."
+      }
+    },
+    "seo": {
+      "whatIsTitle": "O que é déficit calórico",
+      "whatIsText": "Déficit calórico é quando você consome menos calorias do que o corpo gasta. Essa diferença obriga o organismo a buscar energia nas reservas — principalmente a gordura corporal. É o único mecanismo comprovado de emagrecimento: não importa qual dieta você segue, se ela funciona, é porque criou um déficit.\n\nO tamanho do déficit determina a velocidade da perda e o quão sustentável ela é. Déficits pequenos (10–15%) geram perda lenta mas confortável, com menos fome e menos risco de perda muscular. Déficits grandes (acima de 25%) aceleram o processo, mas aumentam a chance de compulsão, fadiga e platô metabólico.",
+      "howToCalcTitle": "Como calcular seu déficit",
+      "howToCalcText": "O cálculo tem três passos:\n\n1. Encontre sua TMB (Taxa Metabólica Basal) — o gasto do corpo em repouso. Esta calculadora usa a fórmula de Mifflin-St Jeor, a mais aceita.\n2. Multiplique pelo fator de atividade para obter o TDEE (gasto diário total): sedentário ×1,2, leve ×1,375, moderado ×1,55, intenso ×1,725.\n3. Aplique o déficit desejado: subtraia 10%, 20% ou 25% do TDEE. O resultado é sua meta calórica diária.\n\nPor exemplo: se seu TDEE é 2.400 kcal e você escolhe um déficit moderado de 20%, sua meta fica em 1.920 kcal/dia. A diferença (480 kcal/dia) somada na semana dá 3.360 kcal — o que equivale a cerca de 0,44 kg de gordura.",
+      "safeDeficitTitle": "Qual déficit é seguro",
+      "safeDeficitText": "A ciência e a prática clínica convergem em alguns limites:\n\n• Déficit de 10–20% do TDEE é considerado seguro e sustentável para a maioria das pessoas. É o intervalo que preserva massa muscular, mantém o metabolismo ativo e causa menos efeitos colaterais (fome excessiva, irritabilidade, fadiga).\n• Déficit acima de 25% pode funcionar a curto prazo, mas aumenta significativamente o risco de compulsão alimentar, perda de músculo e desaceleração do metabolismo (o temido \"platô\").\n• Nunca abaixo do piso de segurança: 1.500 kcal/dia para homens e 1.200 kcal/dia para mulheres. Abaixo disso, é muito difícil obter todos os micronutrientes necessários sem supervisão médica.\n\nA calculadora aplica esse piso automaticamente. Se o déficit escolhido levar abaixo do mínimo, ela ajusta e avisa.",
+      "weeklyLossTitle": "Quanto dá para perder por semana (com honestidade)",
+      "weeklyLossText": "A conta teórica é simples: cada 7.700 kcal de déficit equivalem a aproximadamente 1 kg de gordura. Com um déficit de 500 kcal/dia, a conta dá ~0,45 kg por semana; com 250 kcal/dia, ~0,23 kg.\n\nNa prática, porém, o número na balança vai oscilar mais que isso — e não é motivo para desanimar. Retenção de líquido, ciclo menstrual, sódio da comida do dia anterior e até estresse afetam o peso diário. O que importa é a tendência ao longo de semanas.\n\nUm ritmo saudável e realista para a maioria das pessoas é entre 0,3 e 0,7 kg por semana. Perder mais rápido é possível, mas costuma custar massa muscular e sanidade. Lento e consistente vence."
+    },
+    "faq": {
+      "title": "Perguntas frequentes",
+      "items": [
+        {
+          "question": "Preciso ficar em déficit todo dia, sem exceção?",
+          "answer": "Não. O que importa é a média semanal. Se você comeu mais num dia de festa, compense levemente nos dias seguintes — sem drama. A consistência ao longo de semanas é mais importante que a perfeição diária."
+        },
+        {
+          "question": "Se eu fizer mais exercício, posso comer mais e ainda emagrecer?",
+          "answer": "Em princípio, sim. Exercício aumenta o TDEE, o que permite um déficit com mais comida. Mas cuidado: o gasto calórico de exercícios costuma ser superestimado. Use o exercício como ferramenta de saúde e bem-estar, não como licença para comer sem limite."
+        },
+        {
+          "question": "É melhor um déficit leve por mais tempo ou agressivo por pouco tempo?",
+          "answer": "Para a maioria das pessoas, déficit leve a moderado por mais tempo é mais eficaz. Déficits agressivos geram resultados rápidos no início, mas têm taxa alta de desistência e efeito rebote. Um déficit que você consegue manter por meses vale mais que um que dura duas semanas."
+        },
+        {
+          "question": "Como contar calorias sem pesar tudo?",
+          "answer": "Use um app como o Nutricalor: fotografe o prato e a IA estima calorias e macros em segundos. Não é preciso pesar cada ingrediente — a estimativa por foto é prática o suficiente para manter o déficit."
+        },
+        {
+          "question": "O déficit calórico funciona para todo mundo?",
+          "answer": "O déficit calórico é o mecanismo universal de emagrecimento. Mas o tamanho ideal do déficit, a composição da dieta e a velocidade de perda variam de pessoa para pessoa. Condições médicas (tireoide, resistência a insulina, medicamentos) podem afetar o processo. Sempre que possível, consulte um nutricionista."
         }
       ]
     }
