@@ -11,7 +11,11 @@
     "howItWorks": "Como funciona",
     "contact": "Contato",
     "calculators": "Calculadoras",
-    "tmbCalculator": "Calculadora TMB"
+    "tmbCalculator": "Calculadora TMB",
+    "deficitCalculator": "Déficit Calórico",
+    "caloriesCalculator": "Calorias Diárias",
+    "imcCalculator": "Calculadora de IMC",
+    "macrosCalculator": "Calculadora de Macros"
   },
   "footer": {
     "tagline": "Calorias por foto, feito para a comida brasileira.",

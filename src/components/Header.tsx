@@ -13,6 +13,10 @@ type HeaderProps = {
     contact: string
     calculators?: string
     tmbCalculator?: string
+    deficitCalculator?: string
+    caloriesCalculator?: string
+    imcCalculator?: string
+    macrosCalculator?: string
   }
   ctaDict: {
     comingSoon: string
@@ -81,7 +85,7 @@ export default function Header({ dict, ctaDict }: HeaderProps) {
                 onMouseLeave={() => setIsDropdownOpen(false)}
               >
                 <button 
-                  className={`${styles.navLink} ${styles.dropdownTrigger} ${(pathname.includes('/calculadora-tmb') || pathname.includes('/calculadora-deficit')) ? styles.active : ''}`}
+                  className={`${styles.navLink} ${styles.dropdownTrigger} ${pathname.includes('/calculadora-') ? styles.active : ''}`}
                   onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                   aria-expanded={isDropdownOpen}
                 >
@@ -101,24 +105,50 @@ export default function Header({ dict, ctaDict }: HeaderProps) {
                       </Link>
                     </li>
                   )}
-                  <li>
-                    <Link
-                      href={`/${locale}/calculadora-deficit-calorico`}
-                      onClick={closeMenu}
-                      className={`${styles.dropdownLink} ${pathname.includes('/calculadora-deficit') ? styles.active : ''}`}
-                    >
-                      Déficit Calórico
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href={`/${locale}/calculadora-calorias`}
-                      onClick={closeMenu}
-                      className={`${styles.dropdownLink} ${pathname.includes('/calculadora-calorias') ? styles.active : ''}`}
-                    >
-                      Calorias Diárias
-                    </Link>
-                  </li>
+                  {dict.deficitCalculator && (
+                    <li>
+                      <Link
+                        href={`/${locale}/calculadora-deficit-calorico`}
+                        onClick={closeMenu}
+                        className={`${styles.dropdownLink} ${pathname.includes('/calculadora-deficit') ? styles.active : ''}`}
+                      >
+                        {dict.deficitCalculator}
+                      </Link>
+                    </li>
+                  )}
+                  {dict.caloriesCalculator && (
+                    <li>
+                      <Link
+                        href={`/${locale}/calculadora-calorias`}
+                        onClick={closeMenu}
+                        className={`${styles.dropdownLink} ${pathname.includes('/calculadora-calorias') ? styles.active : ''}`}
+                      >
+                        {dict.caloriesCalculator}
+                      </Link>
+                    </li>
+                  )}
+                  {dict.imcCalculator && (
+                    <li>
+                      <Link
+                        href={`/${locale}/calculadora-imc`}
+                        onClick={closeMenu}
+                        className={`${styles.dropdownLink} ${pathname.includes('/calculadora-imc') ? styles.active : ''}`}
+                      >
+                        {dict.imcCalculator}
+                      </Link>
+                    </li>
+                  )}
+                  {dict.macrosCalculator && (
+                    <li>
+                      <Link
+                        href={`/${locale}/calculadora-macros`}
+                        onClick={closeMenu}
+                        className={`${styles.dropdownLink} ${pathname.includes('/calculadora-macros') ? styles.active : ''}`}
+                      >
+                        {dict.macrosCalculator}
+                      </Link>
+                    </li>
+                  )}
                 </ul>
               </li>
             )}
