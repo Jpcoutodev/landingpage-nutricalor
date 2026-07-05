@@ -3,7 +3,7 @@ import { APP_STATUS, PLAY_STORE_URL } from '@/lib/constants'
 import styles from './AppCTA.module.css'
 
 type AppCTAProps = {
-  variant?: 'inline' | 'block'
+  variant?: 'inline' | 'block' | 'header'
   dict: {
     comingSoon: string
     available: string
@@ -25,15 +25,15 @@ export default function AppCTA({ variant = 'inline', dict }: AppCTAProps) {
           <path d="M15.3 11.8l1.3 1.2-1.3 1.2-11-11.2L14 4l1.3 1.2 3.6 2.1c1.2.7 1.2 1.8 0 2.5l-3.6 2z" fill="#34A853" />
         </svg>
       </span>
-      <div className={styles.textGroup}>
-        <span className={styles.label}>{text}</span>
-        <span className={styles.store}>{dict.googlePlay}</span>
+      <div className={styles.ctaText}>
+        <span className={styles.ctaSmall}>{text}</span>
+        <span className={styles.ctaMain}>{dict.googlePlay}</span>
       </div>
     </>
   )
 
-  const className = `${styles.wrapper} ${styles[variant]} ${
-    !isAvailable ? styles.disabled : ''
+  const className = `${styles.cta} ${variant !== 'inline' ? styles[variant] : ''} ${
+    !isAvailable ? styles.comingSoon : ''
   }`
 
   if (isAvailable) {

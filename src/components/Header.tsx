@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import AppCTA from './AppCTA'
+import Logo from './Logo'
 import styles from './Header.module.css'
 
 type HeaderProps = {
@@ -49,7 +50,8 @@ export default function Header({ dict, ctaDict }: HeaderProps) {
     <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
       <div className={`container ${styles.inner}`}>
         <Link href={`/${locale}`} className={styles.logo} onClick={closeMenu}>
-          Nutricalor <span className={styles.dot}>.</span>
+          <Logo className={styles.logoIcon} />
+          <span className={styles.logoText}>Nutricalor</span>
         </Link>
 
         {/* Navigation */}
@@ -168,7 +170,7 @@ export default function Header({ dict, ctaDict }: HeaderProps) {
         {/* Actions */}
         <div className={styles.actions}>
           <div className={styles.ctaWrapper}>
-            <AppCTA dict={ctaDict} />
+            <AppCTA variant="header" dict={ctaDict} />
           </div>
 
           <button

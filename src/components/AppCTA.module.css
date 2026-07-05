@@ -78,3 +78,23 @@
   width: 28px;
   height: 28px;
 }
+
+/* ---------- Variant: header ---------- */
+.header {
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-full);
+}
+
+.header .ctaSmall {
+  display: none; /* Hide 'coming soon' in header to save space */
+}
+
+.header .ctaMain {
+  font-size: var(--text-sm);
+  font-weight: 500;
+}
+
+.header .icon {
+  width: 18px;
+  height: 18px;
+}

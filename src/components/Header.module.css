@@ -88,12 +88,12 @@
 
 .navLink:hover {
   color: var(--cor-tinta);
-  background-color: rgba(30, 107, 78, 0.06);
+  background-color: rgba(16, 185, 129, 0.08); /* Emerald */
 }
 
 .navLink.active {
   color: var(--cor-primario);
-  background-color: var(--cor-primario-light);
+  background-color: rgba(16, 185, 129, 0.12);
 }
 
 /* ---------- Dropdown ---------- */
@@ -139,14 +139,14 @@
 }
 
 .dropdownLink:hover {
-  background-color: rgba(30, 107, 78, 0.06);
+  background-color: rgba(16, 185, 129, 0.08);
   color: var(--cor-tinta);
 }
 
 .dropdownLink.active {
   color: var(--cor-primario);
   font-weight: 600;
-  background-color: var(--cor-primario-light);
+  background-color: rgba(16, 185, 129, 0.12);
 }
 
 /* ---------- Mobile menu button ---------- */
