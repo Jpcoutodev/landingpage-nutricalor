@@ -34,6 +34,23 @@ export interface NutritionResult {
   goals: GoalCalories
 }
 
+export type ImcClassification = 'underweight' | 'normal' | 'overweight' | 'obesity'
+
+export interface ImcResult {
+  imc: number
+  classification: ImcClassification
+}
+
+export interface MacrosResult {
+  targetCalories: number
+  proteinGram: number
+  proteinKcal: number
+  fatGram: number
+  fatKcal: number
+  carbsGram: number
+  carbsKcal: number
+}
+
 // ---------------------------------------------------------------------------
 // Constants
 // ---------------------------------------------------------------------------
@@ -169,4 +186,59 @@ export function calculateDeficit(
   const weeklyLossKg = parseFloat(((dailyDeficit * 7) / KCAL_PER_KG).toFixed(2))
 
   return { tdee, target, dailyDeficit, weeklyLossKg, isFloored }
+}
+
+/**
+ * Body Mass Index (IMC).
+ *
+ * @param weight   body weight in kg
+ * @param height   height in cm
+ * @returns IMC result with value and WHO classification
+ */
+export function calculateIMC(weight: number, height: number): ImcResult {
+  const heightInMeters = height / 100
+  const imc = weight / (heightInMeters * heightInMeters)
+  const roundedImc = parseFloat(imc.toFixed(1))
+
+  let classification: ImcClassification = 'normal'
+  if (roundedImc < 18.5) classification = 'underweight'
+  else if (roundedImc < 25) classification = 'normal'
+  else if (roundedImc < 30) classification = 'overweight'
+  else classification = 'obesity'
+
+  return { imc: roundedImc, classification }
+}
+
+/**
+ * Macros calculation based on target calories and body weight.
+ *
+ * Protein: ~1.8 g per kg of weight.
+ * Fat: ~25% of total calories (9 kcal/g).
+ * Carbs: remaining calories (4 kcal/g).
+ *
+ * @param targetCalories  Target daily calories
+ * @param weight          Body weight in kg
+ */
+export function calculateMacros(targetCalories: number, weight: number): MacrosResult {
+  // Protein: 1.8g per kg, 4 kcal per gram
+  const proteinGram = Math.round(weight * 1.8)
+  const proteinKcal = proteinGram * 4
+
+  // Fat: 25% of target calories, 9 kcal per gram
+  const fatKcal = Math.round(targetCalories * 0.25)
+  const fatGram = Math.round(fatKcal / 9)
+
+  // Carbs: The remaining calories, 4 kcal per gram
+  const carbsKcal = Math.max(0, targetCalories - proteinKcal - fatKcal)
+  const carbsGram = Math.round(carbsKcal / 4)
+
+  return {
+    targetCalories,
+    proteinGram,
+    proteinKcal,
+    fatGram,
+    fatKcal,
+    carbsGram,
+    carbsKcal,
+  }
 }

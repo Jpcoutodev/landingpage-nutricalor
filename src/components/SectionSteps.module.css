@@ -61,7 +61,7 @@
 }
 
 .card:hover {
-  transform: translateY(-8px) scale(1.01);
+  transform: translateY(-8px) scale(1.02);
   box-shadow: var(--shadow-xl);
 }
 
@@ -139,7 +139,7 @@
     height: 2px;
     background: linear-gradient(90deg, var(--cor-primario), var(--cor-gordura), var(--cor-acao));
     border-radius: var(--radius-full);
-    opacity: 0.2;
+    opacity: 0.4;
   }
 }
 

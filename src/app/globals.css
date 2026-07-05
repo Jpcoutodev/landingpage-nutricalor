@@ -6,28 +6,28 @@
 /* ---------- CSS Custom Properties (Design Tokens) ---------- */
 :root {
   /* Cores — Identidade Visual */
-  --cor-fundo: #FAF7F2;
+  --cor-fundo: #F8FAFC;
   --cor-superficie: #FFFFFF;
-  --cor-tinta: #152B20;
-  --cor-texto-suave: #5C6B62;
-  --cor-linha: #E8E2D9;
-  --cor-primario: #1E6B4E;
-  --cor-primario-hover: #175A40;
-  --cor-primario-light: #e8f5ee;
-  --cor-acao: #FF6B2C;
-  --cor-acao-hover: #E55A1F;
-  --cor-acao-light: #fff0e9;
-  --cor-proteina: #E85D4A;
-  --cor-carbo: #F2A93B;
-  --cor-gordura: #7C6FDE;
+  --cor-tinta: #0F172A;
+  --cor-texto-suave: #64748B;
+  --cor-linha: #E2E8F0;
+  --cor-primario: #10B981;
+  --cor-primario-hover: #059669;
+  --cor-primario-light: #D1FAE5;
+  --cor-acao: #F97316;
+  --cor-acao-hover: #EA580C;
+  --cor-acao-light: #FFEDD5;
+  --cor-proteina: #EF4444;
+  --cor-carbo: #F59E0B;
+  --cor-gordura: #8B5CF6;
 
   /* Gradientes */
-  --grad-primario: linear-gradient(135deg, #1E6B4E 0%, #2a9d6e 100%);
-  --grad-acao: linear-gradient(135deg, #FF6B2C 0%, #ff8f5c 100%);
-  --grad-hero: linear-gradient(160deg, #FAF7F2 0%, #f0ede6 40%, #e8f5ee 100%);
-  --grad-dark: linear-gradient(160deg, #152B20 0%, #1a3d2e 50%, #0f2018 100%);
-  --grad-glass: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.6) 100%);
-  --grad-card: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(250,247,242,0.5) 100%);
+  --grad-primario: linear-gradient(135deg, #10B981 0%, #059669 100%);
+  --grad-acao: linear-gradient(135deg, #F97316 0%, #EA580C 100%);
+  --grad-hero: linear-gradient(160deg, #F8FAFC 0%, #F1F5F9 50%, #D1FAE5 100%);
+  --grad-dark: linear-gradient(160deg, #0F172A 0%, #1E293B 100%);
+  --grad-glass: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.7) 100%);
+  --grad-card: linear-gradient(180deg, #FFFFFF 0%, rgba(248,250,252,0.5) 100%);
 
   /* Tipografia */
   --font-heading: var(--font-sora), 'Sora', system-ui, sans-serif;
@@ -71,13 +71,13 @@
   --radius-full: 9999px;
 
   /* Sombras — mais profundidade */
-  --shadow-sm: 0 1px 3px rgba(21, 43, 32, 0.04), 0 1px 2px rgba(21, 43, 32, 0.03);
-  --shadow-md: 0 4px 16px rgba(21, 43, 32, 0.06), 0 2px 4px rgba(21, 43, 32, 0.04);
-  --shadow-lg: 0 12px 32px rgba(21, 43, 32, 0.08), 0 4px 8px rgba(21, 43, 32, 0.04);
-  --shadow-xl: 0 20px 48px rgba(21, 43, 32, 0.10), 0 8px 16px rgba(21, 43, 32, 0.05);
-  --shadow-2xl: 0 32px 64px rgba(21, 43, 32, 0.14), 0 12px 24px rgba(21, 43, 32, 0.06);
-  --shadow-glow-green: 0 0 40px rgba(30, 107, 78, 0.15);
-  --shadow-glow-orange: 0 0 40px rgba(255, 107, 44, 0.15);
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.08), 0 2px 4px -2px rgba(15, 23, 42, 0.04);
+  --shadow-lg: 0 10px 25px -3px rgba(15, 23, 42, 0.08), 0 4px 6px -4px rgba(15, 23, 42, 0.04);
+  --shadow-xl: 0 20px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+  --shadow-2xl: 0 25px 50px -12px rgba(15, 23, 42, 0.15);
+  --shadow-glow-green: 0 0 40px rgba(16, 185, 129, 0.3);
+  --shadow-glow-orange: 0 0 40px rgba(249, 115, 22, 0.3);
 
   /* Transições */
   --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);

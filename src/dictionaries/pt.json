@@ -22,7 +22,9 @@
     "tools": "Ferramentas",
     "tmbCalculator": "Calculadora TMB",
     "deficitCalculator": "Calculadora Déficit Calórico",
-    "caloriesCalculator": "Calculadora de Calorias"
+    "caloriesCalculator": "Calculadora de Calorias",
+    "imcCalculator": "Calculadora de IMC",
+    "macrosCalculator": "Calculadora de Macros"
   },
   "home": {
     "meta": {
@@ -207,6 +209,14 @@
       "calories": {
         "name": "Calculadora de Calorias Diárias",
         "desc": "Descubra quantas calorias comer para emagrecer, manter ou ganhar massa."
+      },
+      "imc": {
+        "name": "Calculadora de IMC",
+        "desc": "Calcule seu Índice de Massa Corporal e veja sua faixa da OMS."
+      },
+      "macros": {
+        "name": "Calculadora de Macros",
+        "desc": "Divida suas calorias em proteína, gordura e carboidrato."
       }
     },
     "seo": {
@@ -300,6 +310,14 @@
       "calories": {
         "name": "Calculadora de Calorias Diárias",
         "desc": "Descubra quantas calorias comer para emagrecer, manter ou ganhar massa."
+      },
+      "imc": {
+        "name": "Calculadora de IMC",
+        "desc": "Calcule seu Índice de Massa Corporal e veja sua faixa da OMS."
+      },
+      "macros": {
+        "name": "Calculadora de Macros",
+        "desc": "Divida suas calorias em proteína, gordura e carboidrato."
       }
     },
     "seo": {
@@ -391,6 +409,14 @@
       "deficit": {
         "name": "Calculadora de Déficit Calórico",
         "desc": "Descubra quantas calorias comer para emagrecer no seu ritmo."
+      },
+      "imc": {
+        "name": "Calculadora de IMC",
+        "desc": "Calcule seu Índice de Massa Corporal e veja sua faixa da OMS."
+      },
+      "macros": {
+        "name": "Calculadora de Macros",
+        "desc": "Divida suas calorias em proteína, gordura e carboidrato."
       }
     },
     "seo": {
@@ -425,6 +451,186 @@
         {
           "question": "A calculadora também serve para crianças e adolescentes?",
           "answer": "Não. Esta calculadora (equação de Mifflin-St Jeor) foi validada apenas para adultos (18 anos ou mais). Crianças e adolescentes estão em fase de crescimento e têm necessidades metabólicas diferentes, necessitando de acompanhamento pediátrico ou de um nutricionista."
+        }
+      ]
+    }
+  },
+  "imcCalculator": {
+    "meta": {
+      "title": "Calculadora de IMC — Índice de Massa Corporal",
+      "description": "Calcule seu IMC grátis, descubra sua classificação na tabela da OMS (baixo peso, normal, sobrepeso ou obesidade) e entenda as limitações do índice."
+    },
+    "h1": "Calculadora de IMC",
+    "subtitle": "Descubra seu Índice de Massa Corporal e a sua classificação de peso segundo a Organização Mundial da Saúde (OMS).",
+    "form": {
+      "heightLabel": "Altura",
+      "heightPlaceholder": "cm",
+      "weightLabel": "Peso",
+      "weightPlaceholder": "kg",
+      "calculate": "Calcular meu IMC"
+    },
+    "result": {
+      "title": "Seu resultado",
+      "imcLabel": "Seu IMC",
+      "classificationLabel": "Classificação (OMS)",
+      "underweight": "Abaixo do peso",
+      "normal": "Peso normal",
+      "overweight": "Sobrepeso",
+      "obesity": "Obesidade",
+      "safetyNote": "Atenção: O IMC é um indicador populacional geral. Ele não distingue massa muscular de gordura, nem avalia a distribuição da gordura corporal. Não substitui, em nenhuma hipótese, a avaliação de um médico ou nutricionista."
+    },
+    "cta": {
+      "title": "Quer acompanhar seu peso e suas metas ao longo do tempo?",
+      "text": "O Nutricalor ajuda você a chegar lá sem complicação. Registre suas refeições com uma foto e acompanhe seus resultados."
+    },
+    "crossLinks": {
+      "title": "Outras calculadoras",
+      "tmb": {
+        "name": "Calculadora de TMB",
+        "desc": "Descubra seu metabolismo basal e gasto calórico total."
+      },
+      "deficit": {
+        "name": "Calculadora de Déficit Calórico",
+        "desc": "Descubra quantas calorias comer para emagrecer no seu ritmo."
+      },
+      "calories": {
+        "name": "Calculadora de Calorias Diárias",
+        "desc": "Descubra quantas calorias comer para emagrecer, manter ou ganhar massa."
+      },
+      "macros": {
+        "name": "Calculadora de Macros",
+        "desc": "Divida suas calorias em proteína, gordura e carboidrato."
+      }
+    },
+    "seo": {
+      "whatIsTitle": "O que é IMC",
+      "whatIsText": "O Índice de Massa Corporal (IMC) é uma fórmula matemática simples, criada no século XIX pelo matemático belga Adolphe Quetelet, que relaciona o peso e a altura de uma pessoa.\n\nA Organização Mundial da Saúde (OMS) utiliza o IMC como padrão internacional para avaliar de forma rápida se uma pessoa adulta está dentro de uma faixa de peso considerada saudável em relação à sua altura, ou se apresenta baixo peso, sobrepeso ou obesidade.",
+      "howToCalcTitle": "Como calcular o IMC",
+      "howToCalcText": "A conta do IMC é bastante simples. Você pega o seu peso (em quilos) e divide pela sua altura (em metros) elevada ao quadrado.\n\nA fórmula oficial é:\n\n• IMC = Peso (kg) ÷ (Altura (m) × Altura (m))\n\nPor exemplo: uma pessoa que pesa 70 kg e tem 1,75 m de altura teria o cálculo: 70 ÷ (1,75 × 1,75) = 70 ÷ 3,06 = 22,8. Essa pessoa estaria na faixa de \"Peso normal\".",
+      "tableTitle": "Tabela de classificação (OMS)",
+      "tableText": "A Organização Mundial da Saúde classifica o IMC adulto (homens e mulheres a partir dos 20 anos) nas seguintes faixas:\n\n• Menos de 18,5: Abaixo do peso\n• Entre 18,5 e 24,9: Peso normal\n• Entre 25,0 e 29,9: Sobrepeso\n• 30,0 ou mais: Obesidade",
+      "limitationsTitle": "Limitações do IMC — por que ele não conta a história toda",
+      "limitationsText": "Embora o IMC seja uma ferramenta epidemiológica útil para avaliar grandes populações, ele possui limitações significativas quando aplicado isoladamente na avaliação individual de saúde:\n\n1. Não diferencia músculo de gordura: O músculo é mais denso que a gordura. Atletas e pessoas muito musculosas frequentemente têm um IMC que os classifica como em \"sobrepeso\" ou \"obesidade\", mesmo tendo percentuais de gordura corporal muito baixos e excelente saúde cardiovascular.\n2. Não avalia a distribuição da gordura: A gordura visceral (acumulada na região do abdômen, entre os órgãos) é muito mais perigosa para a saúde metabólica do que a gordura subcutânea (acumulada nos quadris e coxas). Duas pessoas com o mesmo IMC podem ter perfis de risco cardiovascular completamente diferentes.\n3. Não considera as diferenças de idade e etnia: As tabelas padrão não são ideais para idosos (que naturalmente perdem massa muscular e óssea) nem para gestantes. Algumas populações, como a asiática, apresentam riscos metabólicos com IMCs mais baixos do que o ponto de corte padrão."
+    },
+    "faq": {
+      "title": "Perguntas frequentes",
+      "items": [
+        {
+          "question": "O IMC serve para crianças?",
+          "answer": "O cálculo do IMC para crianças e adolescentes (até 19 anos) usa a mesma fórmula, mas a classificação é diferente. Como eles estão em fase de crescimento, o resultado deve ser comparado em tabelas e gráficos específicos (percentis) da OMS, divididos por idade e sexo. Esta calculadora foi feita para adultos."
+        },
+        {
+          "question": "O IMC é diferente para homens e mulheres?",
+          "answer": "Não. Para a classificação oficial da Organização Mundial da Saúde em adultos, a tabela e os pontos de corte são os mesmos para homens e mulheres."
+        },
+        {
+          "question": "Meu IMC deu sobrepeso, e agora?",
+          "answer": "O IMC é apenas um indicativo. Ter o IMC na faixa de sobrepeso não significa, automaticamente, que você está doente. Avalie outros fatores de saúde, como percentual de gordura corporal, circunferência abdominal e exames de sangue. Consulte um profissional para uma avaliação completa."
+        },
+        {
+          "question": "O que é mais importante: o IMC ou a porcentagem de gordura corporal?",
+          "answer": "A porcentagem de gordura corporal é um indicador de saúde muito mais preciso, pois revela a real composição do seu corpo (massa magra vs. massa gorda). O IMC é usado porque é muito mais fácil e barato de calcular do que fazer exames precisos de composição corporal, como DEXA scan ou bioimpedância."
+        }
+      ]
+    }
+  },
+  "macrosCalculator": {
+    "meta": {
+      "title": "Calculadora de Macros — Carboidratos, Proteínas e Gorduras",
+      "description": "Calcule seus macros diários para emagrecer ou ganhar massa muscular. Descubra quantos gramas de proteína, gordura e carboidrato você deve comer por dia. Grátis."
+    },
+    "h1": "Calculadora de Macros",
+    "subtitle": "Descubra a quantidade ideal de proteínas, gorduras e carboidratos que você deve consumir diariamente para atingir seu objetivo corporal.",
+    "form": {
+      "sexLabel": "Sexo biológico",
+      "male": "Masculino",
+      "female": "Feminino",
+      "ageLabel": "Idade",
+      "agePlaceholder": "anos",
+      "heightLabel": "Altura",
+      "heightPlaceholder": "cm",
+      "weightLabel": "Peso",
+      "weightPlaceholder": "kg",
+      "activityLabel": "Nível de atividade",
+      "sedentary": "Sedentário (pouco ou nenhum exercício)",
+      "light": "Leve (exercício 1–3 dias/semana)",
+      "moderate": "Moderado (exercício 3–5 dias/semana)",
+      "intense": "Intenso (exercício 6–7 dias/semana)",
+      "goalLabel": "Objetivo",
+      "goalLose": "Emagrecer",
+      "goalMaintain": "Manter o peso",
+      "goalGain": "Ganhar massa",
+      "calculate": "Calcular meus macros"
+    },
+    "result": {
+      "title": "Seus macros diários",
+      "targetLabel": "Meta Calórica",
+      "targetDesc": "O total diário de calorias",
+      "proteinLabel": "Proteína",
+      "proteinDesc": "1.8g por kg de peso corporal",
+      "fatLabel": "Gordura",
+      "fatDesc": "25% das calorias totais",
+      "carbsLabel": "Carboidrato",
+      "carbsDesc": "Calorias restantes",
+      "gramUnit": "g",
+      "kcalUnit": "kcal",
+      "safetyNote": "Sua meta calórica para emagrecimento usou o piso de segurança de {floor} kcal/dia. Os macros foram ajustados proporcionalmente."
+    },
+    "cta": {
+      "title": "Saber seus macros é fácil. Difícil é acompanhar a cada refeição.",
+      "text": "O Nutricalor faz isso por foto. Tire uma foto do prato e veja as proteínas, gorduras e carboidratos contabilizados no seu dia."
+    },
+    "crossLinks": {
+      "title": "Outras calculadoras",
+      "tmb": {
+        "name": "Calculadora de TMB",
+        "desc": "Descubra seu metabolismo basal e gasto calórico total."
+      },
+      "deficit": {
+        "name": "Calculadora de Déficit Calórico",
+        "desc": "Descubra quantas calorias comer para emagrecer no seu ritmo."
+      },
+      "calories": {
+        "name": "Calculadora de Calorias Diárias",
+        "desc": "Descubra quantas calorias comer para emagrecer, manter ou ganhar massa."
+      },
+      "imc": {
+        "name": "Calculadora de IMC",
+        "desc": "Calcule seu Índice de Massa Corporal e veja sua faixa da OMS."
+      }
+    },
+    "seo": {
+      "whatIsTitle": "O que são macronutrientes",
+      "whatIsText": "Macronutrientes, ou \"macros\", são os três principais componentes da alimentação que fornecem energia ao corpo: proteínas, carboidratos e gorduras. Enquanto as vitaminas e minerais (micronutrientes) são necessários em pequenas quantidades, os macros são necessários em grandes quantidades (gramas) todos os dias.\n\nCada macro desempenha um papel essencial:\n\n• Proteínas: São os tijolos do corpo. Essenciais para construir e reparar tecidos (incluindo músculos), produzir enzimas e hormônios, e dar suporte ao sistema imunológico. (Fornecem ~4 kcal por grama).\n• Gorduras (Lipídios): Fundamentais para a saúde hormonal, absorção de vitaminas lipossolúveis (A, D, E e K), proteção dos órgãos e reserva de energia de longo prazo. (Fornecem ~9 kcal por grama).\n• Carboidratos: A fonte de energia preferida e mais rápida do corpo e do cérebro. (Fornecem ~4 kcal por grama).",
+      "howToCalcTitle": "Como calcular seus macros",
+      "howToCalcText": "A divisão dos macros nesta calculadora segue um padrão baseado em evidências para otimização da composição corporal (perder gordura mantendo músculo, ou ganhar massa limpa):\n\n1. Primeiro, definimos as calorias totais com base na sua TMB, fator de atividade e objetivo (emagrecer, manter ou ganhar).\n2. Proteína: Fixamos em ~1,8 gramas por quilograma de peso corporal. Essa é a quantidade considerada ideal por diversos estudos para maximizar a síntese proteica, seja em déficit calórico ou hipertrofia.\n3. Gordura: Reservamos cerca de 25% das calorias totais diárias para as gorduras. Essa quantidade é suficiente para manter a produção hormonal saudável.\n4. Carboidratos: O restante das calorias é alocado para os carboidratos. Eles fornecerão a energia necessária para os treinos e o dia a dia.",
+      "proteinCarbFatTitle": "Proteína, carbo e gordura: quanto de cada",
+      "proteinCarbFatText": "Embora a calculadora forneça um ponto de partida excelente, a distribuição ideal pode variar dependendo das suas preferências alimentares, genética e tipo de treinamento.\n\nAtletas de endurance (corrida, ciclismo) podem precisar de uma proporção maior de carboidratos, reduzindo levemente as gorduras ou proteínas. Pessoas com resistência à insulina ou que preferem dietas mais ricas em gorduras podem diminuir os carboidratos e aumentar as gorduras.\n\nA regra principal é: bata a meta de calorias e, para melhorar a composição do corpo, bata a meta de proteínas. A proporção exata entre gorduras e carboidratos é menos rígida e pode ser adaptada ao que você se sente melhor seguindo.",
+      "goalChangesTitle": "Como os macros mudam conforme o objetivo",
+      "goalChangesText": "A beleza de calcular os macros está na flexibilidade. O seu peso dita a proteína, mas as suas calorias totais — que ditam os carboidratos e gorduras — mudam conforme o objetivo.\n\n• Emagrecer: A proteína permanece alta (crucial para não perder massa muscular), mas os carboidratos e gorduras caem para gerar o déficit calórico.\n• Ganhar Massa: Você come mais calorias no total. A proteína continua suficiente (1,8 a 2,0g/kg), mas os carboidratos aumentam significativamente para fornecer energia extra para treinos intensos e construir tecido novo."
+    },
+    "faq": {
+      "title": "Perguntas frequentes",
+      "items": [
+        {
+          "question": "Devo ser exato e bater os macros grama por grama todos os dias?",
+          "answer": "Não. É praticamente impossível ser perfeitamente exato. Foque em acertar as calorias totais com uma margem de erro (± 5-10%) e em ingerir proteína suficiente. Se em um dia você comer um pouco mais de carboidrato e um pouco menos de gordura, não há problema, desde que as calorias estejam dentro do limite."
+        },
+        {
+          "question": "A gordura não vai me fazer engordar?",
+          "answer": "Não. O que faz engordar é o excesso calórico total. As gorduras alimentares (azeite, abacate, castanhas) são essenciais para a sua saúde e para a produção de hormônios como a testosterona. O cuidado deve ser apenas com a quantidade, já que a gordura tem mais do dobro de calorias (9 kcal/g) do que a proteína e o carboidrato (4 kcal/g)."
+        },
+        {
+          "question": "Posso cortar os carboidratos completamente?",
+          "answer": "O corpo humano pode sobreviver sem carboidratos (usando um processo chamado cetogênese), mas a maioria das pessoas se sente muito melhor, tem mais energia nos treinos e adere melhor à dieta quando consome carboidratos adequadamente. Cortar completamente é desnecessário para o emagrecimento."
+        },
+        {
+          "question": "Qual é o macro mais importante para quem treina musculação?",
+          "answer": "A proteína. Sem ela, o corpo não consegue reparar os microdanos causados pelo treino e construir novas fibras musculares. No entanto, os carboidratos vêm em segundo lugar, pois fornecem o combustível necessário para treinar pesado."
+        },
+        {
+          "question": "Como contar macros de forma prática no dia a dia?",
+          "answer": "Usando a tecnologia a seu favor. Com o Nutricalor, em vez de pesar tudo na balança e registrar cada grama, você apenas fotografa o prato. A inteligência artificial estima os macros de acordo com a comida que está lá, tornando o acompanhamento algo fácil e sustentável a longo prazo."
         }
       ]
     }
