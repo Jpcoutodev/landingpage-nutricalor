@@ -16,7 +16,7 @@ export const APP_STATUS: 'coming-soon' | 'available' = 'coming-soon'
 export const SITE_URL = 'https://nutricalor.app'
 
 /** E-mail de contato */
-export const CONTACT_EMAIL = 'contato@nutricalor.app'
+export const CONTACT_EMAIL = 'coutodev7@gmail.com'
 
 /** Nome do app */
 export const APP_NAME = 'Nutricalor'
