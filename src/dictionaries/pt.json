@@ -638,5 +638,17 @@
         }
       ]
     }
+  },
+  "privacy": {
+    "meta": {
+      "title": "Política de Privacidade — Nutricalor",
+      "description": "Saiba como o Nutricalor coleta, usa e protege seus dados pessoais. Conheça seus direitos segundo a LGPD."
+    }
+  },
+  "terms": {
+    "meta": {
+      "title": "Termos de Uso — Nutricalor",
+      "description": "Leia os Termos de Uso do Nutricalor. Entenda as condições para utilizar o aplicativo de contagem de calorias por foto."
+    }
   }
 }
