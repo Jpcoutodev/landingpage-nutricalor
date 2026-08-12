@@ -5,36 +5,35 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import AppCTA from './AppCTA'
 import Logo from './Logo'
+import LanguageSwitcher from './LanguageSwitcher'
 import { IconChevronDown } from './icons'
+import { CALCULATOR_KEYS, homePath, pathFor, type Locale } from '@/lib/routes'
+import type { CommonDict, NavDict } from '@/dictionaries/types'
 import styles from './Header.module.css'
 
 type HeaderProps = {
-  dict: {
-    home: string
-    howItWorks: string
-    contact: string
-    calculators?: string
-    tmbCalculator?: string
-    deficitCalculator?: string
-    caloriesCalculator?: string
-    imcCalculator?: string
-    macrosCalculator?: string
-  }
-  ctaDict: {
-    comingSoon: string
-    available: string
-    googlePlay: string
-  }
+  locale: Locale
+  dict: NavDict
+  ctaDict: CommonDict
 }
 
-export default function Header({ dict, ctaDict }: HeaderProps) {
+/** Rótulo de cada calculadora no menu, na ordem do registro de rotas. */
+const CALCULATOR_LABEL = {
+  tmbCalculator: 'tmbCalculator',
+  deficitCalculator: 'deficitCalculator',
+  caloriesCalculator: 'caloriesCalculator',
+  imcCalculator: 'imcCalculator',
+  macrosCalculator: 'macrosCalculator',
+} as const satisfies Record<(typeof CALCULATOR_KEYS)[number], keyof NavDict>
+
+export default function Header({ locale, dict, ctaDict }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isDropdownOpen, setIsDropdownOpen] = useState(false)
   const pathname = usePathname()
-  
-  const locale = pathname.split('/')[1] || 'pt'
-  const isHome = pathname === `/${locale}` || pathname === '/'
+
+  const isHome = pathname === homePath(locale)
+  const currentSlug = pathname.split('/').filter(Boolean)[1]
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 12)
@@ -58,120 +57,87 @@ export default function Header({ dict, ctaDict }: HeaderProps) {
     setIsDropdownOpen(false)
   }
 
+  const isCurrent = (slug: string) => currentSlug === slug
+  const isCalculatorPage = CALCULATOR_KEYS.some((key) => isCurrent(pathFor(key, locale).split('/')[2]))
+
   return (
     <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
       <div className={`container ${styles.inner}`}>
-        <Link href={`/${locale}`} className={styles.logo} onClick={closeMenu}>
+        <Link href={homePath(locale)} className={styles.logo} onClick={closeMenu}>
           <Logo className={styles.logoIcon} size={28} />
           <span className={styles.logoText}>Nutricalor</span>
         </Link>
 
-        {/* Navigation */}
         <nav
           className={`${styles.nav} ${isMobileMenuOpen ? styles.navOpen : ''}`}
-          aria-label="Menu principal"
+          aria-label={dict.mainMenu}
         >
           <ul className={styles.navList}>
             <li className={styles.navItemMobileOnly}>
               <Link
-                href={`/${locale}`}
+                href={homePath(locale)}
                 onClick={closeMenu}
                 className={`${styles.navLink} ${isHome ? styles.active : ''}`}
               >
                 {dict.home}
               </Link>
             </li>
+
             <li className={styles.navItem}>
               <Link
-                href={`/${locale}/como-funciona`}
+                href={pathFor('howItWorks', locale)}
                 onClick={closeMenu}
-                className={`${styles.navLink} ${pathname.includes('/como-funciona') ? styles.active : ''}`}
+                className={`${styles.navLink} ${
+                  isCurrent(pathFor('howItWorks', locale).split('/')[2]) ? styles.active : ''
+                }`}
               >
                 {dict.howItWorks}
               </Link>
             </li>
 
-            {/* Calculators Dropdown */}
-            {dict.calculators && (
-              <li 
-                className={styles.navItem} 
-                onMouseEnter={() => setIsDropdownOpen(true)}
-                onMouseLeave={() => setIsDropdownOpen(false)}
+            <li
+              className={styles.navItem}
+              onMouseEnter={() => setIsDropdownOpen(true)}
+              onMouseLeave={() => setIsDropdownOpen(false)}
+            >
+              <button
+                className={`${styles.navLink} ${styles.dropdownTrigger} ${
+                  isCalculatorPage ? styles.active : ''
+                }`}
+                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                aria-expanded={isDropdownOpen}
               >
-                <button 
-                  className={`${styles.navLink} ${styles.dropdownTrigger} ${pathname.includes('/calculadora-') ? styles.active : ''}`}
-                  onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                  aria-expanded={isDropdownOpen}
-                >
-                  {dict.calculators}
-                  <IconChevronDown size={14} className={styles.chevron} />
-                </button>
-                
-                <ul className={`${styles.dropdownMenu} ${isDropdownOpen ? styles.dropdownOpen : ''}`}>
-                  {dict.tmbCalculator && (
-                    <li>
+                {dict.calculators}
+                <IconChevronDown size={14} className={styles.chevron} />
+              </button>
+
+              <ul className={`${styles.dropdownMenu} ${isDropdownOpen ? styles.dropdownOpen : ''}`}>
+                {CALCULATOR_KEYS.map((key) => {
+                  const href = pathFor(key, locale)
+                  return (
+                    <li key={key}>
                       <Link
-                        href={`/${locale}/calculadora-tmb`}
+                        href={href}
                         onClick={closeMenu}
-                        className={`${styles.dropdownLink} ${pathname.includes('/calculadora-tmb') ? styles.active : ''}`}
+                        className={`${styles.dropdownLink} ${
+                          isCurrent(href.split('/')[2]) ? styles.active : ''
+                        }`}
                       >
-                        {dict.tmbCalculator}
+                        {dict[CALCULATOR_LABEL[key]]}
                       </Link>
                     </li>
-                  )}
-                  {dict.deficitCalculator && (
-                    <li>
-                      <Link
-                        href={`/${locale}/calculadora-deficit-calorico`}
-                        onClick={closeMenu}
-                        className={`${styles.dropdownLink} ${pathname.includes('/calculadora-deficit') ? styles.active : ''}`}
-                      >
-                        {dict.deficitCalculator}
-                      </Link>
-                    </li>
-                  )}
-                  {dict.caloriesCalculator && (
-                    <li>
-                      <Link
-                        href={`/${locale}/calculadora-calorias`}
-                        onClick={closeMenu}
-                        className={`${styles.dropdownLink} ${pathname.includes('/calculadora-calorias') ? styles.active : ''}`}
-                      >
-                        {dict.caloriesCalculator}
-                      </Link>
-                    </li>
-                  )}
-                  {dict.imcCalculator && (
-                    <li>
-                      <Link
-                        href={`/${locale}/calculadora-imc`}
-                        onClick={closeMenu}
-                        className={`${styles.dropdownLink} ${pathname.includes('/calculadora-imc') ? styles.active : ''}`}
-                      >
-                        {dict.imcCalculator}
-                      </Link>
-                    </li>
-                  )}
-                  {dict.macrosCalculator && (
-                    <li>
-                      <Link
-                        href={`/${locale}/calculadora-macros`}
-                        onClick={closeMenu}
-                        className={`${styles.dropdownLink} ${pathname.includes('/calculadora-macros') ? styles.active : ''}`}
-                      >
-                        {dict.macrosCalculator}
-                      </Link>
-                    </li>
-                  )}
-                </ul>
-              </li>
-            )}
+                  )
+                })}
+              </ul>
+            </li>
 
             <li className={styles.navItem}>
               <Link
-                href={`/${locale}/contato`}
+                href={pathFor('contact', locale)}
                 onClick={closeMenu}
-                className={`${styles.navLink} ${pathname.includes('/contato') ? styles.active : ''}`}
+                className={`${styles.navLink} ${
+                  isCurrent(pathFor('contact', locale).split('/')[2]) ? styles.active : ''
+                }`}
               >
                 {dict.contact}
               </Link>
@@ -179,8 +145,9 @@ export default function Header({ dict, ctaDict }: HeaderProps) {
           </ul>
         </nav>
 
-        {/* Actions */}
         <div className={styles.actions}>
+          <LanguageSwitcher locale={locale} onNavigate={closeMenu} />
+
           <div className={styles.ctaWrapper}>
             <AppCTA variant="header" dict={ctaDict} />
           </div>
@@ -189,7 +156,7 @@ export default function Header({ dict, ctaDict }: HeaderProps) {
             className={`${styles.menuButton} ${isMobileMenuOpen ? styles.menuOpen : ''}`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-expanded={isMobileMenuOpen}
-            aria-label="Abrir menu"
+            aria-label={dict.menu}
           >
             <span className={styles.menuLine} />
             <span className={styles.menuLine} />
@@ -200,4 +167,3 @@ export default function Header({ dict, ctaDict }: HeaderProps) {
     </header>
   )
 }
-

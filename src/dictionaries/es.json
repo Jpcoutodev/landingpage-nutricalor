@@ -1,0 +1,989 @@
+{
+  "common": {
+    "appName": "Nutricalor",
+    "skipToContent": "Saltar al contenido",
+    "comingSoon": "Muy pronto en",
+    "available": "Disponible en",
+    "googlePlay": "Google Play"
+  },
+  "nav": {
+    "home": "Inicio",
+    "howItWorks": "Cómo funciona",
+    "contact": "Contacto",
+    "calculators": "Calculadoras",
+    "tmbCalculator": "Calculadora de TMB",
+    "deficitCalculator": "Déficit Calórico",
+    "caloriesCalculator": "Calorías Diarias",
+    "imcCalculator": "Calculadora de IMC",
+    "macrosCalculator": "Calculadora de Macros",
+    "mainMenu": "Menú principal",
+    "menu": "Abrir menú"
+  },
+  "footer": {
+    "tagline": "Calorías con una foto. Fotografía tu plato y olvídate de la planilla.",
+    "navLabel": "Pie de página",
+    "legal": "Legal",
+    "privacy": "Privacidad",
+    "terms": "Términos de Uso",
+    "contact": "Contacto",
+    "contactForm": "Formulario",
+    "tools": "Herramientas",
+    "tmbCalculator": "Calculadora de TMB",
+    "deficitCalculator": "Calculadora de Déficit Calórico",
+    "caloriesCalculator": "Calculadora de Calorías Diarias",
+    "imcCalculator": "Calculadora de IMC",
+    "macrosCalculator": "Calculadora de Macros",
+    "rights": "Todos los derechos reservados.",
+    "madeIn": "Conteo por foto"
+  },
+  "home": {
+    "meta": {
+      "title": "Nutricalor — Contador de Calorías por Foto: Calorías y Macros al Instante",
+      "description": "Toma una foto de tu plato y obtén calorías y macros en segundos. Un contador de calorías con IA que lee comida casera de verdad, no solo códigos de barras. Ya en Google Play."
+    },
+    "hero": {
+      "pill": "Conteo de calorías con IA, desde una foto",
+      "titlePart1": "Una foto.",
+      "titlePart2": "Contado.",
+      "subtitle": "Calorías y macros de tu plato en segundos. Apunta la cámara y Nutricalor hace el resto: sin pesar, sin buscar, sin escribir.",
+      "photoLabel": "Plato del día",
+      "protein": "Proteína",
+      "carbs": "Carbos",
+      "fat": "Grasa",
+      "food1": "Arroz blanco",
+      "food2": "Frijoles negros",
+      "food3": "Pollo a la plancha",
+      "badge1": "La IA encontró 3 alimentos",
+      "secondaryCta": "Ver cómo funciona",
+      "scanLabel": "Analizando plato",
+      "readoutLabel": "Resultado",
+      "stats": [
+        {
+          "value": "~2s",
+          "label": "por análisis"
+        },
+        {
+          "value": "7 días",
+          "label": "gratis, sin tarjeta"
+        },
+        {
+          "value": "IA",
+          "label": "lee el plato entero"
+        }
+      ]
+    },
+    "ticker": {
+      "label": "Reconoce",
+      "items": [
+        "arroz con frijoles",
+        "pollo a la plancha",
+        "pasta",
+        "salteado de verduras",
+        "huevos revueltos",
+        "pan con mantequilla",
+        "ensalada mixta",
+        "papas al horno",
+        "guiso de carne",
+        "pescado a la plancha",
+        "bowl de proteína",
+        "avena",
+        "sopa de lentejas",
+        "sándwiches",
+        "las sobras de ayer",
+        "tu vianda"
+      ]
+    },
+    "steps": {
+      "badge": "Cómo funciona",
+      "title": "Tres pasos. Una foto.",
+      "subtitle": "Sin planilla, sin buscar en tablas, sin escribir. Solo apunta y listo.",
+      "items": [
+        {
+          "title": "Fotografía tu plato",
+          "description": "Basta una foto. Comida casera, delivery, la vianda del trabajo, un snack: Nutricalor fue hecho para leer un plato completo, no solo un código de barras."
+        },
+        {
+          "title": "La IA lo identifica",
+          "description": "En segundos ves los alimentos, las porciones estimadas, las calorías y los macros."
+        },
+        {
+          "title": "Ajusta y listo",
+          "description": "¿Corregiste una porción, agregaste algo? Tú tienes la última palabra. El registro queda guardado en tu día."
+        }
+      ]
+    },
+    "features": {
+      "badge": "Por qué Nutricalor",
+      "title": "Distinto a propósito.",
+      "subtitle": "La mayoría de las apps de calorías se diseñaron alrededor de productos envasados. Esta empieza por el plato.",
+      "items": [
+        {
+          "title": "Hecho para platos de verdad",
+          "description": "Los escáneres de código de barras se quedan cortos apenas cocinas. Nutricalor lee un plato de comida tal como lo comes: mezclado, servido y sin etiqueta."
+        },
+        {
+          "title": "Entiende cómo hablas",
+          "description": "Describe tu comida en lenguaje natural y la app la interpreta. Sin sintaxis rígida de base de datos, sin buscar la entrada exacta que cargó otra persona."
+        },
+        {
+          "title": "Una prueba gratis de verdad",
+          "description": "Prueba todas las funciones por 7 días sin costo y sin registrar tarjeta de crédito. Sin cobro sorpresa, sin letra chica."
+        }
+      ]
+    },
+    "cta": {
+      "eyebrow": "Ya disponible",
+      "titlePart1": "Empieza a contar",
+      "titlePart2": "sin contar.",
+      "subtitle": "Nutricalor ya está en Google Play. Registra una comida en lo que tardas en tomar una foto."
+    }
+  },
+  "howItWorks": {
+    "meta": {
+      "title": "Cómo funciona Nutricalor — calorías con una foto",
+      "description": "Apunta la cámara, la IA identifica la comida y tú ajustas. Mira cómo Nutricalor registra una comida en lo que tardas en tomar una foto."
+    },
+    "title": "Cómo funciona",
+    "lead": "Contar calorías siempre fue tedioso: pesar, buscar en listas, escribir. Nutricalor cambia todo eso por una foto. Así funciona.",
+    "section1": {
+      "title": "El registro por foto",
+      "text": "Apunta la cámara a tu plato y toma la foto. Nutricalor analiza la imagen, identifica cada alimento y estima la porción. Obtienes calorías y macronutrientes (proteína, carbohidratos y grasa) al instante. Sin planilla, sin búsquedas tediosas."
+    },
+    "section2": {
+      "title": "Tú tienes el control",
+      "text": "La inteligencia artificial sugiere; tú decides. Ajusta la porción, agrega el acompañamiento que quedó afuera, quita lo que no comiste. El número final siempre es tuyo."
+    },
+    "section3": {
+      "title": "Más de una forma de registrar",
+      "text": "No siempre se puede tomar una foto. Por eso Nutricalor también acepta:",
+      "methods": [
+        {
+          "title": "Texto",
+          "description": "describe lo que comiste (\"pollo a la plancha con arroz y frijoles\") y deja que la app lo interprete."
+        },
+        {
+          "title": "Código de barras",
+          "description": "para productos envasados, con un toque basta."
+        },
+        {
+          "title": "Búsqueda manual",
+          "description": "encuentra el alimento en la base y regístralo."
+        },
+        {
+          "title": "Memoria de comidas",
+          "description": "lo que comes siempre vuelve con un solo toque."
+        }
+      ]
+    },
+    "section4": {
+      "title": "Tu meta, a tu manera",
+      "text": "Al empezar, Nutricalor calcula tu meta diaria de calorías según tu objetivo: bajar de peso, mantener o ganar masa. Revisa el panel para ver de un vistazo si cumpliste la meta del día."
+    },
+    "section5": {
+      "title": "Una nota honesta",
+      "text": "Nutricalor entrega estimaciones, no mediciones de laboratorio. Ninguna app de fotos acierta gramo por gramo, y quien promete eso está mintiendo. Lo que ofrecemos es rapidez y consistencia para que entiendas tus hábitos y avances. Nutricalor no reemplaza la orientación de un nutricionista o un médico."
+    }
+  },
+  "contact": {
+    "meta": {
+      "title": "Contacto",
+      "description": "Ponte en contacto con Nutricalor. Dudas, sugerencias o problemas: te escuchamos."
+    },
+    "title": "Habla con nosotros",
+    "description": "¿Una duda, una sugerencia o un problema? Escríbenos. Leemos todo: Nutricalor se construye escuchando a quienes lo usan."
+  },
+  "privacy": {
+    "meta": {
+      "title": "Política de Privacidad",
+      "description": "Cómo Nutricalor trata tus datos. Tus fotos de comida se procesan y luego se descartan."
+    },
+    "title": "Política de Privacidad",
+    "lastUpdatedLabel": "Última actualización",
+    "lastUpdatedDate": "2026-07-03",
+    "lastUpdatedText": "3 de julio de 2026",
+    "reviewNotice": "Este texto es un borrador estructurado y aún requiere revisión jurídica antes de su publicación definitiva. Nutricalor se opera desde Brasil, por lo que esta política está redactada conforme a la ley brasileña de protección de datos (LGPD); si usas el servicio desde otro país, tus derechos locales pueden ser distintos.",
+    "sections": [
+      {
+        "title": "Quiénes somos",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "{app} ([razón social / responsable — por completar]) es el controlador de los datos personales tratados en esta aplicación y sitio web. Para cualquier consulta sobre datos personales, escríbenos a {email}."
+          }
+        ]
+      },
+      {
+        "title": "Datos que recopilamos",
+        "blocks": [
+          {
+            "type": "ul",
+            "items": [
+              "**Datos de cuenta:** correo electrónico y autenticación con Google.",
+              "**Datos que tú ingresas:** sexo, edad, estatura, peso, objetivo y nivel de actividad física.",
+              "**Registros de comidas:** alimentos registrados, porciones y valores nutricionales.",
+              "**Registros de peso:** historial de pesajes.",
+              "**Datos de uso:** información sobre cómo interactúas con la app (funciones utilizadas, frecuencia)."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Fotos de las comidas",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Las imágenes que tomas se procesan para identificar los alimentos y **se descartan enseguida**. No almacenamos tus fotos de comida de forma predeterminada."
+          }
+        ]
+      },
+      {
+        "title": "Finalidad del tratamiento",
+        "blocks": [
+          {
+            "type": "ul",
+            "items": [
+              "Calcular tu meta diaria de calorías y macronutrientes.",
+              "Registrar tus comidas y mostrar tu progreso.",
+              "Mejorar la precisión del servicio y la experiencia de uso.",
+              "Comunicar actualizaciones relevantes sobre el servicio."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Base legal (LGPD)",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "El tratamiento de tus datos personales se realiza con base en tu **consentimiento** y en la **ejecución del servicio** que contrataste, conforme a la Ley General de Protección de Datos de Brasil (Ley n.º 13.709/2018)."
+          }
+        ]
+      },
+      {
+        "title": "Compartición y transferencia internacional",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Utilizamos servicios de terceros para el procesamiento de imágenes con inteligencia artificial e infraestructura en la nube. Esos servicios pueden tratar datos fuera de Brasil. Aplicamos salvaguardas adecuadas para proteger tus datos en esas transferencias, conforme a la LGPD."
+          }
+        ]
+      },
+      {
+        "title": "Tus derechos",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Conforme a la LGPD, tienes derecho a:"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Acceder a tus datos personales.",
+              "Corregir datos incompletos, inexactos o desactualizados.",
+              "Solicitar la eliminación de tus datos.",
+              "Revocar el consentimiento en cualquier momento.",
+              "Solicitar la portabilidad de los datos a otro proveedor de servicio."
+            ]
+          },
+          {
+            "type": "p",
+            "text": "Para ejercer cualquiera de estos derechos, envía un correo a {email}."
+          }
+        ]
+      },
+      {
+        "title": "Seguridad",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Aplicamos medidas técnicas y organizativas para proteger tus datos, incluyendo acceso restringido y cifrado en tránsito (HTTPS/TLS)."
+          }
+        ]
+      },
+      {
+        "title": "Menores de edad",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "{app} no está dirigido a menores de [edad por definir — p. ej. 13 o 16 años]. No recopilamos datos de menores de forma intencional."
+          }
+        ]
+      },
+      {
+        "title": "Cookies",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "El sitio puede utilizar cookies estrictamente necesarias para su funcionamiento y para el análisis agregado de uso. No usamos cookies con fines publicitarios."
+          }
+        ]
+      },
+      {
+        "title": "Cambios en esta política",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Podemos actualizar esta Política de Privacidad periódicamente. Los cambios relevantes se comunicarán dentro de la aplicación. Recomendamos revisar esta página con cierta frecuencia."
+          }
+        ]
+      }
+    ]
+  },
+  "terms": {
+    "meta": {
+      "title": "Términos de Uso",
+      "description": "Los términos para usar Nutricalor. Estimaciones, no consejo médico."
+    },
+    "title": "Términos de Uso",
+    "lastUpdatedLabel": "Última actualización",
+    "lastUpdatedDate": "2026-07-03",
+    "lastUpdatedText": "3 de julio de 2026",
+    "reviewNotice": "Este texto es un borrador estructurado y aún requiere revisión jurídica antes de su publicación definitiva. Nutricalor se opera desde Brasil y estos términos están redactados conforme a la ley brasileña; si usas el servicio desde otro país, tus derechos como consumidor pueden ser distintos.",
+    "sections": [
+      {
+        "title": "Aceptación",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Al usar {app}, aceptas estos Términos de Uso. Si no estás de acuerdo, no utilices el servicio."
+          }
+        ]
+      },
+      {
+        "title": "El servicio",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "{app} es una herramienta de estimación nutricional que utiliza reconocimiento de fotos con inteligencia artificial y otros métodos de registro (texto, código de barras, búsqueda manual) para ayudarte a llevar un control de tu alimentación."
+          }
+        ]
+      },
+      {
+        "title": "No es consejo médico",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "**{app} entrega estimaciones, no diagnóstico, prescripción ni tratamiento.** Consulta a un profesional de la salud —médico o nutricionista— para decisiones sobre dieta, salud o acondicionamiento físico. {app} no reemplaza la orientación profesional."
+          }
+        ]
+      },
+      {
+        "title": "Precisión",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Las estimaciones de calorías, macronutrientes y porciones son aproximadas y pueden contener errores. Úsalas como referencia para seguir tus hábitos, no como verdad absoluta. Ninguna app de fotos reemplaza una medición de laboratorio."
+          }
+        ]
+      },
+      {
+        "title": "Tu cuenta",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Eres responsable de mantener seguros tus datos de acceso. No compartas tus credenciales. Avísanos de inmediato si sospechas de un uso no autorizado de tu cuenta."
+          }
+        ]
+      },
+      {
+        "title": "Suscripción y pago",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "{app} puede ofrecer planes de suscripción. Los precios, períodos de cobro y condiciones de renovación se muestran con claridad antes de contratar. [Detalles de cobro y cancelación — por definir.]"
+          }
+        ]
+      },
+      {
+        "title": "Uso aceptable",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Al usar {app}, aceptas no utilizarlo con fines ilegales o fraudulentos, ni de ninguna forma que infrinja estos Términos. Nos reservamos el derecho de suspender o cerrar cuentas que incumplan estas condiciones."
+          }
+        ]
+      },
+      {
+        "title": "Limitación de responsabilidad",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "[Cláusula de limitación de responsabilidad — por definir con asesoría jurídica.]"
+          },
+          {
+            "type": "p",
+            "text": "{app} se entrega \"tal cual\", sin garantía de precisión absoluta. No nos responsabilizamos por decisiones tomadas exclusivamente con base en la información que entrega la aplicación."
+          }
+        ]
+      },
+      {
+        "title": "Cambios y contacto",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Podemos actualizar estos Términos periódicamente. Los cambios relevantes se comunicarán dentro de la aplicación. Para dudas o solicitudes, escríbenos a {email}."
+          }
+        ]
+      }
+    ]
+  },
+  "tmbCalculator": {
+    "meta": {
+      "title": "Calculadora de TMB — Tasa Metabólica Basal y Gasto Calórico",
+      "description": "Calcula tu Tasa Metabólica Basal (TMB), tu gasto calórico diario (TDEE) y tu meta de calorías para bajar de peso, mantener o ganar masa. Calculadora gratis con la fórmula Mifflin-St Jeor."
+    },
+    "h1": "Calculadora de TMB",
+    "subtitle": "Descubre cuántas calorías gasta tu cuerpo en reposo, el gasto total con actividad y la meta ideal para tu objetivo.",
+    "form": {
+      "sexLabel": "Sexo biológico",
+      "male": "Masculino",
+      "female": "Femenino",
+      "ageLabel": "Edad",
+      "agePlaceholder": "años",
+      "heightLabel": "Estatura",
+      "heightPlaceholder": "cm",
+      "weightLabel": "Peso",
+      "weightPlaceholder": "kg",
+      "activityLabel": "Nivel de actividad",
+      "sedentary": "Sedentario (poco o ningún ejercicio)",
+      "light": "Ligero (ejercicio 1–3 días/semana)",
+      "moderate": "Moderado (ejercicio 3–5 días/semana)",
+      "intense": "Intenso (ejercicio 6–7 días/semana)",
+      "calculate": "Calcular"
+    },
+    "result": {
+      "title": "Tu resultado",
+      "bmrLabel": "TMB",
+      "bmrDesc": "Metabolismo en reposo",
+      "tdeeLabel": "Gasto diario",
+      "tdeeDesc": "Con actividad física",
+      "loseLabel": "Bajar de peso",
+      "loseDesc": "Déficit del 20%",
+      "maintainLabel": "Mantener",
+      "maintainDesc": "Equilibrio calórico",
+      "gainLabel": "Ganar masa",
+      "gainDesc": "Superávit del 10%",
+      "kcalUnit": "kcal/día",
+      "goalTitle": "Meta calórica por objetivo",
+      "safetyNote": "El valor para bajar de peso nunca baja del piso seguro ({floor} kcal), para evitar dietas demasiado restrictivas."
+    },
+    "cta": {
+      "title": "¿Cansado de hacer los cálculos a mano?",
+      "text": "Nutricalor cuenta las calorías de tu plato con una sola foto: la comida completa, no solo un código de barras."
+    },
+    "crossLinks": {
+      "title": "Otras calculadoras",
+      "items": [
+        {
+          "to": "deficitCalculator",
+          "name": "Calculadora de Déficit Calórico",
+          "desc": "Descubre cuántas calorías comer para bajar de peso a tu ritmo."
+        },
+        {
+          "to": "caloriesCalculator",
+          "name": "Calculadora de Calorías Diarias",
+          "desc": "Descubre cuántas calorías comer para bajar, mantener o ganar masa."
+        },
+        {
+          "to": "imcCalculator",
+          "name": "Calculadora de IMC",
+          "desc": "Calcula tu Índice de Masa Corporal y consulta tu rango según la OMS."
+        },
+        {
+          "to": "macrosCalculator",
+          "name": "Calculadora de Macros",
+          "desc": "Divide tus calorías en proteína, grasa y carbohidratos."
+        }
+      ]
+    },
+    "seo": {
+      "blocks": [
+        {
+          "title": "Qué es la Tasa Metabólica Basal (TMB)",
+          "text": "La Tasa Metabólica Basal, o TMB, es la cantidad mínima de energía que tu cuerpo necesita para mantener sus funciones vitales en reposo absoluto: respiración, circulación sanguínea, regulación de la temperatura, funcionamiento del cerebro y renovación celular. Aunque pasaras el día entero acostado, sin moverte, tu cuerpo seguiría gastando esa energía.\n\nLa TMB representa, en promedio, entre el 60% y el 75% del gasto calórico total diario. Por eso es el punto de partida de cualquier plan de alimentación, ya sea para bajar de peso, mantenerlo o ganar masa. Sin conocer tu TMB, cualquier meta de calorías es una suposición."
+        },
+        {
+          "title": "Cómo se calcula la TMB",
+          "text": "Esta calculadora usa la ecuación de Mifflin-St Jeor, publicada en 1990 y considerada la más precisa entre las fórmulas de estimación populares. Toma en cuenta peso, estatura, edad y sexo biológico:\n\n• Hombre: TMB = 10 × peso (kg) + 6,25 × estatura (cm) − 5 × edad (años) + 5\n• Mujer: TMB = 10 × peso (kg) + 6,25 × estatura (cm) − 5 × edad (años) − 161\n\nLa diferencia entre hombres y mujeres refleja la mayor proporción promedio de masa magra en el cuerpo masculino, que demanda más energía en reposo. La fórmula genera una estimación: para resultados exactos se necesitaría un examen de calorimetría indirecta en laboratorio."
+        },
+        {
+          "title": "TMB, TDEE y gasto calórico: cuál es la diferencia",
+          "text": "Son tres números relacionados, pero distintos:\n\n• TMB (Tasa Metabólica Basal): el gasto del cuerpo en reposo total, sin ningún movimiento.\n• TDEE (Gasto Energético Diario Total): el gasto real considerando todo lo que haces en el día: caminar, trabajar, entrenar. Se calcula multiplicando la TMB por un factor de actividad.\n• Meta calórica: cuánto deberías ingerir para alcanzar un objetivo específico. Para bajar de peso, la meta queda por debajo del TDEE (déficit). Para ganar peso, por encima (superávit).\n\nLa mayoría de las personas confunde la TMB con el TDEE. Si comes solo tu TMB vas a crear un déficit, pero puede no ser saludable según tu nivel de actividad. Por eso la calculadora muestra los tres valores."
+        },
+        {
+          "title": "Qué hacer con este número",
+          "text": "Ahora que tienes la TMB, el TDEE y la meta por objetivo, el siguiente paso es ajustar tu alimentación:\n\n• Bajar de peso: consume menos que tu TDEE (la calculadora sugiere −20%, un déficit moderado y sostenible). Nunca por debajo del piso de seguridad (1.500 kcal para hombres, 1.200 kcal para mujeres) sin acompañamiento profesional.\n• Mantener el peso: come cerca de tu TDEE. Las variaciones de 100 a 200 kcal son normales y esperables.\n• Ganar masa: come por encima del TDEE (+10% es un superávit leve, que favorece la ganancia de masa con menos acumulación de grasa).\n\nRecuerda: estos números son estimaciones. El cuerpo no es una planilla. Úsalos como punto de partida, observa el resultado en la balanza y en el espejo a lo largo de las semanas, y ajusta. Y siempre que puedas, cuenta con la orientación de un nutricionista."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Preguntas frecuentes",
+      "items": [
+        {
+          "question": "¿Cuál es la diferencia entre TMB y TDEE?",
+          "answer": "La TMB es el gasto calórico del cuerpo en reposo absoluto, como si estuvieras acostado todo el día. El TDEE incluye la TMB más la energía gastada en todas las actividades del día (caminar, trabajar, entrenar). El TDEE siempre es mayor que la TMB."
+        },
+        {
+          "question": "¿Cada cuánto debo recalcular mi TMB?",
+          "answer": "Recalcula cada vez que haya un cambio significativo de peso (5 kg o más), en cada cumpleaños (la TMB baja con la edad) o cuando cambie tu nivel de actividad. En la práctica, una vez cada 2 o 3 meses es suficiente para la mayoría."
+        },
+        {
+          "question": "¿La fórmula de Mifflin-St Jeor es precisa?",
+          "answer": "Es la más precisa entre las ecuaciones de estimación populares, con un margen de error cercano al 10% para la mayoría de la población. Para resultados exactos se necesita un examen de calorimetría indirecta. Pero para armar un plan de alimentación inicial es más que suficiente."
+        },
+        {
+          "question": "¿Puedo comer menos que mi TMB para bajar de peso más rápido?",
+          "answer": "No es recomendable. Comer de forma sostenida por debajo de la TMB puede ralentizar el metabolismo y provocar pérdida de masa muscular, fatiga y deficiencias nutricionales. La calculadora ya aplica un piso de seguridad (1.500 kcal para hombres, 1.200 kcal para mujeres) para evitar ese riesgo."
+        },
+        {
+          "question": "¿Cómo contar calorías en la práctica sin pesar todo?",
+          "answer": "Usa una app como Nutricalor: solo fotografía el plato y la inteligencia artificial estima las calorías y los macros en segundos. Es mucho más rápido que pesar ingredientes o buscar en tablas."
+        }
+      ]
+    }
+  },
+  "deficitCalculator": {
+    "meta": {
+      "title": "Calculadora de Déficit Calórico — Cuántas Calorías Comer para Bajar de Peso",
+      "description": "Calcula tu déficit calórico ideal para bajar de peso con seguridad. Descubre tu gasto calórico diario (TDEE), tu meta de calorías y la pérdida de peso estimada por semana. Calculadora gratis."
+    },
+    "h1": "Calculadora de Déficit Calórico",
+    "subtitle": "Descubre cuántas calorías comer por día para bajar de peso a tu ritmo, sin pasar hambre y sin dietas extremas.",
+    "form": {
+      "sexLabel": "Sexo biológico",
+      "male": "Masculino",
+      "female": "Femenino",
+      "ageLabel": "Edad",
+      "agePlaceholder": "años",
+      "heightLabel": "Estatura",
+      "heightPlaceholder": "cm",
+      "weightLabel": "Peso",
+      "weightPlaceholder": "kg",
+      "activityLabel": "Nivel de actividad",
+      "sedentary": "Sedentario (poco o ningún ejercicio)",
+      "light": "Ligero (ejercicio 1–3 días/semana)",
+      "moderate": "Moderado (ejercicio 3–5 días/semana)",
+      "intense": "Intenso (ejercicio 6–7 días/semana)",
+      "deficitLabel": "Ritmo de pérdida",
+      "deficitLight": "Ligero (−10%) — pérdida gradual y cómoda",
+      "deficitModerate": "Moderado (−20%) — ritmo sostenible",
+      "deficitAggressive": "Agresivo (−25%) — más rápido, más exigente",
+      "calculate": "Calcular mi déficit"
+    },
+    "result": {
+      "title": "Tu plan de déficit",
+      "tdeeLabel": "Gasto diario",
+      "tdeeDesc": "Cuánto quemas por día",
+      "targetLabel": "Meta calórica",
+      "targetDesc": "Cuánto comer para bajar de peso",
+      "deficitLabel": "Déficit diario",
+      "deficitDesc": "La diferencia que genera la pérdida",
+      "weeklyLabel": "Pérdida estimada",
+      "weeklyUnit": "kg/semana",
+      "weeklyDesc": "Estimación basada en 7.700 kcal ≈ 1 kg",
+      "kcalUnit": "kcal/día",
+      "safetyNote": "Por seguridad, tu meta se ajustó al mínimo saludable ({floor} kcal). Los déficits más agresivos requieren acompañamiento profesional."
+    },
+    "cta": {
+      "title": "Cumplir el déficit es fácil cuando no tienes que hacer las cuentas.",
+      "text": "Nutricalor cuenta las calorías de tu plato con una sola foto: la comida completa, no solo un código de barras."
+    },
+    "crossLinks": {
+      "title": "Otras calculadoras",
+      "items": [
+        {
+          "to": "tmbCalculator",
+          "name": "Calculadora de TMB",
+          "desc": "Descubre tu metabolismo basal y tu gasto calórico total."
+        },
+        {
+          "to": "caloriesCalculator",
+          "name": "Calculadora de Calorías Diarias",
+          "desc": "Descubre cuántas calorías comer para bajar, mantener o ganar masa."
+        },
+        {
+          "to": "imcCalculator",
+          "name": "Calculadora de IMC",
+          "desc": "Calcula tu Índice de Masa Corporal y consulta tu rango según la OMS."
+        },
+        {
+          "to": "macrosCalculator",
+          "name": "Calculadora de Macros",
+          "desc": "Divide tus calorías en proteína, grasa y carbohidratos."
+        }
+      ]
+    },
+    "seo": {
+      "blocks": [
+        {
+          "title": "Qué es el déficit calórico",
+          "text": "El déficit calórico ocurre cuando consumes menos calorías de las que tu cuerpo gasta. Esa diferencia obliga al organismo a buscar energía en sus reservas, principalmente la grasa corporal. Es el único mecanismo comprobado para bajar de peso: no importa qué dieta sigas, si funciona es porque creó un déficit.\n\nEl tamaño del déficit determina la velocidad de la pérdida y qué tan sostenible es. Los déficits pequeños (10–15%) generan una pérdida lenta pero cómoda, con menos hambre y menos riesgo de perder músculo. Los déficits grandes (por encima del 25%) aceleran el proceso, pero aumentan la probabilidad de atracones, fatiga y estancamiento metabólico."
+        },
+        {
+          "title": "Cómo calcular tu déficit",
+          "text": "El cálculo tiene tres pasos:\n\n1. Encuentra tu TMB (Tasa Metabólica Basal), el gasto del cuerpo en reposo. Esta calculadora usa la fórmula de Mifflin-St Jeor, la más aceptada.\n2. Multiplícala por el factor de actividad para obtener el TDEE (gasto diario total): sedentario ×1,2, ligero ×1,375, moderado ×1,55, intenso ×1,725.\n3. Aplica el déficit deseado: resta 10%, 20% o 25% del TDEE. El resultado es tu meta calórica diaria.\n\nPor ejemplo: si tu TDEE es 2.400 kcal y eliges un déficit moderado del 20%, tu meta queda en 1.920 kcal/día. La diferencia (480 kcal/día) sumada en la semana da 3.360 kcal, lo que equivale a cerca de 0,44 kg de grasa."
+        },
+        {
+          "title": "Qué déficit es seguro",
+          "text": "La ciencia y la práctica clínica coinciden en algunos límites:\n\n• Un déficit del 10 al 20% del TDEE se considera seguro y sostenible para la mayoría de las personas. Es el rango que preserva masa muscular, mantiene el metabolismo activo y causa menos efectos secundarios (hambre excesiva, irritabilidad, fatiga).\n• Un déficit superior al 25% puede funcionar a corto plazo, pero aumenta bastante el riesgo de atracones, pérdida de músculo y desaceleración del metabolismo (el temido \"estancamiento\").\n• Nunca por debajo del piso de seguridad: 1.500 kcal/día para hombres y 1.200 kcal/día para mujeres. Por debajo de eso es muy difícil obtener todos los micronutrientes necesarios sin supervisión médica.\n\nLa calculadora aplica ese piso automáticamente. Si el déficit elegido te lleva por debajo del mínimo, lo ajusta y te avisa."
+        },
+        {
+          "title": "Cuánto se puede bajar por semana (con honestidad)",
+          "text": "La cuenta teórica es simple: cada 7.700 kcal de déficit equivalen aproximadamente a 1 kg de grasa. Con un déficit de 500 kcal/día, la cuenta da unos 0,45 kg por semana; con 250 kcal/día, unos 0,23 kg.\n\nEn la práctica, sin embargo, el número en la balanza va a oscilar más que eso, y no es motivo para desanimarse. La retención de líquidos, el ciclo menstrual, el sodio de la comida del día anterior e incluso el estrés afectan el peso diario. Lo que importa es la tendencia a lo largo de las semanas.\n\nUn ritmo saludable y realista para la mayoría está entre 0,3 y 0,7 kg por semana. Bajar más rápido es posible, pero suele costar masa muscular y cordura. Lento y constante gana."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Preguntas frecuentes",
+      "items": [
+        {
+          "question": "¿Tengo que estar en déficit todos los días, sin excepción?",
+          "answer": "No. Lo que importa es el promedio semanal. Si comiste de más en una celebración, compensa levemente los días siguientes, sin dramas. La consistencia a lo largo de las semanas importa más que la perfección diaria."
+        },
+        {
+          "question": "Si hago más ejercicio, ¿puedo comer más y aun así bajar de peso?",
+          "answer": "En principio, sí. El ejercicio aumenta el TDEE, lo que permite un déficit con más comida. Pero cuidado: el gasto calórico del ejercicio suele sobreestimarse. Usa el ejercicio como herramienta de salud y bienestar, no como licencia para comer sin límite."
+        },
+        {
+          "question": "¿Es mejor un déficit ligero por más tiempo o uno agresivo por poco tiempo?",
+          "answer": "Para la mayoría, un déficit ligero o moderado sostenido por más tiempo es más eficaz. Los déficits agresivos dan resultados rápidos al inicio, pero tienen alta tasa de abandono y efecto rebote. Un déficit que puedes mantener durante meses vale más que uno que dura dos semanas."
+        },
+        {
+          "question": "¿Cómo contar calorías sin pesar todo?",
+          "answer": "Usa una app como Nutricalor: fotografía el plato y la IA estima calorías y macros en segundos. No hace falta pesar cada ingrediente: la estimación por foto es lo bastante práctica para sostener el déficit."
+        },
+        {
+          "question": "¿El déficit calórico funciona para todo el mundo?",
+          "answer": "El déficit calórico es el mecanismo universal para bajar de peso. Pero el tamaño ideal del déficit, la composición de la dieta y la velocidad de la pérdida varían de persona a persona. Algunas condiciones médicas (tiroides, resistencia a la insulina, medicamentos) pueden afectar el proceso. Siempre que puedas, consulta a un nutricionista."
+        }
+      ]
+    }
+  },
+  "caloriesCalculator": {
+    "meta": {
+      "title": "Calculadora de Calorías Diarias — ¿Cuántas Calorías Debo Comer?",
+      "description": "Calcula cuántas calorías necesitas comer por día para bajar de peso, mantenerlo o ganar masa muscular. Calculadora gratis basada en la ecuación de Mifflin-St Jeor."
+    },
+    "h1": "Calculadora de Calorías Diarias",
+    "subtitle": "Descubre la cantidad exacta de calorías que tu cuerpo necesita para bajar de peso, mantenerlo o ganar masa muscular.",
+    "form": {
+      "sexLabel": "Sexo biológico",
+      "male": "Masculino",
+      "female": "Femenino",
+      "ageLabel": "Edad",
+      "agePlaceholder": "años",
+      "heightLabel": "Estatura",
+      "heightPlaceholder": "cm",
+      "weightLabel": "Peso",
+      "weightPlaceholder": "kg",
+      "activityLabel": "Nivel de actividad",
+      "sedentary": "Sedentario (poco o ningún ejercicio)",
+      "light": "Ligero (ejercicio 1–3 días/semana)",
+      "moderate": "Moderado (ejercicio 3–5 días/semana)",
+      "intense": "Intenso (ejercicio 6–7 días/semana)",
+      "goalLabel": "Objetivo",
+      "goalLose": "Bajar de peso",
+      "goalMaintain": "Mantener el peso",
+      "goalGain": "Ganar masa",
+      "calculate": "Calcular mis calorías"
+    },
+    "result": {
+      "title": "Tu meta calórica diaria",
+      "targetLabel": "Meta de calorías",
+      "targetDesc": "Para alcanzar tu objetivo",
+      "tdeeLabel": "Gasto diario (TDEE)",
+      "tdeeDesc": "Como referencia",
+      "loseLabel": "Bajar",
+      "maintainLabel": "Mantener",
+      "gainLabel": "Ganar",
+      "kcalUnit": "kcal/día",
+      "safetyNote": "Por seguridad, la meta para bajar de peso se ajustó al límite saludable de {floor} kcal por día."
+    },
+    "cta": {
+      "title": "Ya sabes tu meta; lo difícil es contar las calorías de cada comida.",
+      "text": "Nutricalor lo hace por foto: fotografía el plato y listo."
+    },
+    "crossLinks": {
+      "title": "Otras calculadoras",
+      "items": [
+        {
+          "to": "tmbCalculator",
+          "name": "Calculadora de TMB",
+          "desc": "Descubre tu metabolismo basal y tu gasto calórico total."
+        },
+        {
+          "to": "deficitCalculator",
+          "name": "Calculadora de Déficit Calórico",
+          "desc": "Descubre cuántas calorías comer para bajar de peso a tu ritmo."
+        },
+        {
+          "to": "imcCalculator",
+          "name": "Calculadora de IMC",
+          "desc": "Calcula tu Índice de Masa Corporal y consulta tu rango según la OMS."
+        },
+        {
+          "to": "macrosCalculator",
+          "name": "Calculadora de Macros",
+          "desc": "Divide tus calorías en proteína, grasa y carbohidratos."
+        }
+      ]
+    },
+    "seo": {
+      "blocks": [
+        {
+          "title": "Cuántas calorías debo comer por día",
+          "text": "La cantidad de calorías que debes ingerir por día depende de varios factores: tu peso actual, estatura, edad, sexo biológico y, sobre todo, tu nivel de actividad física diaria y tu objetivo (bajar de peso, mantener o ganar masa).\n\nPara la mayoría de las personas no existe un número mágico universal de 2.000 calorías. Una mujer menuda y sedentaria puede necesitar apenas 1.500 kcal, mientras que un hombre alto y muy activo puede necesitar más de 3.000 kcal. Por eso es esencial usar una calculadora personalizada que tome en cuenta tu fisiología."
+        },
+        {
+          "title": "Cómo calculamos tu meta",
+          "text": "Utilizamos un método científico en tres etapas:\n\n1. Primero calculamos tu Tasa Metabólica Basal (TMB) usando la ecuación de Mifflin-St Jeor, que estima la energía que tu cuerpo gasta solo para mantenerse vivo (respiración, circulación, etc.).\n2. Luego multiplicamos la TMB por tu factor de actividad (sedentario, ligero, moderado o intenso) para encontrar tu Gasto Energético Diario Total (TDEE).\n3. Por último, ajustamos ese valor según tu objetivo. Si quieres bajar de peso, aplicamos un déficit del 20%. Si quieres mantener, conservamos el valor del TDEE. Si quieres ganar masa, aplicamos un superávit del 10%."
+        },
+        {
+          "title": "Calorías para bajar de peso, mantener o ganar masa",
+          "text": "• Bajar de peso: la regla de oro es el déficit calórico sostenible. Recomendamos reducir un 20% de tu gasto diario. Eso garantiza una pérdida de peso saludable sin sacrificar masa muscular ni dejarte con hambre todo el tiempo. Pero atención: nunca sugerimos consumir menos que el piso seguro (1.500 kcal para hombres, 1.200 kcal para mujeres).\n• Mantener: ideal para quien ya está en el peso deseado o quiere enfocarse solo en la recomposición corporal (cambiar grasa por músculo) a ritmo lento.\n• Ganar masa: para desarrollar músculo (hipertrofia) necesitas un leve exceso calórico (superávit de ~10%) junto con entrenamiento de fuerza. Muy por encima de eso, la ganancia será predominantemente de grasa."
+        },
+        {
+          "title": "Por qué contar calorías funciona (y cómo hacerlo fácil)",
+          "text": "Sea cual sea la dieta de moda —low carb, ayuno intermitente, cetogénica—, el único motivo biológico por el que funciona para bajar de peso es que induce un déficit calórico al final del día. Al entender y registrar tus calorías, ganas la libertad de comer los alimentos que te gustan, siempre que quepan en tu meta diaria.\n\nLa peor parte de contar calorías siempre fue pesar cada ingrediente y buscar en tablas enormes. Nutricalor resuelve eso con inteligencia artificial: solo necesitas tomar una foto de tu plato y la IA estima las calorías y los macronutrientes automáticamente, leyendo un plato completo y mezclado en lugar de un solo producto etiquetado."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Preguntas frecuentes",
+      "items": [
+        {
+          "question": "¿La meta de calorías ya incluye el ejercicio que hago?",
+          "answer": "Sí. El nivel de actividad que seleccionas ya multiplica tu tasa basal para compensar el ejercicio. Si marcaste 'Moderado' o 'Intenso', no necesitas sumar aparte las calorías quemadas en el entrenamiento: ya están en la cuenta."
+        },
+        {
+          "question": "¿Puedo comer menos de 1.200 (mujeres) o 1.500 (hombres) calorías para acelerar?",
+          "answer": "No es recomendable. Las dietas muy bajas en calorías (VLCD) pueden causar pérdida muscular severa, deficiencia de vitaminas, fatiga extrema y caída del cabello. Además, cuando la dieta termina, el metabolismo lento favorece la recuperación rápida del peso (efecto rebote)."
+        },
+        {
+          "question": "Si cumplo las calorías, ¿no importa lo que como?",
+          "answer": "Para el peso puro en la balanza, la cantidad de calorías es el factor dominante. Pero para la calidad de ese peso (músculo vs. grasa), la saciedad, la salud y la energía, importa mucho de dónde vienen esas calorías. Necesitas proteína suficiente, grasas buenas, vitaminas y fibra."
+        },
+        {
+          "question": "¿Cómo sé si debo enfocarme en bajar de peso o en ganar masa?",
+          "answer": "Si tu porcentaje de grasa es alto y te incomoda, el foco principal debe ser bajar de peso. Si eres principiante en el gimnasio, muchas veces puedes ganar masa y perder grasa al mismo tiempo (recomposición corporal), comiendo en la meta de mantenimiento o con un déficit leve."
+        },
+        {
+          "question": "¿La calculadora también sirve para niños y adolescentes?",
+          "answer": "No. Esta calculadora (ecuación de Mifflin-St Jeor) fue validada solo para adultos (18 años o más). Los niños y adolescentes están en fase de crecimiento y tienen necesidades metabólicas distintas, por lo que requieren acompañamiento pediátrico o de un nutricionista."
+        }
+      ]
+    }
+  },
+  "imcCalculator": {
+    "meta": {
+      "title": "Calculadora de IMC — Índice de Masa Corporal",
+      "description": "Calcula tu IMC gratis, descubre tu clasificación en la tabla de la OMS (bajo peso, normal, sobrepeso u obesidad) y entiende las limitaciones del índice."
+    },
+    "h1": "Calculadora de IMC",
+    "subtitle": "Descubre tu Índice de Masa Corporal y tu clasificación de peso según la Organización Mundial de la Salud (OMS).",
+    "form": {
+      "heightLabel": "Estatura",
+      "heightPlaceholder": "cm",
+      "weightLabel": "Peso",
+      "weightPlaceholder": "kg",
+      "calculate": "Calcular mi IMC"
+    },
+    "result": {
+      "title": "Tu resultado",
+      "imcLabel": "Tu IMC",
+      "classificationLabel": "Clasificación (OMS)",
+      "underweight": "Bajo peso",
+      "normal": "Peso normal",
+      "overweight": "Sobrepeso",
+      "obesity": "Obesidad",
+      "safetyNote": "Atención: el IMC es un indicador poblacional general. No distingue masa muscular de grasa ni evalúa la distribución de la grasa corporal. En ningún caso reemplaza la evaluación de un médico o un nutricionista."
+    },
+    "cta": {
+      "title": "¿Quieres seguir tu peso y tus metas a lo largo del tiempo?",
+      "text": "Nutricalor te ayuda a llegar sin complicaciones. Registra tus comidas con una foto y sigue tus resultados."
+    },
+    "crossLinks": {
+      "title": "Otras calculadoras",
+      "items": [
+        {
+          "to": "tmbCalculator",
+          "name": "Calculadora de TMB",
+          "desc": "Descubre tu metabolismo basal y tu gasto calórico total."
+        },
+        {
+          "to": "deficitCalculator",
+          "name": "Calculadora de Déficit Calórico",
+          "desc": "Descubre cuántas calorías comer para bajar de peso a tu ritmo."
+        },
+        {
+          "to": "caloriesCalculator",
+          "name": "Calculadora de Calorías Diarias",
+          "desc": "Descubre cuántas calorías comer para bajar, mantener o ganar masa."
+        },
+        {
+          "to": "macrosCalculator",
+          "name": "Calculadora de Macros",
+          "desc": "Divide tus calorías en proteína, grasa y carbohidratos."
+        }
+      ]
+    },
+    "seo": {
+      "blocks": [
+        {
+          "title": "Qué es el IMC",
+          "text": "El Índice de Masa Corporal (IMC) es una fórmula matemática simple, creada en el siglo XIX por el matemático belga Adolphe Quetelet, que relaciona el peso y la estatura de una persona.\n\nLa Organización Mundial de la Salud (OMS) utiliza el IMC como estándar internacional para evaluar rápidamente si una persona adulta está dentro de un rango de peso considerado saludable en relación con su estatura, o si presenta bajo peso, sobrepeso u obesidad."
+        },
+        {
+          "title": "Cómo calcular el IMC",
+          "text": "La cuenta del IMC es bastante simple. Tomas tu peso (en kilos) y lo divides por tu estatura (en metros) elevada al cuadrado.\n\nLa fórmula oficial es:\n\n• IMC = peso (kg) ÷ (estatura (m) × estatura (m))\n\nPor ejemplo: una persona que pesa 70 kg y mide 1,75 m tendría el cálculo 70 ÷ (1,75 × 1,75) = 70 ÷ 3,06 = 22,8. Esa persona estaría en el rango de \"peso normal\"."
+        },
+        {
+          "title": "Tabla de clasificación (OMS)",
+          "text": "La Organización Mundial de la Salud clasifica el IMC adulto (hombres y mujeres a partir de los 20 años) en los siguientes rangos:\n\n• Menos de 18,5: bajo peso\n• Entre 18,5 y 24,9: peso normal\n• Entre 25,0 y 29,9: sobrepeso\n• 30,0 o más: obesidad"
+        },
+        {
+          "title": "Limitaciones del IMC — por qué no cuenta toda la historia",
+          "text": "Aunque el IMC es una herramienta epidemiológica útil para evaluar grandes poblaciones, tiene limitaciones significativas cuando se aplica de forma aislada en la evaluación individual de salud:\n\n1. No diferencia músculo de grasa: el músculo es más denso que la grasa. Los atletas y las personas muy musculosas suelen tener un IMC que los clasifica como en \"sobrepeso\" u \"obesidad\", aun teniendo porcentajes de grasa corporal muy bajos y excelente salud cardiovascular.\n2. No evalúa la distribución de la grasa: la grasa visceral (acumulada en el abdomen, entre los órganos) es mucho más peligrosa para la salud metabólica que la grasa subcutánea (acumulada en caderas y muslos). Dos personas con el mismo IMC pueden tener perfiles de riesgo cardiovascular completamente distintos.\n3. No considera las diferencias de edad y etnia: las tablas estándar no son ideales para adultos mayores (que naturalmente pierden masa muscular y ósea) ni para embarazadas. Algunas poblaciones, como la asiática, presentan riesgos metabólicos con IMC más bajos que el punto de corte estándar."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Preguntas frecuentes",
+      "items": [
+        {
+          "question": "¿El IMC sirve para niños?",
+          "answer": "El cálculo del IMC para niños y adolescentes (hasta los 19 años) usa la misma fórmula, pero la clasificación es distinta. Como están en fase de crecimiento, el resultado debe compararse con tablas y gráficos específicos (percentiles) de la OMS, separados por edad y sexo. Esta calculadora fue hecha para adultos."
+        },
+        {
+          "question": "¿El IMC es distinto para hombres y mujeres?",
+          "answer": "No. Para la clasificación oficial de la Organización Mundial de la Salud en adultos, la tabla y los puntos de corte son los mismos para hombres y mujeres."
+        },
+        {
+          "question": "Mi IMC dio sobrepeso, ¿y ahora?",
+          "answer": "El IMC es solo un indicativo. Tener el IMC en el rango de sobrepeso no significa automáticamente que estés enfermo. Evalúa otros factores de salud, como el porcentaje de grasa corporal, la circunferencia abdominal y los análisis de sangre. Consulta a un profesional para una evaluación completa."
+        },
+        {
+          "question": "¿Qué es más importante: el IMC o el porcentaje de grasa corporal?",
+          "answer": "El porcentaje de grasa corporal es un indicador de salud mucho más preciso, porque revela la composición real de tu cuerpo (masa magra vs. masa grasa). El IMC se usa porque es mucho más fácil y barato de calcular que hacer exámenes precisos de composición corporal, como el DEXA o la bioimpedancia."
+        }
+      ]
+    }
+  },
+  "macrosCalculator": {
+    "meta": {
+      "title": "Calculadora de Macros — Proteínas, Carbohidratos y Grasas",
+      "description": "Calcula tus macros diarios para bajar de peso o ganar masa muscular. Descubre cuántos gramos de proteína, grasa y carbohidratos debes comer por día. Gratis."
+    },
+    "h1": "Calculadora de Macros",
+    "subtitle": "Descubre la cantidad ideal de proteínas, grasas y carbohidratos que debes consumir a diario para alcanzar tu objetivo corporal.",
+    "form": {
+      "sexLabel": "Sexo biológico",
+      "male": "Masculino",
+      "female": "Femenino",
+      "ageLabel": "Edad",
+      "agePlaceholder": "años",
+      "heightLabel": "Estatura",
+      "heightPlaceholder": "cm",
+      "weightLabel": "Peso",
+      "weightPlaceholder": "kg",
+      "activityLabel": "Nivel de actividad",
+      "sedentary": "Sedentario (poco o ningún ejercicio)",
+      "light": "Ligero (ejercicio 1–3 días/semana)",
+      "moderate": "Moderado (ejercicio 3–5 días/semana)",
+      "intense": "Intenso (ejercicio 6–7 días/semana)",
+      "goalLabel": "Objetivo",
+      "goalLose": "Bajar de peso",
+      "goalMaintain": "Mantener el peso",
+      "goalGain": "Ganar masa",
+      "calculate": "Calcular mis macros"
+    },
+    "result": {
+      "title": "Tus macros diarios",
+      "targetLabel": "Meta calórica",
+      "targetDesc": "El total diario de calorías",
+      "proteinLabel": "Proteína",
+      "proteinDesc": "1,8 g por kg de peso corporal",
+      "fatLabel": "Grasa",
+      "fatDesc": "25% de las calorías totales",
+      "carbsLabel": "Carbohidratos",
+      "carbsDesc": "Calorías restantes",
+      "gramUnit": "g",
+      "kcalUnit": "kcal",
+      "safetyNote": "Tu meta calórica para bajar de peso usó el piso de seguridad de {floor} kcal/día. Los macros se ajustaron proporcionalmente."
+    },
+    "cta": {
+      "title": "Saber tus macros es fácil. Lo difícil es seguirlos en cada comida.",
+      "text": "Nutricalor lo hace por foto. Toma una foto del plato y mira las proteínas, grasas y carbohidratos contabilizados en tu día."
+    },
+    "crossLinks": {
+      "title": "Otras calculadoras",
+      "items": [
+        {
+          "to": "tmbCalculator",
+          "name": "Calculadora de TMB",
+          "desc": "Descubre tu metabolismo basal y tu gasto calórico total."
+        },
+        {
+          "to": "deficitCalculator",
+          "name": "Calculadora de Déficit Calórico",
+          "desc": "Descubre cuántas calorías comer para bajar de peso a tu ritmo."
+        },
+        {
+          "to": "caloriesCalculator",
+          "name": "Calculadora de Calorías Diarias",
+          "desc": "Descubre cuántas calorías comer para bajar, mantener o ganar masa."
+        },
+        {
+          "to": "imcCalculator",
+          "name": "Calculadora de IMC",
+          "desc": "Calcula tu Índice de Masa Corporal y consulta tu rango según la OMS."
+        }
+      ]
+    },
+    "seo": {
+      "blocks": [
+        {
+          "title": "Qué son los macronutrientes",
+          "text": "Los macronutrientes, o \"macros\", son los tres componentes principales de la alimentación que aportan energía al cuerpo: proteínas, carbohidratos y grasas. Mientras que las vitaminas y los minerales (micronutrientes) se necesitan en cantidades pequeñas, los macros se necesitan en cantidades grandes (gramos) todos los días.\n\nCada macro cumple un papel esencial:\n\n• Proteínas: son los ladrillos del cuerpo. Esenciales para construir y reparar tejidos (incluidos los músculos), producir enzimas y hormonas, y dar soporte al sistema inmunológico. (Aportan ~4 kcal por gramo).\n• Grasas (lípidos): fundamentales para la salud hormonal, la absorción de vitaminas liposolubles (A, D, E y K), la protección de los órganos y la reserva de energía de largo plazo. (Aportan ~9 kcal por gramo).\n• Carbohidratos: la fuente de energía preferida y más rápida del cuerpo y del cerebro. (Aportan ~4 kcal por gramo)."
+        },
+        {
+          "title": "Cómo calcular tus macros",
+          "text": "La división de macros en esta calculadora sigue un estándar basado en evidencia para optimizar la composición corporal (perder grasa manteniendo músculo, o ganar masa limpia):\n\n1. Primero definimos las calorías totales con base en tu TMB, tu factor de actividad y tu objetivo (bajar, mantener o ganar).\n2. Proteína: la fijamos en ~1,8 gramos por kilogramo de peso corporal. Es la cantidad que diversos estudios consideran ideal para maximizar la síntesis proteica, tanto en déficit calórico como en hipertrofia.\n3. Grasa: reservamos cerca del 25% de las calorías totales diarias para las grasas. Esa cantidad es suficiente para mantener una producción hormonal saludable.\n4. Carbohidratos: el resto de las calorías se asigna a los carbohidratos. Ellos aportarán la energía necesaria para los entrenamientos y el día a día."
+        },
+        {
+          "title": "Proteína, carbohidratos y grasa: cuánto de cada uno",
+          "text": "Aunque la calculadora ofrece un excelente punto de partida, la distribución ideal puede variar según tus preferencias alimentarias, tu genética y tu tipo de entrenamiento.\n\nLos atletas de resistencia (running, ciclismo) pueden necesitar una proporción mayor de carbohidratos, reduciendo levemente las grasas o las proteínas. Las personas con resistencia a la insulina, o quienes prefieren dietas más ricas en grasas, pueden bajar los carbohidratos y subir las grasas.\n\nLa regla principal es: cumple la meta de calorías y, para mejorar la composición corporal, cumple la meta de proteínas. La proporción exacta entre grasas y carbohidratos es menos rígida y puede adaptarse a lo que te haga sentir mejor."
+        },
+        {
+          "title": "Cómo cambian los macros según el objetivo",
+          "text": "La ventaja de calcular los macros está en la flexibilidad. Tu peso dicta la proteína, pero tus calorías totales —que dictan los carbohidratos y las grasas— cambian según el objetivo.\n\n• Bajar de peso: la proteína se mantiene alta (crucial para no perder masa muscular), mientras que los carbohidratos y las grasas bajan para generar el déficit calórico.\n• Ganar masa: comes más calorías en total. La proteína sigue siendo suficiente (1,8 a 2,0 g/kg), pero los carbohidratos aumentan bastante para aportar energía extra a los entrenamientos intensos y construir tejido nuevo."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Preguntas frecuentes",
+      "items": [
+        {
+          "question": "¿Debo cumplir los macros gramo por gramo todos los días?",
+          "answer": "No. Es prácticamente imposible ser perfectamente exacto. Enfócate en acertar las calorías totales con un margen de error (± 5–10%) y en ingerir proteína suficiente. Si un día comes un poco más de carbohidratos y un poco menos de grasa, no hay problema, siempre que las calorías estén dentro del rango."
+        },
+        {
+          "question": "¿La grasa no me va a hacer engordar?",
+          "answer": "No. Lo que hace engordar es el exceso calórico total. Las grasas alimentarias (aceite de oliva, palta, nueces) son esenciales para tu salud y para la producción de hormonas como la testosterona. El cuidado debe estar solo en la cantidad, ya que la grasa tiene más del doble de calorías (9 kcal/g) que la proteína y los carbohidratos (4 kcal/g)."
+        },
+        {
+          "question": "¿Puedo eliminar los carbohidratos por completo?",
+          "answer": "El cuerpo humano puede sobrevivir sin carbohidratos (mediante un proceso llamado cetogénesis), pero la mayoría de las personas se siente mucho mejor, tiene más energía en los entrenamientos y se adhiere mejor a la dieta cuando consume carbohidratos en cantidades razonables. Eliminarlos por completo es innecesario para bajar de peso."
+        },
+        {
+          "question": "¿Cuál es el macro más importante para quien entrena con pesas?",
+          "answer": "La proteína. Sin ella, el cuerpo no logra reparar los microdaños causados por el entrenamiento ni construir nuevas fibras musculares. Sin embargo, los carbohidratos vienen en segundo lugar, porque aportan el combustible necesario para entrenar fuerte."
+        },
+        {
+          "question": "¿Cómo contar macros de forma práctica en el día a día?",
+          "answer": "Poniendo la tecnología a tu favor. Con Nutricalor, en vez de pesar todo en la balanza y registrar cada gramo, solo fotografías el plato. La inteligencia artificial estima los macros según la comida que está ahí, lo que vuelve el seguimiento algo fácil y sostenible a largo plazo."
+        }
+      ]
+    }
+  }
+}

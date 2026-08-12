@@ -1,5 +1,3 @@
-import type { Metadata } from 'next'
-import { getDictionary } from '@/dictionaries'
 import Reveal from '@/components/Reveal'
 import {
   IconBulb,
@@ -12,47 +10,25 @@ import {
   IconSparkle,
   IconTarget,
 } from '@/components/icons'
-import styles from './page.module.css'
-import { SITE_URL, APP_NAME } from '@/lib/constants'
+import { APP_NAME } from '@/lib/constants'
+import type { HowItWorksDict } from '@/dictionaries/types'
+import styles from './HowItWorksPage.module.css'
 
-type PageProps = {
-  params: Promise<{ lang: string }>
+type HowItWorksPageProps = {
+  content: HowItWorksDict
 }
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const lang = (await params).lang
-  const dict = await getDictionary(lang)
-
-  return {
-    title: dict.howItWorks.meta.title,
-    description: dict.howItWorks.meta.description,
-    alternates: {
-      canonical: `${SITE_URL}/${lang}/como-funciona`,
-      languages: {
-        'pt-BR': `${SITE_URL}/pt/como-funciona`,
-      },
-    },
-    openGraph: {
-      type: 'website',
-      locale: lang === 'pt' ? 'pt_BR' : lang,
-      siteName: APP_NAME,
-      title: dict.howItWorks.meta.title,
-      description: dict.howItWorks.meta.description,
-      url: `${SITE_URL}/${lang}/como-funciona`,
-    },
-  }
-}
-
-export default async function ComoFuncionaPage({ params }: PageProps) {
-  const lang = (await params).lang
-  const dict = await getDictionary(lang)
-  const content = dict.howItWorks
-
+export default function HowItWorksPage({ content }: HowItWorksPageProps) {
   const methods = [
     { Icon: IconPencil, item: content.section3.methods[0] },
     { Icon: IconSearch, item: content.section3.methods[2] },
     { Icon: IconSmartphone, item: content.section3.methods[1] },
     { Icon: IconSparkle, item: content.section3.methods[3] },
+  ]
+
+  const blocks = [
+    { Icon: IconCamera, index: '01', section: content.section1, alt: false },
+    { Icon: IconSliders, index: '02', section: content.section2, alt: true },
   ]
 
   return (
@@ -69,44 +45,35 @@ export default async function ComoFuncionaPage({ params }: PageProps) {
           </div>
         </header>
 
-        <section className={styles.block} aria-labelledby="sec-foto">
-          <div className="container container--narrow" data-reveal>
-            <div className={styles.blockHeader}>
-              <span className={styles.blockIcon} aria-hidden="true">
-                <IconCamera size={20} />
-              </span>
-              <span className={styles.blockIndex}>01</span>
-              <h2 id="sec-foto" className={styles.blockTitle}>
-                {content.section1.title}
-              </h2>
+        {blocks.map(({ Icon, index, section, alt }) => (
+          <section
+            key={index}
+            className={`${styles.block} ${alt ? styles.blockAlt : ''}`}
+            aria-labelledby={`sec-${index}`}
+          >
+            <div className="container container--narrow" data-reveal>
+              <div className={styles.blockHeader}>
+                <span className={styles.blockIcon} aria-hidden="true">
+                  <Icon size={20} />
+                </span>
+                <span className={styles.blockIndex}>{index}</span>
+                <h2 id={`sec-${index}`} className={styles.blockTitle}>
+                  {section.title}
+                </h2>
+              </div>
+              <p>{section.text}</p>
             </div>
-            <p>{content.section1.text}</p>
-          </div>
-        </section>
+          </section>
+        ))}
 
-        <section className={`${styles.block} ${styles.blockAlt}`} aria-labelledby="sec-controle">
-          <div className="container container--narrow" data-reveal>
-            <div className={styles.blockHeader}>
-              <span className={styles.blockIcon} aria-hidden="true">
-                <IconSliders size={20} />
-              </span>
-              <span className={styles.blockIndex}>02</span>
-              <h2 id="sec-controle" className={styles.blockTitle}>
-                {content.section2.title}
-              </h2>
-            </div>
-            <p>{content.section2.text}</p>
-          </div>
-        </section>
-
-        <section className={styles.block} aria-labelledby="sec-metodos">
+        <section className={styles.block} aria-labelledby="sec-03">
           <div className="container container--narrow" data-reveal>
             <div className={styles.blockHeader}>
               <span className={styles.blockIcon} aria-hidden="true">
                 <IconRefresh size={20} />
               </span>
               <span className={styles.blockIndex}>03</span>
-              <h2 id="sec-metodos" className={styles.blockTitle}>
+              <h2 id="sec-03" className={styles.blockTitle}>
                 {content.section3.title}
               </h2>
             </div>
@@ -129,14 +96,14 @@ export default async function ComoFuncionaPage({ params }: PageProps) {
           </div>
         </section>
 
-        <section className={`${styles.block} ${styles.blockAlt}`} aria-labelledby="sec-metas">
+        <section className={`${styles.block} ${styles.blockAlt}`} aria-labelledby="sec-04">
           <div className="container container--narrow" data-reveal>
             <div className={styles.blockHeader}>
               <span className={styles.blockIcon} aria-hidden="true">
                 <IconTarget size={20} />
               </span>
               <span className={styles.blockIndex}>04</span>
-              <h2 id="sec-metas" className={styles.blockTitle}>
+              <h2 id="sec-04" className={styles.blockTitle}>
                 {content.section4.title}
               </h2>
             </div>
@@ -144,13 +111,13 @@ export default async function ComoFuncionaPage({ params }: PageProps) {
           </div>
         </section>
 
-        <section className={`${styles.block} ${styles.honestNote}`} aria-labelledby="sec-nota">
+        <section className={`${styles.block} ${styles.honestNote}`} aria-labelledby="sec-note">
           <div className="container container--narrow" data-reveal>
             <div className={styles.blockHeader}>
               <span className={`${styles.blockIcon} ${styles.noteIcon}`} aria-hidden="true">
                 <IconBulb size={20} />
               </span>
-              <h2 id="sec-nota" className={styles.blockTitle}>
+              <h2 id="sec-note" className={styles.blockTitle}>
                 {content.section5.title}
               </h2>
             </div>

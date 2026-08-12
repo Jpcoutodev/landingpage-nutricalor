@@ -2,8 +2,9 @@
  * Tipos do dicionário, derivados do próprio `pt.json`.
  *
  * `import type` é totalmente apagado na compilação, então nenhum componente
- * carrega o JSON só para se tipar. Adicionar uma chave em `pt.json` propaga o
- * tipo automaticamente — e remover uma que ainda está em uso vira erro de build.
+ * carrega o JSON só para se tipar. O português é a referência de formato: os
+ * arquivos `en.json` e `es.json` precisam ter exatamente a mesma estrutura, e o
+ * `index.ts` verifica isso em tempo de compilação.
  */
 import type ptDictionary from './pt.json'
 
@@ -18,3 +19,15 @@ export type TickerDict = Dictionary['home']['ticker']
 export type StepsDict = Dictionary['home']['steps']
 export type FeaturesDict = Dictionary['home']['features']
 export type CtaDict = Dictionary['home']['cta']
+
+export type HowItWorksDict = Dictionary['howItWorks']
+export type ContactDict = Dictionary['contact']
+export type LegalDict = Dictionary['privacy']
+
+/** Chaves das cinco calculadoras dentro do dicionário. */
+export type CalculatorKey =
+  | 'tmbCalculator'
+  | 'deficitCalculator'
+  | 'caloriesCalculator'
+  | 'imcCalculator'
+  | 'macrosCalculator'

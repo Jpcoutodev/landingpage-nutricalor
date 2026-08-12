@@ -304,6 +304,17 @@ export function IconTrendingUp({ className, size = 24 }: IconProps) {
   )
 }
 
+/** Globo — seletor de idioma */
+export function IconGlobe({ className, size = 24 }: IconProps) {
+  return (
+    <svg {...base(size, className)}>
+      <circle cx="12" cy="12" r="8.6" />
+      <path d="M3.5 12h17" />
+      <path d="M12 3.4a13 13 0 0 1 0 17.2 13 13 0 0 1 0-17.2Z" />
+    </svg>
+  )
+}
+
 /** Mira de enquadramento — o app "olhando" para o prato */
 export function IconViewfinder({ className, size = 24 }: IconProps) {
   return (

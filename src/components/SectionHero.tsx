@@ -3,13 +3,14 @@ import AppCTA from './AppCTA'
 import CountUp from './CountUp'
 import PlateScan from './PlateScan'
 import { IconArrowRight, IconCpu, IconZap } from './icons'
+import { pathFor, type Locale } from '@/lib/routes'
 import type { CommonDict, HeroDict } from '@/dictionaries/types'
 import styles from './SectionHero.module.css'
 
 type SectionHeroProps = {
   dict: HeroDict
   ctaDict: CommonDict
-  locale: string
+  locale: Locale
 }
 
 export default function SectionHero({ dict, ctaDict, locale }: SectionHeroProps) {
@@ -40,7 +41,7 @@ export default function SectionHero({ dict, ctaDict, locale }: SectionHeroProps)
 
           <div className={styles.actions}>
             <AppCTA variant="block" dict={ctaDict} />
-            <Link href={`/${locale}/como-funciona`} className={styles.secondaryCta}>
+            <Link href={pathFor('howItWorks', locale)} className={styles.secondaryCta}>
               {dict.secondaryCta}
               <IconArrowRight size={16} className={styles.secondaryIcon} />
             </Link>

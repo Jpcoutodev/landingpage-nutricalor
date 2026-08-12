@@ -15,20 +15,26 @@
     "deficitCalculator": "Déficit Calórico",
     "caloriesCalculator": "Calorias Diárias",
     "imcCalculator": "Calculadora de IMC",
-    "macrosCalculator": "Calculadora de Macros"
+    "macrosCalculator": "Calculadora de Macros",
+    "mainMenu": "Menu principal",
+    "menu": "Abrir menu"
   },
   "footer": {
     "tagline": "Calorias por foto, feito para a comida brasileira.",
+    "navLabel": "Rodapé",
+    "legal": "Legal",
     "privacy": "Privacidade",
     "terms": "Termos de Uso",
     "contact": "Contato",
-    "rights": "Todos os direitos reservados.",
+    "contactForm": "Formulário",
     "tools": "Ferramentas",
     "tmbCalculator": "Calculadora TMB",
     "deficitCalculator": "Calculadora Déficit Calórico",
     "caloriesCalculator": "Calculadora de Calorias",
     "imcCalculator": "Calculadora de IMC",
-    "macrosCalculator": "Calculadora de Macros"
+    "macrosCalculator": "Calculadora de Macros",
+    "rights": "Todos os direitos reservados.",
+    "madeIn": "Feito no Brasil"
   },
   "home": {
     "meta": {
@@ -52,9 +58,18 @@
       "scanLabel": "Analisando prato",
       "readoutLabel": "Resultado",
       "stats": [
-        { "value": "~2s", "label": "por análise" },
-        { "value": "7 dias", "label": "grátis, sem cartão" },
-        { "value": "PT-BR", "label": "nativo, não traduzido" }
+        {
+          "value": "~2s",
+          "label": "por análise"
+        },
+        {
+          "value": "7 dias",
+          "label": "grátis, sem cartão"
+        },
+        {
+          "value": "PT-BR",
+          "label": "nativo, não traduzido"
+        }
       ]
     },
     "ticker": {
@@ -179,15 +194,238 @@
   },
   "privacy": {
     "meta": {
-      "title": "Política de Privacidade",
-      "description": "Como o Nutricalor trata seus dados. Suas fotos de comida são processadas e descartadas."
-    }
+      "title": "Política de Privacidade — Nutricalor",
+      "description": "Saiba como o Nutricalor coleta, usa e protege seus dados pessoais. Conheça seus direitos segundo a LGPD."
+    },
+    "title": "Política de Privacidade",
+    "lastUpdatedLabel": "Última atualização",
+    "lastUpdatedDate": "2026-07-03",
+    "lastUpdatedText": "3 de julho de 2026",
+    "reviewNotice": "Este texto é um rascunho estruturado e ainda depende de revisão jurídica antes da publicação definitiva.",
+    "sections": [
+      {
+        "title": "Quem somos",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "O {app} ([razão social / responsável — a preencher]) é o controlador dos dados pessoais tratados neste aplicativo e site. Para qualquer questão relacionada a dados pessoais, entre em contato pelo e-mail {email}."
+          }
+        ]
+      },
+      {
+        "title": "Dados que coletamos",
+        "blocks": [
+          {
+            "type": "ul",
+            "items": [
+              "**Dados de cadastro:** e-mail e autenticação via Google.",
+              "**Dados que você informa:** sexo, idade, altura, peso, objetivo e nível de atividade física.",
+              "**Registros alimentares:** alimentos registrados, porções e valores nutricionais.",
+              "**Registros de peso:** histórico de pesagens.",
+              "**Dados de uso:** informações sobre como você interage com o app (funcionalidades utilizadas, frequência)."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Fotos das refeições",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "As imagens que você fotografa são processadas para identificar os alimentos e **descartadas em seguida**. Não armazenamos suas fotos de comida por padrão."
+          }
+        ]
+      },
+      {
+        "title": "Finalidade do tratamento",
+        "blocks": [
+          {
+            "type": "ul",
+            "items": [
+              "Calcular sua meta diária de calorias e macronutrientes.",
+              "Registrar suas refeições e mostrar seu progresso.",
+              "Melhorar a precisão do serviço e a experiência do usuário.",
+              "Comunicar atualizações relevantes sobre o serviço."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Base legal (LGPD)",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "O tratamento de seus dados pessoais é realizado com base no seu **consentimento** e na **execução do serviço** que você contratou, conforme a Lei Geral de Proteção de Dados (Lei nº 13.709/2018)."
+          }
+        ]
+      },
+      {
+        "title": "Compartilhamento e transferência internacional",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Utilizamos serviços de terceiros para processamento de imagem por inteligência artificial e infraestrutura em nuvem. Esses serviços podem tratar dados fora do Brasil. Adotamos salvaguardas adequadas para proteger seus dados nessas transferências, em conformidade com a LGPD."
+          }
+        ]
+      },
+      {
+        "title": "Seus direitos",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Nos termos da LGPD, você tem direito a:"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Acessar seus dados pessoais.",
+              "Corrigir dados incompletos, inexatos ou desatualizados.",
+              "Solicitar a exclusão dos seus dados.",
+              "Revogar o consentimento a qualquer momento.",
+              "Solicitar a portabilidade dos dados a outro fornecedor de serviço."
+            ]
+          },
+          {
+            "type": "p",
+            "text": "Para exercer qualquer desses direitos, envie um e-mail para {email}."
+          }
+        ]
+      },
+      {
+        "title": "Segurança",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Adotamos medidas técnicas e organizacionais para proteger seus dados, incluindo acesso restrito e criptografia em trânsito (HTTPS/TLS)."
+          }
+        ]
+      },
+      {
+        "title": "Menores de idade",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "O {app} não se destina a menores de [idade a definir — ex.: 13 ou 16 anos]. Não coletamos intencionalmente dados de menores."
+          }
+        ]
+      },
+      {
+        "title": "Cookies",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "O site pode utilizar cookies estritamente necessários para funcionamento e análise de uso agregado. Não utilizamos cookies para publicidade."
+          }
+        ]
+      },
+      {
+        "title": "Alterações nesta política",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Podemos atualizar esta Política de Privacidade periodicamente. Mudanças relevantes serão comunicadas dentro do aplicativo. Recomendamos a leitura periódica desta página."
+          }
+        ]
+      }
+    ]
   },
   "terms": {
     "meta": {
-      "title": "Termos de Uso",
-      "description": "Condições de uso do Nutricalor. O app fornece estimativas, não conselho médico."
-    }
+      "title": "Termos de Uso — Nutricalor",
+      "description": "Leia os Termos de Uso do Nutricalor. Entenda as condições para utilizar o aplicativo de contagem de calorias por foto."
+    },
+    "title": "Termos de Uso",
+    "lastUpdatedLabel": "Última atualização",
+    "lastUpdatedDate": "2026-07-03",
+    "lastUpdatedText": "3 de julho de 2026",
+    "reviewNotice": "Este texto é um rascunho estruturado e ainda depende de revisão jurídica antes da publicação definitiva.",
+    "sections": [
+      {
+        "title": "Aceitação",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Ao usar o {app}, você concorda com estes Termos de Uso. Caso não concorde, não utilize o serviço."
+          }
+        ]
+      },
+      {
+        "title": "O serviço",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "O {app} é uma ferramenta de estimativa nutricional que utiliza fotografia por inteligência artificial e outros métodos de registro (texto, código de barras, busca manual) para ajudar você a acompanhar sua alimentação."
+          }
+        ]
+      },
+      {
+        "title": "Não é conselho médico",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "**O {app} fornece estimativas, não diagnóstico, prescrição ou tratamento.** Consulte um profissional de saúde — médico ou nutricionista — para decisões sobre dieta, saúde ou condicionamento físico. O {app} não substitui orientação profissional."
+          }
+        ]
+      },
+      {
+        "title": "Precisão",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "As estimativas de calorias, macronutrientes e porções são aproximadas e podem conter erros. Use-as como referência para acompanhar seus hábitos, não como verdade absoluta. Nenhum app de foto substitui uma medição laboratorial."
+          }
+        ]
+      },
+      {
+        "title": "Conta",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Você é responsável por manter seus dados de acesso seguros. Não compartilhe suas credenciais. Notifique-nos imediatamente caso suspeite de uso não autorizado da sua conta."
+          }
+        ]
+      },
+      {
+        "title": "Assinatura e pagamento",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "O {app} pode oferecer planos de assinatura. Os preços, períodos de cobrança e condições de renovação são exibidos com clareza antes da contratação. [Detalhes de cobrança e cancelamento — a definir.]"
+          }
+        ]
+      },
+      {
+        "title": "Uso aceitável",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Ao usar o {app}, você concorda em não utilizá-lo para fins ilegais, fraudulentos ou que violem estes Termos. Reservamo-nos o direito de suspender ou encerrar contas que violem estas condições."
+          }
+        ]
+      },
+      {
+        "title": "Limitação de responsabilidade",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "[Cláusula de limitação de responsabilidade — a ser definida com assessoria jurídica.]"
+          },
+          {
+            "type": "p",
+            "text": "O {app} é fornecido \"como está\", sem garantias de precisão absoluta. Não nos responsabilizamos por decisões tomadas com base exclusiva nas informações fornecidas pelo aplicativo."
+          }
+        ]
+      },
+      {
+        "title": "Alterações e contato",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Podemos atualizar estes Termos periodicamente. Mudanças relevantes serão comunicadas dentro do aplicativo. Para dúvidas ou solicitações, entre em contato pelo e-mail {email}."
+          }
+        ]
+      }
+    ]
   },
   "tmbCalculator": {
     "meta": {
@@ -235,32 +473,48 @@
     },
     "crossLinks": {
       "title": "Outras calculadoras",
-      "deficit": {
-        "name": "Calculadora de Déficit Calórico",
-        "desc": "Descubra quantas calorias comer para emagrecer no seu ritmo."
-      },
-      "calories": {
-        "name": "Calculadora de Calorias Diárias",
-        "desc": "Descubra quantas calorias comer para emagrecer, manter ou ganhar massa."
-      },
-      "imc": {
-        "name": "Calculadora de IMC",
-        "desc": "Calcule seu Índice de Massa Corporal e veja sua faixa da OMS."
-      },
-      "macros": {
-        "name": "Calculadora de Macros",
-        "desc": "Divida suas calorias em proteína, gordura e carboidrato."
-      }
+      "items": [
+        {
+          "to": "deficitCalculator",
+          "name": "Calculadora de Déficit Calórico",
+          "desc": "Descubra quantas calorias comer para emagrecer no seu ritmo."
+        },
+        {
+          "to": "caloriesCalculator",
+          "name": "Calculadora de Calorias Diárias",
+          "desc": "Descubra quantas calorias comer para emagrecer, manter ou ganhar massa."
+        },
+        {
+          "to": "imcCalculator",
+          "name": "Calculadora de IMC",
+          "desc": "Calcule seu Índice de Massa Corporal e veja sua faixa da OMS."
+        },
+        {
+          "to": "macrosCalculator",
+          "name": "Calculadora de Macros",
+          "desc": "Divida suas calorias em proteína, gordura e carboidrato."
+        }
+      ]
     },
     "seo": {
-      "whatIsTitle": "O que é Taxa Metabólica Basal (TMB)",
-      "whatIsText": "A Taxa Metabólica Basal, ou TMB, é a quantidade mínima de energia que o seu corpo precisa para manter as funções vitais em repouso absoluto: respiração, circulação sanguínea, regulação de temperatura, funcionamento do cérebro e renovação celular. Mesmo que você passasse o dia inteiro deitado, sem se mover, o corpo continuaria gastando essa energia.\n\nA TMB representa, em média, entre 60% e 75% do gasto calórico total diário. Por isso é o ponto de partida de qualquer planejamento alimentar — seja para emagrecer, manter o peso ou ganhar massa. Sem conhecer sua TMB, qualquer meta de calorias é chute.",
-      "howCalculatedTitle": "Como a TMB é calculada",
-      "howCalculatedText": "Esta calculadora usa a equação de Mifflin-St Jeor, publicada em 1990 e considerada a mais precisa entre as fórmulas de estimativa populares. Ela leva em conta peso, altura, idade e sexo biológico:\n\n• Homem: TMB = 10 × peso (kg) + 6,25 × altura (cm) − 5 × idade (anos) + 5\n• Mulher: TMB = 10 × peso (kg) + 6,25 × altura (cm) − 5 × idade (anos) − 161\n\nA diferença entre homens e mulheres reflete, em média, a maior proporção de massa magra no corpo masculino, que demanda mais energia em repouso. A fórmula gera uma estimativa — para resultados exatos, seria necessário um exame de calorimetria indireta em laboratório.",
-      "differenceTitle": "TMB, TDEE e gasto calórico: qual a diferença",
-      "differenceText": "São três números relacionados, mas distintos:\n\n• TMB (Taxa Metabólica Basal): o gasto do corpo em repouso total, sem nenhum movimento.\n• TDEE (Total Daily Energy Expenditure, ou Gasto Energético Diário Total): o gasto real considerando tudo que você faz no dia — caminhar, trabalhar, treinar. É calculado multiplicando a TMB por um fator de atividade.\n• Meta calórica: o quanto você deveria ingerir para atingir um objetivo específico. Para emagrecer, a meta fica abaixo do TDEE (déficit). Para ganhar peso, acima (superávit).\n\nA maioria das pessoas confunde TMB com TDEE. Se você comer apenas sua TMB, vai criar um déficit — mas pode não ser saudável dependendo do seu nível de atividade. Por isso a calculadora mostra os três valores.",
-      "whatToDoTitle": "O que fazer com esse número",
-      "whatToDoText": "Agora que você tem a TMB, o TDEE e a meta por objetivo, o próximo passo é ajustar a alimentação:\n\n• Emagrecer: consuma menos que o TDEE (a calculadora sugere −20%, um déficit moderado e sustentável). Nunca abaixo do piso de segurança (1 500 kcal para homens, 1 200 kcal para mulheres) sem acompanhamento profissional.\n• Manter o peso: coma próximo do TDEE. Flutuações de 100–200 kcal são normais e esperadas.\n• Ganhar massa: coma acima do TDEE (+10% é um superávit leve, que favorece ganho de massa com menos acúmulo de gordura).\n\nLembre-se: esses números são estimativas. O corpo não é uma planilha. Use-os como ponto de partida, observe o resultado na balança e no espelho ao longo de semanas, e ajuste. E, sempre que possível, conte com a orientação de um nutricionista."
+      "blocks": [
+        {
+          "title": "O que é Taxa Metabólica Basal (TMB)",
+          "text": "A Taxa Metabólica Basal, ou TMB, é a quantidade mínima de energia que o seu corpo precisa para manter as funções vitais em repouso absoluto: respiração, circulação sanguínea, regulação de temperatura, funcionamento do cérebro e renovação celular. Mesmo que você passasse o dia inteiro deitado, sem se mover, o corpo continuaria gastando essa energia.\n\nA TMB representa, em média, entre 60% e 75% do gasto calórico total diário. Por isso é o ponto de partida de qualquer planejamento alimentar — seja para emagrecer, manter o peso ou ganhar massa. Sem conhecer sua TMB, qualquer meta de calorias é chute."
+        },
+        {
+          "title": "Como a TMB é calculada",
+          "text": "Esta calculadora usa a equação de Mifflin-St Jeor, publicada em 1990 e considerada a mais precisa entre as fórmulas de estimativa populares. Ela leva em conta peso, altura, idade e sexo biológico:\n\n• Homem: TMB = 10 × peso (kg) + 6,25 × altura (cm) − 5 × idade (anos) + 5\n• Mulher: TMB = 10 × peso (kg) + 6,25 × altura (cm) − 5 × idade (anos) − 161\n\nA diferença entre homens e mulheres reflete, em média, a maior proporção de massa magra no corpo masculino, que demanda mais energia em repouso. A fórmula gera uma estimativa — para resultados exatos, seria necessário um exame de calorimetria indireta em laboratório."
+        },
+        {
+          "title": "TMB, TDEE e gasto calórico: qual a diferença",
+          "text": "São três números relacionados, mas distintos:\n\n• TMB (Taxa Metabólica Basal): o gasto do corpo em repouso total, sem nenhum movimento.\n• TDEE (Total Daily Energy Expenditure, ou Gasto Energético Diário Total): o gasto real considerando tudo que você faz no dia — caminhar, trabalhar, treinar. É calculado multiplicando a TMB por um fator de atividade.\n• Meta calórica: o quanto você deveria ingerir para atingir um objetivo específico. Para emagrecer, a meta fica abaixo do TDEE (déficit). Para ganhar peso, acima (superávit).\n\nA maioria das pessoas confunde TMB com TDEE. Se você comer apenas sua TMB, vai criar um déficit — mas pode não ser saudável dependendo do seu nível de atividade. Por isso a calculadora mostra os três valores."
+        },
+        {
+          "title": "O que fazer com esse número",
+          "text": "Agora que você tem a TMB, o TDEE e a meta por objetivo, o próximo passo é ajustar a alimentação:\n\n• Emagrecer: consuma menos que o TDEE (a calculadora sugere −20%, um déficit moderado e sustentável). Nunca abaixo do piso de segurança (1 500 kcal para homens, 1 200 kcal para mulheres) sem acompanhamento profissional.\n• Manter o peso: coma próximo do TDEE. Flutuações de 100–200 kcal são normais e esperadas.\n• Ganhar massa: coma acima do TDEE (+10% é um superávit leve, que favorece ganho de massa com menos acúmulo de gordura).\n\nLembre-se: esses números são estimativas. O corpo não é uma planilha. Use-os como ponto de partida, observe o resultado na balança e no espelho ao longo de semanas, e ajuste. E, sempre que possível, conte com a orientação de um nutricionista."
+        }
+      ]
     },
     "faq": {
       "title": "Perguntas frequentes",
@@ -336,32 +590,48 @@
     },
     "crossLinks": {
       "title": "Outras calculadoras",
-      "tmb": {
-        "name": "Calculadora de TMB",
-        "desc": "Descubra seu metabolismo basal e gasto calórico total."
-      },
-      "calories": {
-        "name": "Calculadora de Calorias Diárias",
-        "desc": "Descubra quantas calorias comer para emagrecer, manter ou ganhar massa."
-      },
-      "imc": {
-        "name": "Calculadora de IMC",
-        "desc": "Calcule seu Índice de Massa Corporal e veja sua faixa da OMS."
-      },
-      "macros": {
-        "name": "Calculadora de Macros",
-        "desc": "Divida suas calorias em proteína, gordura e carboidrato."
-      }
+      "items": [
+        {
+          "to": "tmbCalculator",
+          "name": "Calculadora de TMB",
+          "desc": "Descubra seu metabolismo basal e gasto calórico total."
+        },
+        {
+          "to": "caloriesCalculator",
+          "name": "Calculadora de Calorias Diárias",
+          "desc": "Descubra quantas calorias comer para emagrecer, manter ou ganhar massa."
+        },
+        {
+          "to": "imcCalculator",
+          "name": "Calculadora de IMC",
+          "desc": "Calcule seu Índice de Massa Corporal e veja sua faixa da OMS."
+        },
+        {
+          "to": "macrosCalculator",
+          "name": "Calculadora de Macros",
+          "desc": "Divida suas calorias em proteína, gordura e carboidrato."
+        }
+      ]
     },
     "seo": {
-      "whatIsTitle": "O que é déficit calórico",
-      "whatIsText": "Déficit calórico é quando você consome menos calorias do que o corpo gasta. Essa diferença obriga o organismo a buscar energia nas reservas — principalmente a gordura corporal. É o único mecanismo comprovado de emagrecimento: não importa qual dieta você segue, se ela funciona, é porque criou um déficit.\n\nO tamanho do déficit determina a velocidade da perda e o quão sustentável ela é. Déficits pequenos (10–15%) geram perda lenta mas confortável, com menos fome e menos risco de perda muscular. Déficits grandes (acima de 25%) aceleram o processo, mas aumentam a chance de compulsão, fadiga e platô metabólico.",
-      "howToCalcTitle": "Como calcular seu déficit",
-      "howToCalcText": "O cálculo tem três passos:\n\n1. Encontre sua TMB (Taxa Metabólica Basal) — o gasto do corpo em repouso. Esta calculadora usa a fórmula de Mifflin-St Jeor, a mais aceita.\n2. Multiplique pelo fator de atividade para obter o TDEE (gasto diário total): sedentário ×1,2, leve ×1,375, moderado ×1,55, intenso ×1,725.\n3. Aplique o déficit desejado: subtraia 10%, 20% ou 25% do TDEE. O resultado é sua meta calórica diária.\n\nPor exemplo: se seu TDEE é 2.400 kcal e você escolhe um déficit moderado de 20%, sua meta fica em 1.920 kcal/dia. A diferença (480 kcal/dia) somada na semana dá 3.360 kcal — o que equivale a cerca de 0,44 kg de gordura.",
-      "safeDeficitTitle": "Qual déficit é seguro",
-      "safeDeficitText": "A ciência e a prática clínica convergem em alguns limites:\n\n• Déficit de 10–20% do TDEE é considerado seguro e sustentável para a maioria das pessoas. É o intervalo que preserva massa muscular, mantém o metabolismo ativo e causa menos efeitos colaterais (fome excessiva, irritabilidade, fadiga).\n• Déficit acima de 25% pode funcionar a curto prazo, mas aumenta significativamente o risco de compulsão alimentar, perda de músculo e desaceleração do metabolismo (o temido \"platô\").\n• Nunca abaixo do piso de segurança: 1.500 kcal/dia para homens e 1.200 kcal/dia para mulheres. Abaixo disso, é muito difícil obter todos os micronutrientes necessários sem supervisão médica.\n\nA calculadora aplica esse piso automaticamente. Se o déficit escolhido levar abaixo do mínimo, ela ajusta e avisa.",
-      "weeklyLossTitle": "Quanto dá para perder por semana (com honestidade)",
-      "weeklyLossText": "A conta teórica é simples: cada 7.700 kcal de déficit equivalem a aproximadamente 1 kg de gordura. Com um déficit de 500 kcal/dia, a conta dá ~0,45 kg por semana; com 250 kcal/dia, ~0,23 kg.\n\nNa prática, porém, o número na balança vai oscilar mais que isso — e não é motivo para desanimar. Retenção de líquido, ciclo menstrual, sódio da comida do dia anterior e até estresse afetam o peso diário. O que importa é a tendência ao longo de semanas.\n\nUm ritmo saudável e realista para a maioria das pessoas é entre 0,3 e 0,7 kg por semana. Perder mais rápido é possível, mas costuma custar massa muscular e sanidade. Lento e consistente vence."
+      "blocks": [
+        {
+          "title": "O que é déficit calórico",
+          "text": "Déficit calórico é quando você consome menos calorias do que o corpo gasta. Essa diferença obriga o organismo a buscar energia nas reservas — principalmente a gordura corporal. É o único mecanismo comprovado de emagrecimento: não importa qual dieta você segue, se ela funciona, é porque criou um déficit.\n\nO tamanho do déficit determina a velocidade da perda e o quão sustentável ela é. Déficits pequenos (10–15%) geram perda lenta mas confortável, com menos fome e menos risco de perda muscular. Déficits grandes (acima de 25%) aceleram o processo, mas aumentam a chance de compulsão, fadiga e platô metabólico."
+        },
+        {
+          "title": "Como calcular seu déficit",
+          "text": "O cálculo tem três passos:\n\n1. Encontre sua TMB (Taxa Metabólica Basal) — o gasto do corpo em repouso. Esta calculadora usa a fórmula de Mifflin-St Jeor, a mais aceita.\n2. Multiplique pelo fator de atividade para obter o TDEE (gasto diário total): sedentário ×1,2, leve ×1,375, moderado ×1,55, intenso ×1,725.\n3. Aplique o déficit desejado: subtraia 10%, 20% ou 25% do TDEE. O resultado é sua meta calórica diária.\n\nPor exemplo: se seu TDEE é 2.400 kcal e você escolhe um déficit moderado de 20%, sua meta fica em 1.920 kcal/dia. A diferença (480 kcal/dia) somada na semana dá 3.360 kcal — o que equivale a cerca de 0,44 kg de gordura."
+        },
+        {
+          "title": "Qual déficit é seguro",
+          "text": "A ciência e a prática clínica convergem em alguns limites:\n\n• Déficit de 10–20% do TDEE é considerado seguro e sustentável para a maioria das pessoas. É o intervalo que preserva massa muscular, mantém o metabolismo ativo e causa menos efeitos colaterais (fome excessiva, irritabilidade, fadiga).\n• Déficit acima de 25% pode funcionar a curto prazo, mas aumenta significativamente o risco de compulsão alimentar, perda de músculo e desaceleração do metabolismo (o temido \"platô\").\n• Nunca abaixo do piso de segurança: 1.500 kcal/dia para homens e 1.200 kcal/dia para mulheres. Abaixo disso, é muito difícil obter todos os micronutrientes necessários sem supervisão médica.\n\nA calculadora aplica esse piso automaticamente. Se o déficit escolhido levar abaixo do mínimo, ela ajusta e avisa."
+        },
+        {
+          "title": "Quanto dá para perder por semana (com honestidade)",
+          "text": "A conta teórica é simples: cada 7.700 kcal de déficit equivalem a aproximadamente 1 kg de gordura. Com um déficit de 500 kcal/dia, a conta dá ~0,45 kg por semana; com 250 kcal/dia, ~0,23 kg.\n\nNa prática, porém, o número na balança vai oscilar mais que isso — e não é motivo para desanimar. Retenção de líquido, ciclo menstrual, sódio da comida do dia anterior e até estresse afetam o peso diário. O que importa é a tendência ao longo de semanas.\n\nUm ritmo saudável e realista para a maioria das pessoas é entre 0,3 e 0,7 kg por semana. Perder mais rápido é possível, mas costuma custar massa muscular e sanidade. Lento e consistente vence."
+        }
+      ]
     },
     "faq": {
       "title": "Perguntas frequentes",
@@ -435,32 +705,48 @@
     },
     "crossLinks": {
       "title": "Outras calculadoras",
-      "tmb": {
-        "name": "Calculadora de TMB",
-        "desc": "Descubra seu metabolismo basal e gasto calórico total."
-      },
-      "deficit": {
-        "name": "Calculadora de Déficit Calórico",
-        "desc": "Descubra quantas calorias comer para emagrecer no seu ritmo."
-      },
-      "imc": {
-        "name": "Calculadora de IMC",
-        "desc": "Calcule seu Índice de Massa Corporal e veja sua faixa da OMS."
-      },
-      "macros": {
-        "name": "Calculadora de Macros",
-        "desc": "Divida suas calorias em proteína, gordura e carboidrato."
-      }
+      "items": [
+        {
+          "to": "tmbCalculator",
+          "name": "Calculadora de TMB",
+          "desc": "Descubra seu metabolismo basal e gasto calórico total."
+        },
+        {
+          "to": "deficitCalculator",
+          "name": "Calculadora de Déficit Calórico",
+          "desc": "Descubra quantas calorias comer para emagrecer no seu ritmo."
+        },
+        {
+          "to": "imcCalculator",
+          "name": "Calculadora de IMC",
+          "desc": "Calcule seu Índice de Massa Corporal e veja sua faixa da OMS."
+        },
+        {
+          "to": "macrosCalculator",
+          "name": "Calculadora de Macros",
+          "desc": "Divida suas calorias em proteína, gordura e carboidrato."
+        }
+      ]
     },
     "seo": {
-      "whatIsTitle": "Quantas calorias devo comer por dia",
-      "whatIsText": "A quantidade de calorias que você deve ingerir por dia depende de vários fatores: seu peso atual, altura, idade, sexo biológico e, principalmente, o seu nível de atividade física diária e o seu objetivo (emagrecer, manter ou ganhar massa).\n\nPara a maioria das pessoas, não existe um número mágico universal de 2.000 calorias. Uma mulher pequena e sedentária pode precisar de apenas 1.500 kcal, enquanto um homem alto e muito ativo pode precisar de mais de 3.000 kcal. Por isso é essencial usar uma calculadora personalizada que leve em conta a sua fisiologia.",
-      "howToCalcTitle": "Como calculamos sua meta",
-      "howToCalcText": "Utilizamos um método científico em três etapas:\n\n1. Primeiro, calculamos sua Taxa Metabólica Basal (TMB) usando a equação de Mifflin-St Jeor, que estima a energia que seu corpo gasta apenas para se manter vivo (respiração, circulação, etc.).\n2. Em seguida, multiplicamos a TMB pelo seu fator de atividade (sedentário, leve, moderado ou intenso) para encontrar o seu Gasto Energético Diário Total (TDEE).\n3. Finalmente, ajustamos esse valor com base no seu objetivo. Se você quer emagrecer, aplicamos um déficit de 20%. Se quer manter, mantemos o valor do TDEE. Se quer ganhar, aplicamos um superávit de 10%.",
-      "safeDeficitTitle": "Calorias para emagrecer, manter ou ganhar",
-      "safeDeficitText": "• Emagrecer: A regra de ouro é o déficit calórico sustentável. Recomendamos reduzir 20% do seu gasto diário. Isso garante uma perda de peso saudável sem sacrificar a massa muscular ou deixar você com fome o tempo todo. Mas atenção: nunca sugerimos consumir menos que o piso seguro (1.500 kcal para homens, 1.200 kcal para mulheres).\n• Manter: Ideal para quem já está no peso desejado ou quer focar apenas em recomposição corporal (trocar gordura por músculo) em ritmo lento.\n• Ganhar: Para crescer músculos (hipertrofia), você precisa de um leve excesso calórico (superávit de ~10%) aliado a treino de força. Muito acima disso, o ganho será predominantemente de gordura.",
-      "weeklyLossTitle": "Por que contar calorias funciona (e como facilitar)",
-      "weeklyLossText": "Seja qual for a dieta da moda — low carb, jejum intermitente, cetogênica — o único motivo biológico que a faz funcionar para perda de peso é se ela induz um déficit calórico no final do dia. Ao entender e rastrear suas calorias, você ganha a liberdade de comer os alimentos que gosta, desde que caibam na sua meta diária.\n\nA pior parte de contar calorias sempre foi pesar cada ingrediente e procurar em tabelas gigantescas. O Nutricalor resolve isso usando Inteligência Artificial: você só precisa tirar uma foto do seu prato, e a IA estima as calorias e macronutrientes automaticamente, reconhecendo a comida brasileira do dia a dia."
+      "blocks": [
+        {
+          "title": "Quantas calorias devo comer por dia",
+          "text": "A quantidade de calorias que você deve ingerir por dia depende de vários fatores: seu peso atual, altura, idade, sexo biológico e, principalmente, o seu nível de atividade física diária e o seu objetivo (emagrecer, manter ou ganhar massa).\n\nPara a maioria das pessoas, não existe um número mágico universal de 2.000 calorias. Uma mulher pequena e sedentária pode precisar de apenas 1.500 kcal, enquanto um homem alto e muito ativo pode precisar de mais de 3.000 kcal. Por isso é essencial usar uma calculadora personalizada que leve em conta a sua fisiologia."
+        },
+        {
+          "title": "Como calculamos sua meta",
+          "text": "Utilizamos um método científico em três etapas:\n\n1. Primeiro, calculamos sua Taxa Metabólica Basal (TMB) usando a equação de Mifflin-St Jeor, que estima a energia que seu corpo gasta apenas para se manter vivo (respiração, circulação, etc.).\n2. Em seguida, multiplicamos a TMB pelo seu fator de atividade (sedentário, leve, moderado ou intenso) para encontrar o seu Gasto Energético Diário Total (TDEE).\n3. Finalmente, ajustamos esse valor com base no seu objetivo. Se você quer emagrecer, aplicamos um déficit de 20%. Se quer manter, mantemos o valor do TDEE. Se quer ganhar, aplicamos um superávit de 10%."
+        },
+        {
+          "title": "Calorias para emagrecer, manter ou ganhar",
+          "text": "• Emagrecer: A regra de ouro é o déficit calórico sustentável. Recomendamos reduzir 20% do seu gasto diário. Isso garante uma perda de peso saudável sem sacrificar a massa muscular ou deixar você com fome o tempo todo. Mas atenção: nunca sugerimos consumir menos que o piso seguro (1.500 kcal para homens, 1.200 kcal para mulheres).\n• Manter: Ideal para quem já está no peso desejado ou quer focar apenas em recomposição corporal (trocar gordura por músculo) em ritmo lento.\n• Ganhar: Para crescer músculos (hipertrofia), você precisa de um leve excesso calórico (superávit de ~10%) aliado a treino de força. Muito acima disso, o ganho será predominantemente de gordura."
+        },
+        {
+          "title": "Por que contar calorias funciona (e como facilitar)",
+          "text": "Seja qual for a dieta da moda — low carb, jejum intermitente, cetogênica — o único motivo biológico que a faz funcionar para perda de peso é se ela induz um déficit calórico no final do dia. Ao entender e rastrear suas calorias, você ganha a liberdade de comer os alimentos que gosta, desde que caibam na sua meta diária.\n\nA pior parte de contar calorias sempre foi pesar cada ingrediente e procurar em tabelas gigantescas. O Nutricalor resolve isso usando Inteligência Artificial: você só precisa tirar uma foto do seu prato, e a IA estima as calorias e macronutrientes automaticamente, reconhecendo a comida brasileira do dia a dia."
+        }
+      ]
     },
     "faq": {
       "title": "Perguntas frequentes",
@@ -518,32 +804,48 @@
     },
     "crossLinks": {
       "title": "Outras calculadoras",
-      "tmb": {
-        "name": "Calculadora de TMB",
-        "desc": "Descubra seu metabolismo basal e gasto calórico total."
-      },
-      "deficit": {
-        "name": "Calculadora de Déficit Calórico",
-        "desc": "Descubra quantas calorias comer para emagrecer no seu ritmo."
-      },
-      "calories": {
-        "name": "Calculadora de Calorias Diárias",
-        "desc": "Descubra quantas calorias comer para emagrecer, manter ou ganhar massa."
-      },
-      "macros": {
-        "name": "Calculadora de Macros",
-        "desc": "Divida suas calorias em proteína, gordura e carboidrato."
-      }
+      "items": [
+        {
+          "to": "tmbCalculator",
+          "name": "Calculadora de TMB",
+          "desc": "Descubra seu metabolismo basal e gasto calórico total."
+        },
+        {
+          "to": "deficitCalculator",
+          "name": "Calculadora de Déficit Calórico",
+          "desc": "Descubra quantas calorias comer para emagrecer no seu ritmo."
+        },
+        {
+          "to": "caloriesCalculator",
+          "name": "Calculadora de Calorias Diárias",
+          "desc": "Descubra quantas calorias comer para emagrecer, manter ou ganhar massa."
+        },
+        {
+          "to": "macrosCalculator",
+          "name": "Calculadora de Macros",
+          "desc": "Divida suas calorias em proteína, gordura e carboidrato."
+        }
+      ]
     },
     "seo": {
-      "whatIsTitle": "O que é IMC",
-      "whatIsText": "O Índice de Massa Corporal (IMC) é uma fórmula matemática simples, criada no século XIX pelo matemático belga Adolphe Quetelet, que relaciona o peso e a altura de uma pessoa.\n\nA Organização Mundial da Saúde (OMS) utiliza o IMC como padrão internacional para avaliar de forma rápida se uma pessoa adulta está dentro de uma faixa de peso considerada saudável em relação à sua altura, ou se apresenta baixo peso, sobrepeso ou obesidade.",
-      "howToCalcTitle": "Como calcular o IMC",
-      "howToCalcText": "A conta do IMC é bastante simples. Você pega o seu peso (em quilos) e divide pela sua altura (em metros) elevada ao quadrado.\n\nA fórmula oficial é:\n\n• IMC = Peso (kg) ÷ (Altura (m) × Altura (m))\n\nPor exemplo: uma pessoa que pesa 70 kg e tem 1,75 m de altura teria o cálculo: 70 ÷ (1,75 × 1,75) = 70 ÷ 3,06 = 22,8. Essa pessoa estaria na faixa de \"Peso normal\".",
-      "tableTitle": "Tabela de classificação (OMS)",
-      "tableText": "A Organização Mundial da Saúde classifica o IMC adulto (homens e mulheres a partir dos 20 anos) nas seguintes faixas:\n\n• Menos de 18,5: Abaixo do peso\n• Entre 18,5 e 24,9: Peso normal\n• Entre 25,0 e 29,9: Sobrepeso\n• 30,0 ou mais: Obesidade",
-      "limitationsTitle": "Limitações do IMC — por que ele não conta a história toda",
-      "limitationsText": "Embora o IMC seja uma ferramenta epidemiológica útil para avaliar grandes populações, ele possui limitações significativas quando aplicado isoladamente na avaliação individual de saúde:\n\n1. Não diferencia músculo de gordura: O músculo é mais denso que a gordura. Atletas e pessoas muito musculosas frequentemente têm um IMC que os classifica como em \"sobrepeso\" ou \"obesidade\", mesmo tendo percentuais de gordura corporal muito baixos e excelente saúde cardiovascular.\n2. Não avalia a distribuição da gordura: A gordura visceral (acumulada na região do abdômen, entre os órgãos) é muito mais perigosa para a saúde metabólica do que a gordura subcutânea (acumulada nos quadris e coxas). Duas pessoas com o mesmo IMC podem ter perfis de risco cardiovascular completamente diferentes.\n3. Não considera as diferenças de idade e etnia: As tabelas padrão não são ideais para idosos (que naturalmente perdem massa muscular e óssea) nem para gestantes. Algumas populações, como a asiática, apresentam riscos metabólicos com IMCs mais baixos do que o ponto de corte padrão."
+      "blocks": [
+        {
+          "title": "O que é IMC",
+          "text": "O Índice de Massa Corporal (IMC) é uma fórmula matemática simples, criada no século XIX pelo matemático belga Adolphe Quetelet, que relaciona o peso e a altura de uma pessoa.\n\nA Organização Mundial da Saúde (OMS) utiliza o IMC como padrão internacional para avaliar de forma rápida se uma pessoa adulta está dentro de uma faixa de peso considerada saudável em relação à sua altura, ou se apresenta baixo peso, sobrepeso ou obesidade."
+        },
+        {
+          "title": "Como calcular o IMC",
+          "text": "A conta do IMC é bastante simples. Você pega o seu peso (em quilos) e divide pela sua altura (em metros) elevada ao quadrado.\n\nA fórmula oficial é:\n\n• IMC = Peso (kg) ÷ (Altura (m) × Altura (m))\n\nPor exemplo: uma pessoa que pesa 70 kg e tem 1,75 m de altura teria o cálculo: 70 ÷ (1,75 × 1,75) = 70 ÷ 3,06 = 22,8. Essa pessoa estaria na faixa de \"Peso normal\"."
+        },
+        {
+          "title": "Tabela de classificação (OMS)",
+          "text": "A Organização Mundial da Saúde classifica o IMC adulto (homens e mulheres a partir dos 20 anos) nas seguintes faixas:\n\n• Menos de 18,5: Abaixo do peso\n• Entre 18,5 e 24,9: Peso normal\n• Entre 25,0 e 29,9: Sobrepeso\n• 30,0 ou mais: Obesidade"
+        },
+        {
+          "title": "Limitações do IMC — por que ele não conta a história toda",
+          "text": "Embora o IMC seja uma ferramenta epidemiológica útil para avaliar grandes populações, ele possui limitações significativas quando aplicado isoladamente na avaliação individual de saúde:\n\n1. Não diferencia músculo de gordura: O músculo é mais denso que a gordura. Atletas e pessoas muito musculosas frequentemente têm um IMC que os classifica como em \"sobrepeso\" ou \"obesidade\", mesmo tendo percentuais de gordura corporal muito baixos e excelente saúde cardiovascular.\n2. Não avalia a distribuição da gordura: A gordura visceral (acumulada na região do abdômen, entre os órgãos) é muito mais perigosa para a saúde metabólica do que a gordura subcutânea (acumulada nos quadris e coxas). Duas pessoas com o mesmo IMC podem ter perfis de risco cardiovascular completamente diferentes.\n3. Não considera as diferenças de idade e etnia: As tabelas padrão não são ideais para idosos (que naturalmente perdem massa muscular e óssea) nem para gestantes. Algumas populações, como a asiática, apresentam riscos metabólicos com IMCs mais baixos do que o ponto de corte padrão."
+        }
+      ]
     },
     "faq": {
       "title": "Perguntas frequentes",
@@ -615,32 +917,48 @@
     },
     "crossLinks": {
       "title": "Outras calculadoras",
-      "tmb": {
-        "name": "Calculadora de TMB",
-        "desc": "Descubra seu metabolismo basal e gasto calórico total."
-      },
-      "deficit": {
-        "name": "Calculadora de Déficit Calórico",
-        "desc": "Descubra quantas calorias comer para emagrecer no seu ritmo."
-      },
-      "calories": {
-        "name": "Calculadora de Calorias Diárias",
-        "desc": "Descubra quantas calorias comer para emagrecer, manter ou ganhar massa."
-      },
-      "imc": {
-        "name": "Calculadora de IMC",
-        "desc": "Calcule seu Índice de Massa Corporal e veja sua faixa da OMS."
-      }
+      "items": [
+        {
+          "to": "tmbCalculator",
+          "name": "Calculadora de TMB",
+          "desc": "Descubra seu metabolismo basal e gasto calórico total."
+        },
+        {
+          "to": "deficitCalculator",
+          "name": "Calculadora de Déficit Calórico",
+          "desc": "Descubra quantas calorias comer para emagrecer no seu ritmo."
+        },
+        {
+          "to": "caloriesCalculator",
+          "name": "Calculadora de Calorias Diárias",
+          "desc": "Descubra quantas calorias comer para emagrecer, manter ou ganhar massa."
+        },
+        {
+          "to": "imcCalculator",
+          "name": "Calculadora de IMC",
+          "desc": "Calcule seu Índice de Massa Corporal e veja sua faixa da OMS."
+        }
+      ]
     },
     "seo": {
-      "whatIsTitle": "O que são macronutrientes",
-      "whatIsText": "Macronutrientes, ou \"macros\", são os três principais componentes da alimentação que fornecem energia ao corpo: proteínas, carboidratos e gorduras. Enquanto as vitaminas e minerais (micronutrientes) são necessários em pequenas quantidades, os macros são necessários em grandes quantidades (gramas) todos os dias.\n\nCada macro desempenha um papel essencial:\n\n• Proteínas: São os tijolos do corpo. Essenciais para construir e reparar tecidos (incluindo músculos), produzir enzimas e hormônios, e dar suporte ao sistema imunológico. (Fornecem ~4 kcal por grama).\n• Gorduras (Lipídios): Fundamentais para a saúde hormonal, absorção de vitaminas lipossolúveis (A, D, E e K), proteção dos órgãos e reserva de energia de longo prazo. (Fornecem ~9 kcal por grama).\n• Carboidratos: A fonte de energia preferida e mais rápida do corpo e do cérebro. (Fornecem ~4 kcal por grama).",
-      "howToCalcTitle": "Como calcular seus macros",
-      "howToCalcText": "A divisão dos macros nesta calculadora segue um padrão baseado em evidências para otimização da composição corporal (perder gordura mantendo músculo, ou ganhar massa limpa):\n\n1. Primeiro, definimos as calorias totais com base na sua TMB, fator de atividade e objetivo (emagrecer, manter ou ganhar).\n2. Proteína: Fixamos em ~1,8 gramas por quilograma de peso corporal. Essa é a quantidade considerada ideal por diversos estudos para maximizar a síntese proteica, seja em déficit calórico ou hipertrofia.\n3. Gordura: Reservamos cerca de 25% das calorias totais diárias para as gorduras. Essa quantidade é suficiente para manter a produção hormonal saudável.\n4. Carboidratos: O restante das calorias é alocado para os carboidratos. Eles fornecerão a energia necessária para os treinos e o dia a dia.",
-      "proteinCarbFatTitle": "Proteína, carbo e gordura: quanto de cada",
-      "proteinCarbFatText": "Embora a calculadora forneça um ponto de partida excelente, a distribuição ideal pode variar dependendo das suas preferências alimentares, genética e tipo de treinamento.\n\nAtletas de endurance (corrida, ciclismo) podem precisar de uma proporção maior de carboidratos, reduzindo levemente as gorduras ou proteínas. Pessoas com resistência à insulina ou que preferem dietas mais ricas em gorduras podem diminuir os carboidratos e aumentar as gorduras.\n\nA regra principal é: bata a meta de calorias e, para melhorar a composição do corpo, bata a meta de proteínas. A proporção exata entre gorduras e carboidratos é menos rígida e pode ser adaptada ao que você se sente melhor seguindo.",
-      "goalChangesTitle": "Como os macros mudam conforme o objetivo",
-      "goalChangesText": "A beleza de calcular os macros está na flexibilidade. O seu peso dita a proteína, mas as suas calorias totais — que ditam os carboidratos e gorduras — mudam conforme o objetivo.\n\n• Emagrecer: A proteína permanece alta (crucial para não perder massa muscular), mas os carboidratos e gorduras caem para gerar o déficit calórico.\n• Ganhar Massa: Você come mais calorias no total. A proteína continua suficiente (1,8 a 2,0g/kg), mas os carboidratos aumentam significativamente para fornecer energia extra para treinos intensos e construir tecido novo."
+      "blocks": [
+        {
+          "title": "O que são macronutrientes",
+          "text": "Macronutrientes, ou \"macros\", são os três principais componentes da alimentação que fornecem energia ao corpo: proteínas, carboidratos e gorduras. Enquanto as vitaminas e minerais (micronutrientes) são necessários em pequenas quantidades, os macros são necessários em grandes quantidades (gramas) todos os dias.\n\nCada macro desempenha um papel essencial:\n\n• Proteínas: São os tijolos do corpo. Essenciais para construir e reparar tecidos (incluindo músculos), produzir enzimas e hormônios, e dar suporte ao sistema imunológico. (Fornecem ~4 kcal por grama).\n• Gorduras (Lipídios): Fundamentais para a saúde hormonal, absorção de vitaminas lipossolúveis (A, D, E e K), proteção dos órgãos e reserva de energia de longo prazo. (Fornecem ~9 kcal por grama).\n• Carboidratos: A fonte de energia preferida e mais rápida do corpo e do cérebro. (Fornecem ~4 kcal por grama)."
+        },
+        {
+          "title": "Como calcular seus macros",
+          "text": "A divisão dos macros nesta calculadora segue um padrão baseado em evidências para otimização da composição corporal (perder gordura mantendo músculo, ou ganhar massa limpa):\n\n1. Primeiro, definimos as calorias totais com base na sua TMB, fator de atividade e objetivo (emagrecer, manter ou ganhar).\n2. Proteína: Fixamos em ~1,8 gramas por quilograma de peso corporal. Essa é a quantidade considerada ideal por diversos estudos para maximizar a síntese proteica, seja em déficit calórico ou hipertrofia.\n3. Gordura: Reservamos cerca de 25% das calorias totais diárias para as gorduras. Essa quantidade é suficiente para manter a produção hormonal saudável.\n4. Carboidratos: O restante das calorias é alocado para os carboidratos. Eles fornecerão a energia necessária para os treinos e o dia a dia."
+        },
+        {
+          "title": "Proteína, carbo e gordura: quanto de cada",
+          "text": "Embora a calculadora forneça um ponto de partida excelente, a distribuição ideal pode variar dependendo das suas preferências alimentares, genética e tipo de treinamento.\n\nAtletas de endurance (corrida, ciclismo) podem precisar de uma proporção maior de carboidratos, reduzindo levemente as gorduras ou proteínas. Pessoas com resistência à insulina ou que preferem dietas mais ricas em gorduras podem diminuir os carboidratos e aumentar as gorduras.\n\nA regra principal é: bata a meta de calorias e, para melhorar a composição do corpo, bata a meta de proteínas. A proporção exata entre gorduras e carboidratos é menos rígida e pode ser adaptada ao que você se sente melhor seguindo."
+        },
+        {
+          "title": "Como os macros mudam conforme o objetivo",
+          "text": "A beleza de calcular os macros está na flexibilidade. O seu peso dita a proteína, mas as suas calorias totais — que ditam os carboidratos e gorduras — mudam conforme o objetivo.\n\n• Emagrecer: A proteína permanece alta (crucial para não perder massa muscular), mas os carboidratos e gorduras caem para gerar o déficit calórico.\n• Ganhar Massa: Você come mais calorias no total. A proteína continua suficiente (1,8 a 2,0g/kg), mas os carboidratos aumentam significativamente para fornecer energia extra para treinos intensos e construir tecido novo."
+        }
+      ]
     },
     "faq": {
       "title": "Perguntas frequentes",
@@ -666,18 +984,6 @@
           "answer": "Usando a tecnologia a seu favor. Com o Nutricalor, em vez de pesar tudo na balança e registrar cada grama, você apenas fotografa o prato. A inteligência artificial estima os macros de acordo com a comida que está lá, tornando o acompanhamento algo fácil e sustentável a longo prazo."
         }
       ]
-    }
-  },
-  "privacy": {
-    "meta": {
-      "title": "Política de Privacidade — Nutricalor",
-      "description": "Saiba como o Nutricalor coleta, usa e protege seus dados pessoais. Conheça seus direitos segundo a LGPD."
-    }
-  },
-  "terms": {
-    "meta": {
-      "title": "Termos de Uso — Nutricalor",
-      "description": "Leia os Termos de Uso do Nutricalor. Entenda as condições para utilizar o aplicativo de contagem de calorias por foto."
     }
   }
 }

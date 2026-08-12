@@ -1,75 +1,60 @@
-'use client'
-
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
 import Logo from './Logo'
 import { CONTACT_EMAIL } from '@/lib/constants'
+import { CALCULATOR_KEYS, homePath, pathFor, type Locale } from '@/lib/routes'
+import type { FooterDict } from '@/dictionaries/types'
 import styles from './Footer.module.css'
 
 type FooterProps = {
-  dict: {
-    tagline: string
-    privacy: string
-    terms: string
-    contact: string
-    rights: string
-    tools?: string
-    tmbCalculator?: string
-    deficitCalculator?: string
-    caloriesCalculator?: string
-    imcCalculator?: string
-    macrosCalculator?: string
-  }
+  locale: Locale
+  dict: FooterDict
 }
 
-export default function Footer({ dict }: FooterProps) {
-  const currentYear = new Date().getFullYear()
-  const pathname = usePathname()
-  const locale = pathname.split('/')[1] || 'pt'
+/** Rótulo de cada calculadora no rodapé, na ordem do registro de rotas. */
+const CALCULATOR_LABEL = {
+  tmbCalculator: 'tmbCalculator',
+  deficitCalculator: 'deficitCalculator',
+  caloriesCalculator: 'caloriesCalculator',
+  imcCalculator: 'imcCalculator',
+  macrosCalculator: 'macrosCalculator',
+} as const satisfies Record<(typeof CALCULATOR_KEYS)[number], keyof FooterDict>
 
-  const tools = [
-    { href: `/${locale}/calculadora-tmb`, label: dict.tmbCalculator },
-    { href: `/${locale}/calculadora-deficit-calorico`, label: dict.deficitCalculator },
-    { href: `/${locale}/calculadora-calorias`, label: dict.caloriesCalculator },
-    { href: `/${locale}/calculadora-imc`, label: dict.imcCalculator },
-    { href: `/${locale}/calculadora-macros`, label: dict.macrosCalculator },
-  ].filter((tool) => Boolean(tool.label))
+export default function Footer({ locale, dict }: FooterProps) {
+  const currentYear = new Date().getFullYear()
 
   return (
     <footer className={styles.footer}>
       <div className={`container ${styles.inner}`}>
         <div className={styles.main}>
           <div className={styles.brand}>
-            <Link href={`/${locale}`} className={styles.logo}>
+            <Link href={homePath(locale)} className={styles.logo}>
               <Logo size={26} />
               <span className={styles.logoText}>Nutricalor</span>
             </Link>
             <p className={styles.tagline}>{dict.tagline}</p>
           </div>
 
-          <nav className={styles.links} aria-label="Rodapé">
+          <nav className={styles.links} aria-label={dict.navLabel}>
             <div className={styles.linkGroup}>
-              <h2 className={styles.linkTitle}>Legal</h2>
-              <Link href={`/${locale}/privacidade`}>{dict.privacy}</Link>
-              <Link href={`/${locale}/termos`}>{dict.terms}</Link>
+              <h2 className={styles.linkTitle}>{dict.legal}</h2>
+              <Link href={pathFor('privacy', locale)}>{dict.privacy}</Link>
+              <Link href={pathFor('terms', locale)}>{dict.terms}</Link>
             </div>
 
             <div className={styles.linkGroup}>
               <h2 className={styles.linkTitle}>{dict.contact}</h2>
               <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
-              <Link href={`/${locale}/contato`}>Formulário</Link>
+              <Link href={pathFor('contact', locale)}>{dict.contactForm}</Link>
             </div>
 
-            {dict.tools && tools.length > 0 && (
-              <div className={styles.linkGroup}>
-                <h2 className={styles.linkTitle}>{dict.tools}</h2>
-                {tools.map((tool) => (
-                  <Link key={tool.href} href={tool.href}>
-                    {tool.label}
-                  </Link>
-                ))}
-              </div>
-            )}
+            <div className={styles.linkGroup}>
+              <h2 className={styles.linkTitle}>{dict.tools}</h2>
+              {CALCULATOR_KEYS.map((key) => (
+                <Link key={key} href={pathFor(key, locale)}>
+                  {dict[CALCULATOR_LABEL[key]]}
+                </Link>
+              ))}
+            </div>
           </nav>
         </div>
 
@@ -79,7 +64,7 @@ export default function Footer({ dict }: FooterProps) {
           </p>
           <p className={styles.madeIn}>
             <span className={styles.madeDot} />
-            Feito no Brasil
+            {dict.madeIn}
           </p>
         </div>
       </div>

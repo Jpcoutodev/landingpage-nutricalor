@@ -1,0 +1,989 @@
+{
+  "common": {
+    "appName": "Nutricalor",
+    "skipToContent": "Skip to content",
+    "comingSoon": "Coming soon on",
+    "available": "Get it on",
+    "googlePlay": "Google Play"
+  },
+  "nav": {
+    "home": "Home",
+    "howItWorks": "How it works",
+    "contact": "Contact",
+    "calculators": "Calculators",
+    "tmbCalculator": "BMR Calculator",
+    "deficitCalculator": "Calorie Deficit",
+    "caloriesCalculator": "Daily Calories",
+    "imcCalculator": "BMI Calculator",
+    "macrosCalculator": "Macro Calculator",
+    "mainMenu": "Main menu",
+    "menu": "Open menu"
+  },
+  "footer": {
+    "tagline": "Calories from a photo. Snap your plate, skip the spreadsheet.",
+    "navLabel": "Footer",
+    "legal": "Legal",
+    "privacy": "Privacy",
+    "terms": "Terms of Use",
+    "contact": "Contact",
+    "contactForm": "Contact form",
+    "tools": "Tools",
+    "tmbCalculator": "BMR Calculator",
+    "deficitCalculator": "Calorie Deficit Calculator",
+    "caloriesCalculator": "Daily Calorie Calculator",
+    "imcCalculator": "BMI Calculator",
+    "macrosCalculator": "Macro Calculator",
+    "rights": "All rights reserved.",
+    "madeIn": "Photo-first tracking"
+  },
+  "home": {
+    "meta": {
+      "title": "Nutricalor — Photo Calorie Counter: Snap Your Meal, Get Calories and Macros",
+      "description": "Take a photo of your plate and get calories and macros in seconds. An AI calorie counter that reads real, home-cooked meals — not just barcodes. Now on Google Play."
+    },
+    "hero": {
+      "pill": "AI calorie counting from a photo",
+      "titlePart1": "Snap it.",
+      "titlePart2": "Counted.",
+      "subtitle": "Calories and macros for your plate in seconds. Point the camera and Nutricalor does the rest — no weighing, no searching, no typing.",
+      "photoLabel": "Today's plate",
+      "protein": "Protein",
+      "carbs": "Carbs",
+      "fat": "Fat",
+      "food1": "White rice",
+      "food2": "Black beans",
+      "food3": "Grilled chicken",
+      "badge1": "AI found 3 items",
+      "secondaryCta": "See how it works",
+      "scanLabel": "Analyzing plate",
+      "readoutLabel": "Result",
+      "stats": [
+        {
+          "value": "~2s",
+          "label": "per analysis"
+        },
+        {
+          "value": "7 days",
+          "label": "free, no card"
+        },
+        {
+          "value": "AI",
+          "label": "reads whole plates"
+        }
+      ]
+    },
+    "ticker": {
+      "label": "Recognizes",
+      "items": [
+        "rice and beans",
+        "grilled chicken",
+        "pasta bowls",
+        "stir fry",
+        "scrambled eggs",
+        "toast and butter",
+        "mixed salad",
+        "roast potatoes",
+        "beef stew",
+        "grilled fish",
+        "burrito bowl",
+        "oatmeal",
+        "lentil soup",
+        "sandwiches",
+        "leftovers",
+        "your lunchbox"
+      ]
+    },
+    "steps": {
+      "badge": "How it works",
+      "title": "Three steps. One photo.",
+      "subtitle": "No spreadsheet, no database search, no typing. Just point and you're done.",
+      "items": [
+        {
+          "title": "Photograph your plate",
+          "description": "One photo is enough. Home cooking, takeout, a lunchbox, a snack — Nutricalor was built to read a full plate, not just a barcode."
+        },
+        {
+          "title": "The AI identifies it",
+          "description": "In seconds you see the foods, the estimated portions, the calories and the macros."
+        },
+        {
+          "title": "Adjust and done",
+          "description": "Fixed a portion, added an item? You get the final say. The entry is saved to your day."
+        }
+      ]
+    },
+    "features": {
+      "badge": "Why Nutricalor",
+      "title": "Different on purpose.",
+      "subtitle": "Most calorie apps were built around packaged food. This one starts with the plate.",
+      "items": [
+        {
+          "title": "Built for real plates",
+          "description": "Barcode scanners fall apart the moment you cook. Nutricalor reads a plate of food the way you actually eat it — mixed, plated and unlabeled."
+        },
+        {
+          "title": "Understands how you talk",
+          "description": "Describe your meal in plain language and the app works it out. No rigid database syntax, no hunting for the exact entry someone else typed in."
+        },
+        {
+          "title": "A free trial that's actually free",
+          "description": "Try every feature for 7 days at no cost, with no credit card required. No surprise charge, no fine print."
+        }
+      ]
+    },
+    "cta": {
+      "eyebrow": "Available now",
+      "titlePart1": "Start counting",
+      "titlePart2": "without counting.",
+      "subtitle": "Nutricalor is on Google Play. Log a meal in the time it takes to snap a photo."
+    }
+  },
+  "howItWorks": {
+    "meta": {
+      "title": "How Nutricalor works — calories from a photo",
+      "description": "Point the camera, the AI identifies the food, and you adjust. See how Nutricalor logs a meal in the time it takes to take a photo."
+    },
+    "title": "How it works",
+    "lead": "Counting calories has always been tedious — weighing, scrolling lists, typing. Nutricalor trades all of that for one photo. Here's how.",
+    "section1": {
+      "title": "Logging by photo",
+      "text": "Point the camera at your plate and take the photo. Nutricalor analyzes the image, identifies each food and estimates the portion. You get calories and macronutrients (protein, carbs and fat) right away. No spreadsheet, no tedious search."
+    },
+    "section2": {
+      "title": "You stay in control",
+      "text": "The AI suggests — you decide. Adjust a portion, add a side that got missed, remove what you didn't eat. The final number is always yours."
+    },
+    "section3": {
+      "title": "More than one way to log",
+      "text": "You can't always take a photo. That's why Nutricalor also accepts:",
+      "methods": [
+        {
+          "title": "Text",
+          "description": "describe what you ate (\"grilled chicken with rice and beans\") and let the app work it out."
+        },
+        {
+          "title": "Barcode",
+          "description": "for packaged products, one tap does it."
+        },
+        {
+          "title": "Manual search",
+          "description": "find the food in the database and log it."
+        },
+        {
+          "title": "Meal memory",
+          "description": "whatever you eat often comes back in a single tap."
+        }
+      ]
+    },
+    "section4": {
+      "title": "Your goal, your way",
+      "text": "When you start, Nutricalor calculates your daily calorie target based on your goal — lose, maintain or gain. Check the dashboard to see whether you hit the day's target at a glance."
+    },
+    "section5": {
+      "title": "An honest note",
+      "text": "Nutricalor gives estimates, not laboratory measurements. No photo app is accurate to the gram — and anyone promising that is lying. What we offer is speed and consistency, so you can understand your habits and improve. Nutricalor does not replace advice from a dietitian or doctor."
+    }
+  },
+  "contact": {
+    "meta": {
+      "title": "Contact",
+      "description": "Get in touch with Nutricalor. Questions, suggestions or problems — we're listening."
+    },
+    "title": "Talk to us",
+    "description": "A question, a suggestion or a problem? Write to us. We read everything — Nutricalor is being built by listening to the people who use it."
+  },
+  "privacy": {
+    "meta": {
+      "title": "Privacy Policy",
+      "description": "How Nutricalor handles your data. Your meal photos are processed and then discarded."
+    },
+    "title": "Privacy Policy",
+    "lastUpdatedLabel": "Last updated",
+    "lastUpdatedDate": "2026-07-03",
+    "lastUpdatedText": "July 3, 2026",
+    "reviewNotice": "This text is a structured draft and still requires legal review before final publication. Nutricalor is operated from Brazil, so this policy is written around Brazilian data protection law (LGPD); if you use the service from another country, your local rights may differ.",
+    "sections": [
+      {
+        "title": "Who we are",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "{app} ([legal entity / controller — to be filled in]) is the controller of the personal data processed in this app and website. For any question about personal data, contact us at {email}."
+          }
+        ]
+      },
+      {
+        "title": "Data we collect",
+        "blocks": [
+          {
+            "type": "ul",
+            "items": [
+              "**Account data:** email address and Google sign-in.",
+              "**Data you provide:** sex, age, height, weight, goal and activity level.",
+              "**Food logs:** the foods you record, portions and nutrition values.",
+              "**Weight logs:** your weigh-in history.",
+              "**Usage data:** information about how you interact with the app (features used, frequency)."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Meal photos",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "The images you take are processed to identify the food and **discarded afterwards**. We do not store your food photos by default."
+          }
+        ]
+      },
+      {
+        "title": "Why we process your data",
+        "blocks": [
+          {
+            "type": "ul",
+            "items": [
+              "To calculate your daily calorie and macronutrient targets.",
+              "To log your meals and show your progress.",
+              "To improve the accuracy of the service and the user experience.",
+              "To communicate relevant updates about the service."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Legal basis (LGPD)",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Your personal data is processed on the basis of your **consent** and the **performance of the service** you signed up for, under Brazil's General Data Protection Law (Law No. 13.709/2018)."
+          }
+        ]
+      },
+      {
+        "title": "Sharing and international transfers",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "We use third-party services for AI image processing and cloud infrastructure. These services may process data outside Brazil. We apply appropriate safeguards to protect your data in those transfers, in line with the LGPD."
+          }
+        ]
+      },
+      {
+        "title": "Your rights",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Under the LGPD, you have the right to:"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Access your personal data.",
+              "Correct incomplete, inaccurate or outdated data.",
+              "Request deletion of your data.",
+              "Withdraw your consent at any time.",
+              "Request portability of your data to another service provider."
+            ]
+          },
+          {
+            "type": "p",
+            "text": "To exercise any of these rights, send an email to {email}."
+          }
+        ]
+      },
+      {
+        "title": "Security",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "We apply technical and organizational measures to protect your data, including restricted access and encryption in transit (HTTPS/TLS)."
+          }
+        ]
+      },
+      {
+        "title": "Minors",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "{app} is not intended for children under [age to be defined — e.g. 13 or 16]. We do not knowingly collect data from minors."
+          }
+        ]
+      },
+      {
+        "title": "Cookies",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "The website may use cookies that are strictly necessary for it to function and for aggregate usage analysis. We do not use cookies for advertising."
+          }
+        ]
+      },
+      {
+        "title": "Changes to this policy",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "We may update this Privacy Policy from time to time. Significant changes will be announced inside the app. We recommend checking this page periodically."
+          }
+        ]
+      }
+    ]
+  },
+  "terms": {
+    "meta": {
+      "title": "Terms of Use",
+      "description": "The terms for using Nutricalor. Estimates, not medical advice."
+    },
+    "title": "Terms of Use",
+    "lastUpdatedLabel": "Last updated",
+    "lastUpdatedDate": "2026-07-03",
+    "lastUpdatedText": "July 3, 2026",
+    "reviewNotice": "This text is a structured draft and still requires legal review before final publication. Nutricalor is operated from Brazil and these terms are written under Brazilian law; if you use the service from another country, your local consumer rights may differ.",
+    "sections": [
+      {
+        "title": "Acceptance",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "By using {app}, you agree to these Terms of Use. If you do not agree, do not use the service."
+          }
+        ]
+      },
+      {
+        "title": "The service",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "{app} is a nutrition estimation tool that uses AI photo recognition and other logging methods (text, barcode, manual search) to help you track what you eat."
+          }
+        ]
+      },
+      {
+        "title": "Not medical advice",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "**{app} provides estimates, not diagnosis, prescription or treatment.** Consult a health professional — a doctor or a dietitian — for decisions about diet, health or fitness. {app} does not replace professional guidance."
+          }
+        ]
+      },
+      {
+        "title": "Accuracy",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Calorie, macronutrient and portion estimates are approximate and may contain errors. Use them as a reference for tracking your habits, not as absolute truth. No photo app replaces a laboratory measurement."
+          }
+        ]
+      },
+      {
+        "title": "Your account",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "You are responsible for keeping your login details secure. Do not share your credentials. Notify us immediately if you suspect unauthorized use of your account."
+          }
+        ]
+      },
+      {
+        "title": "Subscription and payment",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "{app} may offer subscription plans. Prices, billing periods and renewal conditions are shown clearly before you subscribe. [Billing and cancellation details — to be defined.]"
+          }
+        ]
+      },
+      {
+        "title": "Acceptable use",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "By using {app}, you agree not to use it for illegal or fraudulent purposes, or in any way that breaches these Terms. We reserve the right to suspend or terminate accounts that break these conditions."
+          }
+        ]
+      },
+      {
+        "title": "Limitation of liability",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "[Limitation of liability clause — to be defined with legal counsel.]"
+          },
+          {
+            "type": "p",
+            "text": "{app} is provided \"as is\", without warranty of absolute accuracy. We are not liable for decisions made solely on the basis of the information the app provides."
+          }
+        ]
+      },
+      {
+        "title": "Changes and contact",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "We may update these Terms from time to time. Significant changes will be announced inside the app. For questions or requests, contact us at {email}."
+          }
+        ]
+      }
+    ]
+  },
+  "tmbCalculator": {
+    "meta": {
+      "title": "BMR Calculator — Basal Metabolic Rate and Daily Calorie Burn",
+      "description": "Calculate your Basal Metabolic Rate (BMR), total daily energy expenditure (TDEE) and calorie target to lose, maintain or gain weight. Free calculator using the Mifflin-St Jeor formula."
+    },
+    "h1": "BMR Calculator",
+    "subtitle": "Find out how many calories your body burns at rest, your total burn with activity, and the right target for your goal.",
+    "form": {
+      "sexLabel": "Biological sex",
+      "male": "Male",
+      "female": "Female",
+      "ageLabel": "Age",
+      "agePlaceholder": "years",
+      "heightLabel": "Height",
+      "heightPlaceholder": "cm",
+      "weightLabel": "Weight",
+      "weightPlaceholder": "kg",
+      "activityLabel": "Activity level",
+      "sedentary": "Sedentary (little or no exercise)",
+      "light": "Light (exercise 1–3 days/week)",
+      "moderate": "Moderate (exercise 3–5 days/week)",
+      "intense": "Intense (exercise 6–7 days/week)",
+      "calculate": "Calculate"
+    },
+    "result": {
+      "title": "Your result",
+      "bmrLabel": "BMR",
+      "bmrDesc": "Metabolism at rest",
+      "tdeeLabel": "Daily burn",
+      "tdeeDesc": "Including physical activity",
+      "loseLabel": "Lose",
+      "loseDesc": "20% deficit",
+      "maintainLabel": "Maintain",
+      "maintainDesc": "Calorie balance",
+      "gainLabel": "Gain",
+      "gainDesc": "10% surplus",
+      "kcalUnit": "kcal/day",
+      "goalTitle": "Calorie target by goal",
+      "safetyNote": "The weight-loss figure never drops below the safe floor ({floor} kcal), to avoid overly restrictive dieting."
+    },
+    "cta": {
+      "title": "Tired of doing the math by hand?",
+      "text": "Nutricalor counts the calories on your plate from a single photo — a whole meal, not just a barcode."
+    },
+    "crossLinks": {
+      "title": "Other calculators",
+      "items": [
+        {
+          "to": "deficitCalculator",
+          "name": "Calorie Deficit Calculator",
+          "desc": "Find out how many calories to eat to lose weight at your own pace."
+        },
+        {
+          "to": "caloriesCalculator",
+          "name": "Daily Calorie Calculator",
+          "desc": "Find out how many calories to eat to lose, maintain or gain."
+        },
+        {
+          "to": "imcCalculator",
+          "name": "BMI Calculator",
+          "desc": "Calculate your Body Mass Index and see your WHO category."
+        },
+        {
+          "to": "macrosCalculator",
+          "name": "Macro Calculator",
+          "desc": "Split your calories into protein, fat and carbs."
+        }
+      ]
+    },
+    "seo": {
+      "blocks": [
+        {
+          "title": "What Basal Metabolic Rate (BMR) is",
+          "text": "Your Basal Metabolic Rate, or BMR, is the minimum amount of energy your body needs to keep its vital functions running at complete rest: breathing, blood circulation, temperature regulation, brain activity and cell renewal. Even if you spent the whole day lying down without moving, your body would still burn that energy.\n\nBMR accounts for roughly 60% to 75% of total daily calorie expenditure. That makes it the starting point for any eating plan — whether you want to lose weight, maintain it or build muscle. Without knowing your BMR, any calorie target is guesswork."
+        },
+        {
+          "title": "How BMR is calculated",
+          "text": "This calculator uses the Mifflin-St Jeor equation, published in 1990 and considered the most accurate of the popular estimation formulas. It accounts for weight, height, age and biological sex:\n\n• Men: BMR = 10 × weight (kg) + 6.25 × height (cm) − 5 × age (years) + 5\n• Women: BMR = 10 × weight (kg) + 6.25 × height (cm) − 5 × age (years) − 161\n\nThe difference between men and women reflects the higher average proportion of lean mass in male bodies, which demands more energy at rest. The formula produces an estimate — for exact figures you would need indirect calorimetry testing in a lab."
+        },
+        {
+          "title": "BMR, TDEE and calorie burn: the difference",
+          "text": "These are three related but distinct numbers:\n\n• BMR (Basal Metabolic Rate): what your body burns at complete rest, with no movement at all.\n• TDEE (Total Daily Energy Expenditure): what you actually burn given everything you do in a day — walking, working, training. It is calculated by multiplying BMR by an activity factor.\n• Calorie target: how much you should eat to reach a specific goal. To lose weight, the target sits below your TDEE (a deficit). To gain weight, above it (a surplus).\n\nMost people confuse BMR with TDEE. If you eat only your BMR you will create a deficit — but it may not be a healthy one, depending on your activity level. That is why this calculator shows all three figures."
+        },
+        {
+          "title": "What to do with this number",
+          "text": "Now that you have your BMR, your TDEE and a target per goal, the next step is adjusting how you eat:\n\n• To lose weight: eat below your TDEE (the calculator suggests −20%, a moderate and sustainable deficit). Never go below the safety floor (1,500 kcal for men, 1,200 kcal for women) without professional supervision.\n• To maintain: eat close to your TDEE. Swings of 100–200 kcal are normal and expected.\n• To gain muscle: eat above your TDEE (+10% is a mild surplus that favors muscle gain with less fat storage).\n\nRemember: these are estimates. The body is not a spreadsheet. Use them as a starting point, watch what happens on the scale and in the mirror over several weeks, and adjust. And whenever you can, work with a registered dietitian."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "question": "What is the difference between BMR and TDEE?",
+          "answer": "BMR is what your body burns at complete rest — as if you stayed in bed all day. TDEE includes your BMR plus the energy spent on everything else you do (walking, working, training). TDEE is always higher than BMR."
+        },
+        {
+          "question": "How often should I recalculate my BMR?",
+          "answer": "Recalculate whenever your weight changes significantly (5 kg or more), on each birthday (BMR declines with age), or when your activity level changes. In practice, once every 2–3 months is enough for most people."
+        },
+        {
+          "question": "Is the Mifflin-St Jeor formula accurate?",
+          "answer": "It is the most accurate of the popular estimation equations, with a margin of error of about 10% for most of the population. Exact figures require indirect calorimetry testing. But for building a starting nutrition plan, it is more than good enough."
+        },
+        {
+          "question": "Can I eat less than my BMR to lose weight faster?",
+          "answer": "It is not recommended. Eating consistently below your BMR can slow your metabolism and cause muscle loss, fatigue and nutrient deficiencies. This calculator already applies a safety floor (1,500 kcal for men, 1,200 kcal for women) to avoid that risk."
+        },
+        {
+          "question": "How do I count calories in practice without weighing everything?",
+          "answer": "Use an app like Nutricalor: photograph your plate and the AI estimates calories and macros in seconds. It is far faster than weighing ingredients or searching through databases."
+        }
+      ]
+    }
+  },
+  "deficitCalculator": {
+    "meta": {
+      "title": "Calorie Deficit Calculator — How Many Calories to Eat to Lose Weight",
+      "description": "Calculate the right calorie deficit to lose weight safely. Find your total daily energy expenditure (TDEE), your calorie target and your estimated weekly weight loss. Free calculator."
+    },
+    "h1": "Calorie Deficit Calculator",
+    "subtitle": "Find out how many calories to eat per day to lose weight at your own pace — without going hungry and without a crash diet.",
+    "form": {
+      "sexLabel": "Biological sex",
+      "male": "Male",
+      "female": "Female",
+      "ageLabel": "Age",
+      "agePlaceholder": "years",
+      "heightLabel": "Height",
+      "heightPlaceholder": "cm",
+      "weightLabel": "Weight",
+      "weightPlaceholder": "kg",
+      "activityLabel": "Activity level",
+      "sedentary": "Sedentary (little or no exercise)",
+      "light": "Light (exercise 1–3 days/week)",
+      "moderate": "Moderate (exercise 3–5 days/week)",
+      "intense": "Intense (exercise 6–7 days/week)",
+      "deficitLabel": "Weight-loss pace",
+      "deficitLight": "Light (−10%) — gradual and comfortable",
+      "deficitModerate": "Moderate (−20%) — sustainable pace",
+      "deficitAggressive": "Aggressive (−25%) — faster, more demanding",
+      "calculate": "Calculate my deficit"
+    },
+    "result": {
+      "title": "Your deficit plan",
+      "tdeeLabel": "Daily burn",
+      "tdeeDesc": "What you burn per day",
+      "targetLabel": "Calorie target",
+      "targetDesc": "What to eat to lose weight",
+      "deficitLabel": "Daily deficit",
+      "deficitDesc": "The gap that drives the loss",
+      "weeklyLabel": "Estimated loss",
+      "weeklyUnit": "kg/week",
+      "weeklyDesc": "Estimate based on 7,700 kcal ≈ 1 kg",
+      "kcalUnit": "kcal/day",
+      "safetyNote": "For safety, your target was raised to the healthy minimum ({floor} kcal). More aggressive deficits require professional supervision."
+    },
+    "cta": {
+      "title": "Hitting your deficit is easy when you don't have to do the math.",
+      "text": "Nutricalor counts the calories on your plate from a single photo — a whole meal, not just a barcode."
+    },
+    "crossLinks": {
+      "title": "Other calculators",
+      "items": [
+        {
+          "to": "tmbCalculator",
+          "name": "BMR Calculator",
+          "desc": "Find your basal metabolism and total calorie burn."
+        },
+        {
+          "to": "caloriesCalculator",
+          "name": "Daily Calorie Calculator",
+          "desc": "Find out how many calories to eat to lose, maintain or gain."
+        },
+        {
+          "to": "imcCalculator",
+          "name": "BMI Calculator",
+          "desc": "Calculate your Body Mass Index and see your WHO category."
+        },
+        {
+          "to": "macrosCalculator",
+          "name": "Macro Calculator",
+          "desc": "Split your calories into protein, fat and carbs."
+        }
+      ]
+    },
+    "seo": {
+      "blocks": [
+        {
+          "title": "What a calorie deficit is",
+          "text": "A calorie deficit is when you consume fewer calories than your body burns. That gap forces your system to draw energy from its reserves — mainly body fat. It is the only proven mechanism for weight loss: whatever diet you follow, if it works, it works because it created a deficit.\n\nThe size of the deficit determines how fast you lose and how sustainable it is. Small deficits (10–15%) produce slow but comfortable loss, with less hunger and less risk of muscle loss. Large deficits (above 25%) speed things up but raise the odds of binge eating, fatigue and a metabolic plateau."
+        },
+        {
+          "title": "How to calculate your deficit",
+          "text": "The calculation has three steps:\n\n1. Find your BMR (Basal Metabolic Rate) — what your body burns at rest. This calculator uses the Mifflin-St Jeor formula, the most widely accepted one.\n2. Multiply by your activity factor to get your TDEE (total daily burn): sedentary ×1.2, light ×1.375, moderate ×1.55, intense ×1.725.\n3. Apply the deficit you want: subtract 10%, 20% or 25% from your TDEE. The result is your daily calorie target.\n\nFor example: if your TDEE is 2,400 kcal and you choose a moderate 20% deficit, your target lands at 1,920 kcal/day. The gap (480 kcal/day) adds up to 3,360 kcal over a week — roughly 0.44 kg of fat."
+        },
+        {
+          "title": "Which deficit is safe",
+          "text": "Research and clinical practice converge on a few limits:\n\n• A deficit of 10–20% of your TDEE is considered safe and sustainable for most people. It is the range that preserves muscle mass, keeps your metabolism active and causes fewer side effects (excessive hunger, irritability, fatigue).\n• A deficit above 25% can work in the short term, but it significantly raises the risk of binge eating, muscle loss and metabolic slowdown (the dreaded \"plateau\").\n• Never go below the safety floor: 1,500 kcal/day for men and 1,200 kcal/day for women. Below that it is very hard to get all the micronutrients you need without medical supervision.\n\nThis calculator applies that floor automatically. If the deficit you pick would take you below the minimum, it adjusts and tells you."
+        },
+        {
+          "title": "How much you can actually lose per week",
+          "text": "The theoretical math is simple: every 7,700 kcal of deficit equals roughly 1 kg of fat. With a 500 kcal/day deficit, that works out to about 0.45 kg per week; at 250 kcal/day, about 0.23 kg.\n\nIn practice, though, the scale will swing more than that — and that is no reason to give up. Water retention, your menstrual cycle, the sodium in yesterday's dinner and even stress all affect daily weight. What matters is the trend across weeks.\n\nA healthy, realistic pace for most people is between 0.3 and 0.7 kg per week. Losing faster is possible, but it usually costs you muscle and sanity. Slow and consistent wins."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "question": "Do I need to be in a deficit every single day?",
+          "answer": "No. What matters is the weekly average. If you ate more at a celebration, pull back slightly over the following days — no drama. Consistency across weeks matters far more than daily perfection."
+        },
+        {
+          "question": "If I exercise more, can I eat more and still lose weight?",
+          "answer": "In principle, yes. Exercise raises your TDEE, which allows a deficit with more food. But be careful: the calories burned in exercise are usually overestimated. Treat exercise as a tool for health and wellbeing, not as a license to eat without limit."
+        },
+        {
+          "question": "Is a light deficit for longer better than an aggressive one for a short time?",
+          "answer": "For most people, a light to moderate deficit sustained for longer is more effective. Aggressive deficits produce fast early results but have a high dropout rate and a rebound effect. A deficit you can hold for months is worth more than one that lasts two weeks."
+        },
+        {
+          "question": "How do I count calories without weighing everything?",
+          "answer": "Use an app like Nutricalor: photograph your plate and the AI estimates calories and macros in seconds. You do not need to weigh every ingredient — a photo estimate is practical enough to hold a deficit."
+        },
+        {
+          "question": "Does a calorie deficit work for everyone?",
+          "answer": "A calorie deficit is the universal mechanism of weight loss. But the ideal size of the deficit, the composition of your diet and the rate of loss vary from person to person. Medical conditions (thyroid, insulin resistance, medications) can affect the process. Whenever possible, consult a registered dietitian."
+        }
+      ]
+    }
+  },
+  "caloriesCalculator": {
+    "meta": {
+      "title": "Daily Calorie Calculator — How Many Calories Should I Eat?",
+      "description": "Calculate how many calories you need per day to lose weight, maintain it or build muscle. Free calculator based on the Mifflin-St Jeor equation."
+    },
+    "h1": "Daily Calorie Calculator",
+    "subtitle": "Find the exact number of calories your body needs to lose weight, maintain it or build muscle.",
+    "form": {
+      "sexLabel": "Biological sex",
+      "male": "Male",
+      "female": "Female",
+      "ageLabel": "Age",
+      "agePlaceholder": "years",
+      "heightLabel": "Height",
+      "heightPlaceholder": "cm",
+      "weightLabel": "Weight",
+      "weightPlaceholder": "kg",
+      "activityLabel": "Activity level",
+      "sedentary": "Sedentary (little or no exercise)",
+      "light": "Light (exercise 1–3 days/week)",
+      "moderate": "Moderate (exercise 3–5 days/week)",
+      "intense": "Intense (exercise 6–7 days/week)",
+      "goalLabel": "Goal",
+      "goalLose": "Lose weight",
+      "goalMaintain": "Maintain weight",
+      "goalGain": "Build muscle",
+      "calculate": "Calculate my calories"
+    },
+    "result": {
+      "title": "Your daily calorie target",
+      "targetLabel": "Calorie target",
+      "targetDesc": "To reach your goal",
+      "tdeeLabel": "Daily burn (TDEE)",
+      "tdeeDesc": "For reference",
+      "loseLabel": "Lose",
+      "maintainLabel": "Maintain",
+      "gainLabel": "Gain",
+      "kcalUnit": "kcal/day",
+      "safetyNote": "For safety, the weight-loss target was raised to the healthy limit of {floor} kcal per day."
+    },
+    "cta": {
+      "title": "Now that you know your target, the hard part is counting the calories in every meal.",
+      "text": "Nutricalor does that from a photo — snap your plate and you're done."
+    },
+    "crossLinks": {
+      "title": "Other calculators",
+      "items": [
+        {
+          "to": "tmbCalculator",
+          "name": "BMR Calculator",
+          "desc": "Find your basal metabolism and total calorie burn."
+        },
+        {
+          "to": "deficitCalculator",
+          "name": "Calorie Deficit Calculator",
+          "desc": "Find out how many calories to eat to lose weight at your own pace."
+        },
+        {
+          "to": "imcCalculator",
+          "name": "BMI Calculator",
+          "desc": "Calculate your Body Mass Index and see your WHO category."
+        },
+        {
+          "to": "macrosCalculator",
+          "name": "Macro Calculator",
+          "desc": "Split your calories into protein, fat and carbs."
+        }
+      ]
+    },
+    "seo": {
+      "blocks": [
+        {
+          "title": "How many calories should I eat per day",
+          "text": "How many calories you should eat per day depends on several factors: your current weight, height, age, biological sex and — above all — your daily activity level and your goal (lose, maintain or gain).\n\nFor most people there is no magic universal figure of 2,000 calories. A small, sedentary woman may need only 1,500 kcal, while a tall, very active man may need more than 3,000 kcal. That is why it is essential to use a personalized calculator that accounts for your physiology."
+        },
+        {
+          "title": "How we calculate your target",
+          "text": "We use a scientific method in three steps:\n\n1. First we calculate your Basal Metabolic Rate (BMR) using the Mifflin-St Jeor equation, which estimates the energy your body spends simply staying alive (breathing, circulation and so on).\n2. Then we multiply your BMR by your activity factor (sedentary, light, moderate or intense) to find your Total Daily Energy Expenditure (TDEE).\n3. Finally we adjust that figure to your goal. To lose weight we apply a 20% deficit. To maintain, we keep the TDEE as is. To gain, we apply a 10% surplus."
+        },
+        {
+          "title": "Calories to lose, maintain or gain",
+          "text": "• To lose weight: the golden rule is a sustainable calorie deficit. We recommend cutting 20% from your daily burn. That delivers healthy weight loss without sacrificing muscle mass or leaving you hungry all the time. One caveat: we never suggest eating below the safety floor (1,500 kcal for men, 1,200 kcal for women).\n• To maintain: ideal if you are already at your target weight, or if you want to focus on body recomposition (trading fat for muscle) at a slow pace.\n• To gain: to build muscle (hypertrophy) you need a slight calorie surplus (around 10%) combined with strength training. Much more than that and the gain will be mostly fat."
+        },
+        {
+          "title": "Why calorie counting works (and how to make it easy)",
+          "text": "Whatever the diet of the moment — low carb, intermittent fasting, keto — the only biological reason it produces weight loss is that it creates a calorie deficit by the end of the day. Once you understand and track your calories, you get the freedom to eat the foods you enjoy, as long as they fit your daily target.\n\nThe worst part of counting calories has always been weighing every ingredient and digging through enormous databases. Nutricalor solves that with AI: you just take a photo of your plate, and the AI estimates the calories and macronutrients automatically — reading a full, mixed plate rather than a single labeled product."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "question": "Does the calorie target already include the exercise I do?",
+          "answer": "Yes. The activity level you select already multiplies your basal rate to account for exercise. If you selected 'Moderate' or 'Intense', you do not need to add the calories burned in training separately — they are already in the figure."
+        },
+        {
+          "question": "Can I eat below 1,200 (women) or 1,500 (men) calories to speed things up?",
+          "answer": "It is not recommended. Very low calorie diets (VLCD) can cause severe muscle loss, vitamin deficiency, extreme fatigue and hair loss. On top of that, when the diet ends, a slowed metabolism makes rapid weight regain more likely (the yo-yo effect)."
+        },
+        {
+          "question": "If I hit my calories, does it matter what I eat?",
+          "answer": "For the raw number on the scale, calorie quantity is the dominant factor. But for the quality of that weight (muscle vs fat), for satiety, health and energy, where those calories come from matters a great deal. You need enough protein, good fats, vitamins and fiber."
+        },
+        {
+          "question": "How do I know whether to focus on losing fat or building muscle?",
+          "answer": "If your body fat percentage is high and it bothers you, losing fat should be the primary focus. If you are new to strength training, you can often build muscle and lose fat at the same time (body recomposition) by eating at maintenance or in a light deficit."
+        },
+        {
+          "question": "Does this calculator work for children and teenagers?",
+          "answer": "No. This calculator (the Mifflin-St Jeor equation) has been validated only for adults (18 and over). Children and teenagers are still growing and have different metabolic needs, requiring pediatric or dietitian supervision."
+        }
+      ]
+    }
+  },
+  "imcCalculator": {
+    "meta": {
+      "title": "BMI Calculator — Body Mass Index and WHO Categories",
+      "description": "Calculate your BMI for free, find your category on the WHO table (underweight, normal, overweight or obesity) and understand the limits of the index."
+    },
+    "h1": "BMI Calculator",
+    "subtitle": "Find your Body Mass Index and your weight category according to the World Health Organization (WHO).",
+    "form": {
+      "heightLabel": "Height",
+      "heightPlaceholder": "cm",
+      "weightLabel": "Weight",
+      "weightPlaceholder": "kg",
+      "calculate": "Calculate my BMI"
+    },
+    "result": {
+      "title": "Your result",
+      "imcLabel": "Your BMI",
+      "classificationLabel": "Category (WHO)",
+      "underweight": "Underweight",
+      "normal": "Normal weight",
+      "overweight": "Overweight",
+      "obesity": "Obesity",
+      "safetyNote": "Note: BMI is a general population-level indicator. It does not distinguish muscle from fat, nor does it assess how body fat is distributed. It is never a substitute for assessment by a doctor or dietitian."
+    },
+    "cta": {
+      "title": "Want to track your weight and your goals over time?",
+      "text": "Nutricalor helps you get there without the hassle. Log your meals with a photo and follow your results."
+    },
+    "crossLinks": {
+      "title": "Other calculators",
+      "items": [
+        {
+          "to": "tmbCalculator",
+          "name": "BMR Calculator",
+          "desc": "Find your basal metabolism and total calorie burn."
+        },
+        {
+          "to": "deficitCalculator",
+          "name": "Calorie Deficit Calculator",
+          "desc": "Find out how many calories to eat to lose weight at your own pace."
+        },
+        {
+          "to": "caloriesCalculator",
+          "name": "Daily Calorie Calculator",
+          "desc": "Find out how many calories to eat to lose, maintain or gain."
+        },
+        {
+          "to": "macrosCalculator",
+          "name": "Macro Calculator",
+          "desc": "Split your calories into protein, fat and carbs."
+        }
+      ]
+    },
+    "seo": {
+      "blocks": [
+        {
+          "title": "What BMI is",
+          "text": "Body Mass Index (BMI) is a simple mathematical formula, created in the 19th century by the Belgian mathematician Adolphe Quetelet, that relates a person's weight to their height.\n\nThe World Health Organization (WHO) uses BMI as an international standard for quickly assessing whether an adult falls within a weight range considered healthy for their height, or whether they are underweight, overweight or living with obesity."
+        },
+        {
+          "title": "How to calculate BMI",
+          "text": "The BMI calculation is straightforward. You take your weight (in kilograms) and divide it by your height (in meters) squared.\n\nThe official formula is:\n\n• BMI = weight (kg) ÷ (height (m) × height (m))\n\nFor example: someone who weighs 70 kg and is 1.75 m tall would calculate 70 ÷ (1.75 × 1.75) = 70 ÷ 3.06 = 22.8. That person would fall in the \"Normal weight\" range."
+        },
+        {
+          "title": "WHO classification table",
+          "text": "The World Health Organization classifies adult BMI (men and women aged 20 and over) into the following ranges:\n\n• Below 18.5: Underweight\n• Between 18.5 and 24.9: Normal weight\n• Between 25.0 and 29.9: Overweight\n• 30.0 or above: Obesity"
+        },
+        {
+          "title": "The limits of BMI — why it doesn't tell the whole story",
+          "text": "While BMI is a useful epidemiological tool for assessing large populations, it has significant limitations when used on its own to assess an individual's health:\n\n1. It does not tell muscle from fat: muscle is denser than fat. Athletes and very muscular people often get a BMI that labels them \"overweight\" or \"obese\" even with very low body fat and excellent cardiovascular health.\n2. It does not assess fat distribution: visceral fat (stored in the abdomen, around the organs) is far more dangerous for metabolic health than subcutaneous fat (stored on the hips and thighs). Two people with the same BMI can have completely different cardiovascular risk profiles.\n3. It does not account for age or ethnicity: the standard tables are not ideal for older adults (who naturally lose muscle and bone mass) or for pregnant women. Some populations, such as people of Asian descent, face metabolic risk at lower BMI values than the standard cut-off."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "question": "Does BMI work for children?",
+          "answer": "BMI for children and teenagers (up to 19) uses the same formula, but the classification is different. Because they are still growing, the result must be compared against WHO-specific charts (percentiles), split by age and sex. This calculator was built for adults."
+        },
+        {
+          "question": "Is BMI different for men and women?",
+          "answer": "No. For the World Health Organization's official adult classification, the table and cut-off points are the same for men and women."
+        },
+        {
+          "question": "My BMI says overweight — what now?",
+          "answer": "BMI is only an indicator. A BMI in the overweight range does not automatically mean you are unwell. Look at other health markers, such as body fat percentage, waist circumference and blood work. Consult a professional for a full assessment."
+        },
+        {
+          "question": "Which matters more: BMI or body fat percentage?",
+          "answer": "Body fat percentage is a far more accurate health indicator, because it reveals your body's actual composition (lean mass vs fat mass). BMI is used because it is much easier and cheaper to calculate than accurate body composition tests such as a DEXA scan or bioimpedance."
+        }
+      ]
+    }
+  },
+  "macrosCalculator": {
+    "meta": {
+      "title": "Macro Calculator — Protein, Carbs and Fat Split",
+      "description": "Calculate your daily macros to lose fat or build muscle. Find out how many grams of protein, fat and carbs to eat per day. Free."
+    },
+    "h1": "Macro Calculator",
+    "subtitle": "Find the right amount of protein, fat and carbs to eat each day to reach your body composition goal.",
+    "form": {
+      "sexLabel": "Biological sex",
+      "male": "Male",
+      "female": "Female",
+      "ageLabel": "Age",
+      "agePlaceholder": "years",
+      "heightLabel": "Height",
+      "heightPlaceholder": "cm",
+      "weightLabel": "Weight",
+      "weightPlaceholder": "kg",
+      "activityLabel": "Activity level",
+      "sedentary": "Sedentary (little or no exercise)",
+      "light": "Light (exercise 1–3 days/week)",
+      "moderate": "Moderate (exercise 3–5 days/week)",
+      "intense": "Intense (exercise 6–7 days/week)",
+      "goalLabel": "Goal",
+      "goalLose": "Lose weight",
+      "goalMaintain": "Maintain weight",
+      "goalGain": "Build muscle",
+      "calculate": "Calculate my macros"
+    },
+    "result": {
+      "title": "Your daily macros",
+      "targetLabel": "Calorie target",
+      "targetDesc": "Your daily calorie total",
+      "proteinLabel": "Protein",
+      "proteinDesc": "1.8g per kg of body weight",
+      "fatLabel": "Fat",
+      "fatDesc": "25% of total calories",
+      "carbsLabel": "Carbs",
+      "carbsDesc": "Remaining calories",
+      "gramUnit": "g",
+      "kcalUnit": "kcal",
+      "safetyNote": "Your weight-loss calorie target used the safety floor of {floor} kcal/day. The macros were adjusted proportionally."
+    },
+    "cta": {
+      "title": "Knowing your macros is the easy part. Tracking them at every meal isn't.",
+      "text": "Nutricalor does it from a photo. Snap your plate and see the protein, fat and carbs counted into your day."
+    },
+    "crossLinks": {
+      "title": "Other calculators",
+      "items": [
+        {
+          "to": "tmbCalculator",
+          "name": "BMR Calculator",
+          "desc": "Find your basal metabolism and total calorie burn."
+        },
+        {
+          "to": "deficitCalculator",
+          "name": "Calorie Deficit Calculator",
+          "desc": "Find out how many calories to eat to lose weight at your own pace."
+        },
+        {
+          "to": "caloriesCalculator",
+          "name": "Daily Calorie Calculator",
+          "desc": "Find out how many calories to eat to lose, maintain or gain."
+        },
+        {
+          "to": "imcCalculator",
+          "name": "BMI Calculator",
+          "desc": "Calculate your Body Mass Index and see your WHO category."
+        }
+      ]
+    },
+    "seo": {
+      "blocks": [
+        {
+          "title": "What macronutrients are",
+          "text": "Macronutrients, or \"macros\", are the three main components of food that supply energy to the body: protein, carbohydrates and fat. While vitamins and minerals (micronutrients) are needed in small amounts, macros are needed in large amounts (grams) every day.\n\nEach macro plays an essential role:\n\n• Protein: the building blocks of the body. Essential for building and repairing tissue (including muscle), producing enzymes and hormones, and supporting the immune system. (Provides ~4 kcal per gram.)\n• Fat (lipids): fundamental for hormone health, absorbing fat-soluble vitamins (A, D, E and K), protecting organs and storing long-term energy. (Provides ~9 kcal per gram.)\n• Carbohydrates: the body's and the brain's preferred and fastest source of energy. (Provides ~4 kcal per gram.)"
+        },
+        {
+          "title": "How to calculate your macros",
+          "text": "The macro split in this calculator follows an evidence-based standard for optimizing body composition (losing fat while keeping muscle, or gaining lean mass):\n\n1. First we set total calories based on your BMR, activity factor and goal (lose, maintain or gain).\n2. Protein: fixed at ~1.8 grams per kilogram of body weight. Several studies consider this the ideal amount for maximizing protein synthesis, whether you are in a calorie deficit or building muscle.\n3. Fat: we reserve around 25% of daily calories for fat. That is enough to keep hormone production healthy.\n4. Carbohydrates: the remaining calories go to carbs. They supply the energy you need for training and daily life."
+        },
+        {
+          "title": "Protein, carbs and fat: how much of each",
+          "text": "While the calculator gives you an excellent starting point, the ideal split can vary depending on your food preferences, genetics and type of training.\n\nEndurance athletes (running, cycling) may need a higher proportion of carbohydrates, slightly reducing fat or protein. People with insulin resistance, or those who simply prefer higher-fat diets, can lower carbs and raise fat.\n\nThe main rule is: hit your calorie target and, to improve body composition, hit your protein target. The exact ratio between fat and carbs is less rigid and can be adapted to whatever you feel best following."
+        },
+        {
+          "title": "How macros change with your goal",
+          "text": "The beauty of calculating macros is the flexibility. Your body weight dictates protein, but your total calories — which dictate carbs and fat — change with your goal.\n\n• Losing fat: protein stays high (crucial for not losing muscle mass), while carbs and fat come down to create the calorie deficit.\n• Building muscle: you eat more calories overall. Protein stays sufficient (1.8 to 2.0 g/kg), but carbs increase significantly to fuel hard training and build new tissue."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "question": "Do I have to hit my macros to the gram every single day?",
+          "answer": "No. Being perfectly exact is practically impossible. Focus on hitting your total calories within a margin (± 5–10%) and eating enough protein. If one day you eat slightly more carbs and slightly less fat, that is fine, as long as calories stay within range."
+        },
+        {
+          "question": "Won't eating fat make me gain weight?",
+          "answer": "No. What causes weight gain is a total calorie surplus. Dietary fats (olive oil, avocado, nuts) are essential for your health and for producing hormones such as testosterone. The only thing to watch is the amount, since fat carries more than twice the calories (9 kcal/g) of protein and carbs (4 kcal/g)."
+        },
+        {
+          "question": "Can I cut carbohydrates completely?",
+          "answer": "The human body can survive without carbohydrates (through a process called ketogenesis), but most people feel much better, have more energy in training and stick to their diet more easily when they eat carbs in reasonable amounts. Cutting them entirely is unnecessary for weight loss."
+        },
+        {
+          "question": "Which macro matters most for strength training?",
+          "answer": "Protein. Without it, the body cannot repair the microdamage caused by training and build new muscle fibers. That said, carbohydrates come second, since they supply the fuel you need to train hard."
+        },
+        {
+          "question": "How do I track macros practically day to day?",
+          "answer": "By putting technology to work. With Nutricalor, instead of weighing everything on a scale and logging every gram, you simply photograph your plate. The AI estimates the macros from the food that is actually there, which makes tracking easy and sustainable over the long term."
+        }
+      ]
+    }
+  }
+}

@@ -105,3 +105,15 @@
     font-size: var(--text-2xl);
   }
 }
+
+/* Aviso de que o texto ainda depende de revisão jurídica */
+.reviewNotice {
+  margin-bottom: var(--space-8);
+  padding: var(--space-4) var(--space-5);
+  border: 1px solid rgba(240, 160, 32, 0.3);
+  border-radius: var(--radius-lg);
+  background: rgba(240, 160, 32, 0.07);
+  font-size: var(--text-sm);
+  color: var(--cor-tinta-2);
+  line-height: 1.6;
+}
