@@ -1,104 +1,126 @@
+import Link from 'next/link'
 import AppCTA from './AppCTA'
+import CountUp from './CountUp'
+import PlateScan from './PlateScan'
+import { IconArrowRight, IconCpu, IconZap } from './icons'
+import type { CommonDict, HeroDict } from '@/dictionaries/types'
 import styles from './SectionHero.module.css'
 
 type SectionHeroProps = {
-  dict: any
-  ctaDict: any
+  dict: HeroDict
+  ctaDict: CommonDict
+  locale: string
 }
 
-export default function SectionHero({ dict, ctaDict }: SectionHeroProps) {
+export default function SectionHero({ dict, ctaDict, locale }: SectionHeroProps) {
+  const stats = dict.stats
+
   return (
     <section className={styles.hero} aria-labelledby="hero-title" id="hero">
-      {/* Decorative blobs */}
-      <div className={styles.blobWrap} aria-hidden="true">
-        <div className={styles.blob1} />
-        <div className={styles.blob2} />
-        <div className={styles.blob3} />
+      {/* Fundo: grid técnico + aurora */}
+      <div className={styles.backdrop} aria-hidden="true">
+        <div className="tech-grid" />
+        <div className={styles.auroraA} />
+        <div className={styles.auroraB} />
       </div>
 
       <div className={`container ${styles.inner}`}>
         <div className={styles.content}>
-          <div className={styles.pill}>
-            <span className={styles.pillDot} />
+          <p className={`eyebrow ${styles.eyebrow}`}>
+            <span className={styles.liveDot} />
             {dict.pill}
-          </div>
+          </p>
+
           <h1 id="hero-title" className={styles.title}>
             {dict.titlePart1}{' '}
             <span className={styles.highlight}>{dict.titlePart2}</span>
           </h1>
-          <p className={styles.subtitle}>
-            {dict.subtitle}
-          </p>
-          <div className={styles.ctaWrapper}>
+
+          <p className={styles.subtitle}>{dict.subtitle}</p>
+
+          <div className={styles.actions}>
             <AppCTA variant="block" dict={ctaDict} />
+            <Link href={`/${locale}/como-funciona`} className={styles.secondaryCta}>
+              {dict.secondaryCta}
+              <IconArrowRight size={16} className={styles.secondaryIcon} />
+            </Link>
           </div>
+
+          {stats.length > 0 && (
+            <dl className={styles.stats}>
+              {stats.map((stat) => (
+                <div key={stat.label} className={styles.stat}>
+                  <dt className={styles.statValue}>{stat.value}</dt>
+                  <dd className={styles.statLabel}>{stat.label}</dd>
+                </div>
+              ))}
+            </dl>
+          )}
         </div>
 
-        <div className={styles.visual} aria-hidden="true">
-          <div className={styles.phoneGlow} />
-          <div className={styles.phone}>
-            <div className={styles.phoneNotch} />
-            <div className={styles.phoneScreen}>
-              {/* Photo area */}
-              <div className={styles.photoArea}>
-                <div className={styles.photoGrad} />
-                <span className={styles.cameraIcon}>📸</span>
-                <span className={styles.photoLabel}>{dict.photoLabel}</span>
-              </div>
+        <div className={styles.visual}>
+          <div className={styles.deviceGlow} aria-hidden="true" />
 
-              {/* Macro bars */}
-              <div className={styles.macroSection}>
-                <div className={styles.calorieRow}>
-                  <span className={styles.calorieNum}>487</span>
-                  <span className={styles.calorieUnit}>kcal</span>
-                </div>
-
-                <div className={styles.macroRow}>
-                  <div className={styles.macroItem}>
-                    <div className={styles.macroBar}>
-                      <div className={styles.macroFill} style={{ background: 'var(--cor-proteina)', width: '72%' }} />
-                    </div>
-                    <span className={styles.macroLabel}>{dict.protein}</span>
-                    <span className={styles.macroValue}>32g</span>
-                  </div>
-                  <div className={styles.macroItem}>
-                    <div className={styles.macroBar}>
-                      <div className={styles.macroFill} style={{ background: 'var(--cor-carbo)', width: '85%' }} />
-                    </div>
-                    <span className={styles.macroLabel}>{dict.carbs}</span>
-                    <span className={styles.macroValue}>58g</span>
-                  </div>
-                  <div className={styles.macroItem}>
-                    <div className={styles.macroBar}>
-                      <div className={styles.macroFill} style={{ background: 'var(--cor-gordura)', width: '45%' }} />
-                    </div>
-                    <span className={styles.macroLabel}>{dict.fat}</span>
-                    <span className={styles.macroValue}>18g</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Food items */}
-              <div className={styles.foodList}>
-                <div className={styles.foodItem}>
-                  <span>🍚</span> <span>{dict.food1}</span> <span className={styles.foodGrams}>150g</span>
-                </div>
-                <div className={styles.foodItem}>
-                  <span>🫘</span> <span>{dict.food2}</span> <span className={styles.foodGrams}>80g</span>
-                </div>
-                <div className={styles.foodItem}>
-                  <span>🍗</span> <span>{dict.food3}</span> <span className={styles.foodGrams}>120g</span>
-                </div>
-              </div>
+          <figure className={styles.device}>
+            {/* Barra de status do app */}
+            <div className={styles.deviceBar}>
+              <span className={styles.deviceBrand}>
+                <IconCpu size={13} />
+                nutricalor
+              </span>
+              <span className={styles.deviceStatus}>
+                <span className={styles.liveDot} />
+                {dict.scanLabel}
+              </span>
             </div>
-          </div>
 
-          {/* Floating badges */}
-          <div className={`${styles.floatingBadge} ${styles.badgeTop}`}>
-            <span>✨</span> {dict.badge1}
-          </div>
-          <div className={`${styles.floatingBadge} ${styles.badgeBottom}`}>
-            <span>⚡</span> 2.3s
+            {/* Área de captura com detecções */}
+            <PlateScan dict={dict} />
+
+            {/* Leitura nutricional */}
+            <figcaption className={styles.readout}>
+              <div className={styles.calorieRow}>
+                <span className={styles.calorieNum}>
+                  <CountUp value={487} />
+                </span>
+                <span className={styles.calorieUnit}>kcal</span>
+                <span className={styles.confidence}>
+                  <IconZap size={12} />
+                  2.1s
+                </span>
+              </div>
+
+              <div className={styles.macros}>
+                {[
+                  { label: dict.protein, value: '32g', pct: 72, color: 'var(--cor-proteina)' },
+                  { label: dict.carbs, value: '58g', pct: 88, color: 'var(--cor-carbo)' },
+                  { label: dict.fat, value: '18g', pct: 44, color: 'var(--cor-gordura)' },
+                ].map((macro, i) => (
+                  <div key={macro.label} className={styles.macro}>
+                    <div className={styles.macroHead}>
+                      <span className={styles.macroLabel}>{macro.label}</span>
+                      <span className={styles.macroValue}>{macro.value}</span>
+                    </div>
+                    <div className={styles.macroTrack}>
+                      <span
+                        className={styles.macroFill}
+                        style={{
+                          background: macro.color,
+                          width: `${macro.pct}%`,
+                          animationDelay: `${0.9 + i * 0.12}s`,
+                        }}
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </figcaption>
+          </figure>
+
+          {/* Chips flutuantes */}
+          <div className={`${styles.chip} ${styles.chipA}`} aria-hidden="true">
+            <IconCpu size={14} className={styles.chipIcon} />
+            {dict.badge1}
           </div>
         </div>
       </div>

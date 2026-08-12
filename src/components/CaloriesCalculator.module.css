@@ -62,7 +62,7 @@
 }
 
 .input::placeholder {
-  color: #A0AAB2;
+  color: var(--cor-texto-fraco);
 }
 
 /* ---------- Radio Buttons ---------- */
@@ -188,7 +188,7 @@
 
 .heroCard {
   background: var(--cor-primario-light);
-  border: 1px solid rgba(30, 107, 78, 0.2);
+  border: 1px solid rgba(14, 164, 122, 0.2);
   border-radius: var(--radius-xl);
   padding: var(--space-6);
   text-align: center;
@@ -273,19 +273,20 @@
   gap: var(--space-3);
   margin: var(--space-4) 0;
   padding: var(--space-4);
-  background: #FFF9E6;
-  border: 1px solid #FFE082;
+  background: rgba(240, 160, 32, 0.08);
+  border: 1px solid rgba(240, 160, 32, 0.28);
   border-radius: var(--radius-lg);
 }
 
 .safetyIcon {
-  font-size: 20px;
+  color: var(--cor-acao);
   flex-shrink: 0;
+  margin-top: 2px;
 }
 
 .safetyNote p {
   font-size: var(--text-sm);
-  color: #8D6E00;
+  color: #8A5A08;
   margin: 0;
   line-height: 1.5;
 }

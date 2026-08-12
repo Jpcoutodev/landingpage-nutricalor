@@ -1,50 +1,75 @@
 /* ============================================================
-   NUTRICALOR — Design System Tokens & Global Styles
-   Premium, modern, alive.
+   NUTRICALOR — Design System
+   Light tech: superfícies claras, hairlines, grid técnico,
+   tipografia densa e acentos mono. Clean, preciso, com movimento.
    ============================================================ */
 
-/* ---------- CSS Custom Properties (Design Tokens) ---------- */
+/* ---------- Design Tokens ---------- */
 :root {
-  /* Cores — Identidade Visual */
-  --cor-fundo: #F8FAFC;
+  /* Superfícies — do fundo gelo ao branco puro */
+  --cor-fundo: #F7F9FB;
   --cor-superficie: #FFFFFF;
-  --cor-tinta: #0F172A;
-  --cor-texto-suave: #64748B;
-  --cor-linha: #E2E8F0;
-  --cor-primario: #10B981;
-  --cor-primario-hover: #059669;
-  --cor-primario-light: #D1FAE5;
-  --cor-acao: #F97316;
-  --cor-acao-hover: #EA580C;
-  --cor-acao-light: #FFEDD5;
-  --cor-proteina: #EF4444;
-  --cor-carbo: #F59E0B;
-  --cor-gordura: #8B5CF6;
+  --cor-superficie-2: #F1F4F8;
+  --cor-superficie-3: #E9EEF4;
+
+  /* Tinta — escala de texto */
+  --cor-tinta: #0A1020;
+  --cor-tinta-2: #1E293B;
+  --cor-texto-suave: #5A6779;
+  --cor-texto-fraco: #8593A5;
+
+  /* Linhas — hairlines, nunca bordas grossas */
+  --cor-linha: #E4E9F0;
+  --cor-linha-forte: #CFD8E3;
+  --hairline: rgba(10, 16, 32, 0.07);
+  --hairline-forte: rgba(10, 16, 32, 0.12);
+
+  /* Marca — esmeralda levemente teal, mais técnica que doce */
+  --cor-primario: #0EA47A;
+  --cor-primario-hover: #0B8663;
+  --cor-primario-dark: #076F52;
+  --cor-primario-light: rgba(14, 164, 122, 0.10);
+  --cor-primario-glow: rgba(14, 164, 122, 0.22);
+  --cor-ciano: #0AA3C2;
+  --cor-ciano-light: rgba(10, 163, 194, 0.10);
+
+  /* Ação — reservado para dado/destaque, não para CTA */
+  --cor-acao: #EA6C0B;
+  --cor-acao-hover: #C85606;
+  --cor-acao-light: rgba(234, 108, 11, 0.10);
+
+  /* Dados — macros */
+  --cor-proteina: #E5484D;
+  --cor-carbo: #F0A020;
+  --cor-gordura: #6E56CF;
 
   /* Gradientes */
-  --grad-primario: linear-gradient(135deg, #10B981 0%, #059669 100%);
-  --grad-acao: linear-gradient(135deg, #F97316 0%, #EA580C 100%);
-  --grad-hero: linear-gradient(160deg, #F8FAFC 0%, #F1F5F9 50%, #D1FAE5 100%);
-  --grad-dark: linear-gradient(160deg, #0F172A 0%, #1E293B 100%);
-  --grad-glass: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.7) 100%);
-  --grad-card: linear-gradient(180deg, #FFFFFF 0%, rgba(248,250,252,0.5) 100%);
+  --grad-primario: linear-gradient(120deg, #0EA47A 0%, #0AA3C2 100%);
+  --grad-acao: linear-gradient(120deg, #EA6C0B 0%, #F0A020 100%);
+  --grad-hero: linear-gradient(180deg, #FFFFFF 0%, #F7F9FB 100%);
+  --grad-dark: linear-gradient(150deg, #0A1020 0%, #111B2E 100%);
+  --grad-glass: linear-gradient(160deg, rgba(255, 255, 255, 0.92) 0%, rgba(255, 255, 255, 0.62) 100%);
+  --grad-card: linear-gradient(180deg, #FFFFFF 0%, #FBFCFE 100%);
+  /* Hairline em degradê para bordas "vivas" */
+  --grad-borda: linear-gradient(140deg, rgba(14, 164, 122, 0.35), rgba(10, 163, 194, 0.14) 40%, rgba(10, 16, 32, 0.06) 75%);
 
   /* Tipografia */
-  --font-heading: var(--font-sora), 'Sora', system-ui, sans-serif;
-  --font-body: var(--font-inter), 'Inter', system-ui, sans-serif;
+  --font-heading: var(--font-geist), system-ui, -apple-system, sans-serif;
+  --font-body: var(--font-geist), system-ui, -apple-system, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, 'SFMono-Regular', Menlo, monospace;
 
-  /* Tamanhos de fonte */
+  /* Escala de fonte — fluida nos tamanhos de display */
   --text-xs: 0.75rem;
-  --text-sm: 0.875rem;
-  --text-base: 1rem;
-  --text-lg: 1.125rem;
+  --text-sm: 0.8125rem;
+  --text-base: 0.9375rem;
+  --text-lg: 1.0625rem;
   --text-xl: 1.25rem;
-  --text-2xl: 1.5rem;
-  --text-3xl: 1.875rem;
-  --text-4xl: 2.25rem;
-  --text-5xl: 3rem;
-  --text-6xl: 3.75rem;
-  --text-7xl: 4.5rem;
+  --text-2xl: clamp(1.35rem, 1.1rem + 1vw, 1.625rem);
+  --text-3xl: clamp(1.65rem, 1.25rem + 1.7vw, 2.125rem);
+  --text-4xl: clamp(2rem, 1.4rem + 2.6vw, 2.75rem);
+  --text-5xl: clamp(2.4rem, 1.5rem + 3.8vw, 3.5rem);
+  --text-6xl: clamp(2.8rem, 1.5rem + 5.2vw, 4.25rem);
+  --text-7xl: clamp(3.2rem, 1.4rem + 6.8vw, 5.25rem);
 
   /* Espaçamentos */
   --space-1: 0.25rem;
@@ -61,36 +86,39 @@
   --space-24: 6rem;
   --space-32: 8rem;
 
-  /* Cantos arredondados */
-  --radius-sm: 0.375rem;
-  --radius-md: 0.5rem;
-  --radius-lg: 0.75rem;
-  --radius-xl: 1rem;
-  --radius-2xl: 1.5rem;
-  --radius-3xl: 2rem;
+  /* Cantos — contidos; excesso de arredondamento infantiliza */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 20px;
+  --radius-3xl: 28px;
   --radius-full: 9999px;
 
-  /* Sombras — mais profundidade */
-  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.08), 0 2px 4px -2px rgba(15, 23, 42, 0.04);
-  --shadow-lg: 0 10px 25px -3px rgba(15, 23, 42, 0.08), 0 4px 6px -4px rgba(15, 23, 42, 0.04);
-  --shadow-xl: 0 20px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
-  --shadow-2xl: 0 25px 50px -12px rgba(15, 23, 42, 0.15);
-  --shadow-glow-green: 0 0 40px rgba(16, 185, 129, 0.3);
-  --shadow-glow-orange: 0 0 40px rgba(249, 115, 22, 0.3);
+  /* Sombras — difusas e frias, nunca pesadas */
+  --shadow-sm: 0 1px 2px rgba(10, 16, 32, 0.04);
+  --shadow-md: 0 1px 2px rgba(10, 16, 32, 0.04), 0 8px 20px -10px rgba(10, 16, 32, 0.14);
+  --shadow-lg: 0 1px 2px rgba(10, 16, 32, 0.04), 0 16px 36px -14px rgba(10, 16, 32, 0.18);
+  --shadow-xl: 0 1px 2px rgba(10, 16, 32, 0.04), 0 28px 60px -20px rgba(10, 16, 32, 0.22);
+  --shadow-2xl: 0 40px 90px -30px rgba(10, 16, 32, 0.28);
+  --shadow-glow-green: 0 0 0 1px rgba(14, 164, 122, 0.16), 0 12px 40px -12px var(--cor-primario-glow);
+  --shadow-glow-orange: 0 0 0 1px rgba(234, 108, 11, 0.16), 0 12px 40px -12px rgba(234, 108, 11, 0.22);
 
   /* Transições */
-  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-base: 300ms cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-spring: 500ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  --transition-fast: 160ms cubic-bezier(0.2, 0, 0.2, 1);
+  --transition-base: 280ms cubic-bezier(0.2, 0, 0.2, 1);
+  --transition-slow: 520ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-spring: 620ms cubic-bezier(0.22, 1.2, 0.36, 1);
 
   /* Layout */
-  --container-max: 1120px;
+  --container-max: 1180px;
   --container-narrow: 720px;
-  --header-height: 72px;
-}
+  --header-height: 64px;
 
+  /* Grid técnico de fundo */
+  --grid-size: 64px;
+  --grid-cor: rgba(10, 16, 32, 0.045);
+}
 
 /* ---------- Reset & Base ---------- */
 *,
@@ -107,41 +135,49 @@ html {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-height) + var(--space-6));
 }
 
 body {
   font-family: var(--font-body);
-  color: var(--cor-tinta);
+  font-size: var(--text-base);
+  color: var(--cor-tinta-2);
   background-color: var(--cor-fundo);
   line-height: 1.6;
   min-height: 100dvh;
   overflow-x: hidden;
+  font-feature-settings: 'cv11', 'ss01';
 }
 
 /* ---------- Tipografia ---------- */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
-  font-weight: 700;
-  line-height: 1.15;
+  font-weight: 600;
+  line-height: 1.12;
   color: var(--cor-tinta);
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
 }
 
 h1 {
-  font-size: var(--text-4xl);
+  font-size: var(--text-5xl);
+  letter-spacing: -0.04em;
 }
 
 h2 {
-  font-size: var(--text-3xl);
+  font-size: var(--text-4xl);
+  letter-spacing: -0.035em;
 }
 
 h3 {
-  font-size: var(--text-2xl);
+  font-size: var(--text-xl);
+  letter-spacing: -0.02em;
 }
 
 p {
   color: var(--cor-texto-suave);
-  line-height: 1.7;
+  line-height: 1.65;
+  text-wrap: pretty;
 }
 
 a {
@@ -159,7 +195,15 @@ strong {
   color: var(--cor-tinta);
 }
 
-/* ---------- Layout Utilities ---------- */
+/* Números e rótulos técnicos usam tabular mono */
+.mono,
+.tabular {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum';
+}
+
+/* ---------- Layout ---------- */
 .container {
   width: 100%;
   max-width: var(--container-max);
@@ -172,7 +216,6 @@ strong {
   max-width: var(--container-narrow);
 }
 
-/* ---------- Sections ---------- */
 .section {
   padding: var(--space-16) 0;
   position: relative;
@@ -180,31 +223,46 @@ strong {
 
 .section--lg {
   padding: var(--space-20) 0;
+  position: relative;
 }
 
-/* ---------- Responsive typography ---------- */
 @media (min-width: 768px) {
-  h1 { font-size: var(--text-5xl); }
-  h2 { font-size: var(--text-4xl); }
-  h3 { font-size: var(--text-3xl); }
   .section { padding: var(--space-20) 0; }
   .section--lg { padding: var(--space-24) 0; }
+  .container { padding-left: var(--space-8); padding-right: var(--space-8); }
 }
 
-@media (min-width: 1024px) {
-  h1 { font-size: var(--text-6xl); }
+/* ---------- Eyebrow / rótulo técnico ---------- */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--cor-texto-fraco);
 }
 
-/* ---------- Animations ---------- */
+/* ---------- Grid técnico de fundo ---------- */
+/* Aplicado em um elemento decorativo posicionado, não no conteúdo. */
+.tech-grid {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(to right, var(--grid-cor) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-cor) 1px, transparent 1px);
+  background-size: var(--grid-size) var(--grid-size);
+  -webkit-mask-image: radial-gradient(ellipse 100% 70% at 50% 0%, #000 20%, transparent 78%);
+  mask-image: radial-gradient(ellipse 100% 70% at 50% 0%, #000 20%, transparent 78%);
+}
+
+/* ---------- Animações ---------- */
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(24px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes fadeIn {
@@ -213,28 +271,22 @@ strong {
 }
 
 @keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  from { opacity: 0; transform: translateX(-16px); }
+  to { opacity: 1; transform: translateX(0); }
 }
 
 @keyframes float {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-12px); }
+  50% { transform: translateY(-8px); }
 }
 
 @keyframes pulse {
   0%, 100% { opacity: 1; }
-  50% { opacity: 0.6; }
+  50% { opacity: 0.45; }
 }
 
 @keyframes shimmer {
-  0% { background-position: -200% center; }
+  0% { background-position: 0% center; }
   100% { background-position: 200% center; }
 }
 
@@ -243,45 +295,89 @@ strong {
   to { transform: rotate(360deg); }
 }
 
-@keyframes blob {
-  0%, 100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
-  25% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
-  50% { border-radius: 50% 60% 30% 60% / 30% 50% 70% 60%; }
-  75% { border-radius: 60% 30% 50% 40% / 60% 70% 30% 50%; }
+/* Aurora suave que "respira" atrás do hero */
+@keyframes aurora {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); opacity: 0.85; }
+  50% { transform: translate3d(2%, -3%, 0) scale(1.12); opacity: 1; }
 }
 
-/* Utility animation classes */
+/* Linha de varredura — leitura do prato pela IA */
+@keyframes scanline {
+  0% { transform: translateY(-10%); opacity: 0; }
+  12% { opacity: 1; }
+  88% { opacity: 1; }
+  100% { transform: translateY(320%); opacity: 0; }
+}
+
+/* Preenchimento das barras de macro */
+@keyframes barFill {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+/* Ticker horizontal de alimentos */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* Traço do SVG se desenhando */
+@keyframes drawStroke {
+  from { stroke-dashoffset: var(--dash, 100); }
+  to { stroke-dashoffset: 0; }
+}
+
 .animate-fade-in-up {
-  animation: fadeInUp 0.7s cubic-bezier(0.4, 0, 0.2, 1) both;
+  animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
-.animate-delay-1 { animation-delay: 0.1s; }
-.animate-delay-2 { animation-delay: 0.2s; }
-.animate-delay-3 { animation-delay: 0.3s; }
-.animate-delay-4 { animation-delay: 0.4s; }
-.animate-delay-5 { animation-delay: 0.5s; }
+.animate-delay-1 { animation-delay: 0.06s; }
+.animate-delay-2 { animation-delay: 0.12s; }
+.animate-delay-3 { animation-delay: 0.18s; }
+.animate-delay-4 { animation-delay: 0.24s; }
+.animate-delay-5 { animation-delay: 0.30s; }
 
-/* ---------- Focus visible ---------- */
+/* ---------- Reveal ao rolar (componente Reveal) ---------- */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(20px);
+  filter: blur(6px);
+  transition:
+    opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+[data-reveal='in'] {
+  opacity: 1;
+  transform: none;
+  filter: none;
+}
+
+/* ---------- Foco visível ---------- */
 :focus-visible {
   outline: 2px solid var(--cor-primario);
   outline-offset: 3px;
   border-radius: var(--radius-sm);
 }
 
-/* ---------- Selection ---------- */
+/* ---------- Seleção ---------- */
 ::selection {
-  background-color: var(--cor-primario);
-  color: var(--cor-superficie);
+  background-color: rgba(14, 164, 122, 0.18);
+  color: var(--cor-tinta);
 }
 
-/* ---------- Scrollbar (subtle) ---------- */
-::-webkit-scrollbar { width: 6px; }
+/* ---------- Scrollbar ---------- */
+::-webkit-scrollbar { width: 10px; height: 10px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb {
-  background: var(--cor-linha);
+  background: var(--cor-linha-forte);
+  border: 3px solid var(--cor-fundo);
   border-radius: var(--radius-full);
 }
-::-webkit-scrollbar-thumb:hover { background: var(--cor-texto-suave); }
+::-webkit-scrollbar-thumb:hover { background: var(--cor-texto-fraco); }
 
 /* ---------- Skip to content (a11y) ---------- */
 .skip-to-content {
@@ -290,8 +386,8 @@ strong {
   left: var(--space-4);
   z-index: 9999;
   padding: var(--space-2) var(--space-4);
-  background: var(--cor-primario);
-  color: var(--cor-superficie);
+  background: var(--cor-tinta);
+  color: #fff;
   border-radius: var(--radius-md);
   font-size: var(--text-sm);
   font-weight: 600;
@@ -302,13 +398,34 @@ strong {
   top: var(--space-4);
 }
 
-/* ---------- Noise / grain overlay ---------- */
+/* ---------- Grão sutil ---------- */
 .noise-overlay::before {
   content: '';
   position: absolute;
   inset: 0;
-  opacity: 0.03;
+  opacity: 0.025;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
   pointer-events: none;
   z-index: 0;
+}
+
+/* ---------- Movimento reduzido ---------- */
+/* Desliga loops e revela tudo; mantém apenas microtransições de estado. */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
 }

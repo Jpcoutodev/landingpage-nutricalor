@@ -1,70 +1,50 @@
+import { IconCamera, IconCpu, IconSliders } from './icons'
+import type { StepsDict } from '@/dictionaries/types'
 import styles from './SectionSteps.module.css'
 
 type SectionStepsProps = {
-  dict: any
+  dict: StepsDict
 }
 
 export default function SectionSteps({ dict }: SectionStepsProps) {
-  const stepsData = [
-    {
-      number: '1',
-      emoji: '📷',
-      title: dict.items[0].title,
-      description: dict.items[0].description,
-      accent: 'var(--cor-primario)',
-    },
-    {
-      number: '2',
-      emoji: '🤖',
-      title: dict.items[1].title,
-      description: dict.items[1].description,
-      accent: 'var(--cor-gordura)',
-    },
-    {
-      number: '3',
-      emoji: '✏️',
-      title: dict.items[2].title,
-      description: dict.items[2].description,
-      accent: 'var(--cor-acao)',
-    },
+  const steps = [
+    { number: '01', Icon: IconCamera, title: dict.items[0].title, description: dict.items[0].description },
+    { number: '02', Icon: IconCpu, title: dict.items[1].title, description: dict.items[1].description },
+    { number: '03', Icon: IconSliders, title: dict.items[2].title, description: dict.items[2].description },
   ]
 
   return (
     <section className={`section ${styles.steps}`} aria-labelledby="steps-title" id="como-funciona-resumo">
       <div className="container">
-        <div className={styles.header}>
-          <span className={styles.badge}>{dict.badge}</span>
-          <h2 id="steps-title" className={styles.title}>
-            {dict.title}
-          </h2>
-          <p className={styles.subtitle}>
-            {dict.subtitle}
-          </p>
-        </div>
+        <header className={styles.header} data-reveal>
+          <p className="eyebrow">{dict.badge}</p>
+          <h2 id="steps-title" className={styles.title}>{dict.title}</h2>
+          <p className={styles.subtitle}>{dict.subtitle}</p>
+        </header>
 
         <ol className={styles.grid}>
-          {stepsData.map((step, i) => (
+          {steps.map(({ number, Icon, title, description }, i) => (
             <li
-              key={step.number}
-              className={`${styles.card} animate-fade-in-up animate-delay-${i + 1}`}
+              key={number}
+              className={styles.step}
+              data-reveal
+              style={{ '--reveal-delay': `${i * 90}ms` } as React.CSSProperties}
             >
-              <div className={styles.cardAccent} style={{ background: step.accent }} />
-              <div className={styles.cardContent}>
-                <div className={styles.cardTop}>
-                  <span className={styles.number} style={{ background: step.accent }}>{step.number}</span>
-                  <span className={styles.emoji}>{step.emoji}</span>
-                </div>
-                <h3 className={styles.cardTitle}>{step.title}</h3>
-                <p className={styles.cardDesc}>{step.description}</p>
+              {/* Trilho: número + linha de conexão */}
+              <div className={styles.rail}>
+                <span className={styles.number}>{number}</span>
+                <span className={styles.railLine} aria-hidden="true" />
               </div>
+
+              <span className={styles.iconTile} aria-hidden="true">
+                <Icon size={20} />
+              </span>
+
+              <h3 className={styles.stepTitle}>{title}</h3>
+              <p className={styles.stepDesc}>{description}</p>
             </li>
           ))}
         </ol>
-
-        {/* Connector line (desktop) */}
-        <div className={styles.connector} aria-hidden="true">
-          <div className={styles.connectorLine} />
-        </div>
       </div>
     </section>
   )

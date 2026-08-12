@@ -1,61 +1,49 @@
+import Spotlight from './Spotlight'
+import { IconMapPin, IconMessage, IconShieldCheck } from './icons'
+import type { FeaturesDict } from '@/dictionaries/types'
 import styles from './SectionFeatures.module.css'
 
 type SectionFeaturesProps = {
-  dict: any
+  dict: FeaturesDict
 }
 
 export default function SectionFeatures({ dict }: SectionFeaturesProps) {
-  const featuresData = [
-    {
-      icon: '🇧🇷',
-      title: dict.items[0].title,
-      description: dict.items[0].description,
-      gradient: 'linear-gradient(135deg, #e8f5ee 0%, #f0f7f4 100%)',
-    },
-    {
-      icon: '💬',
-      title: dict.items[1].title,
-      description: dict.items[1].description,
-      gradient: 'linear-gradient(135deg, #f0eef9 0%, #f5f3fc 100%)',
-    },
-    {
-      icon: '💰',
-      title: dict.items[2].title,
-      description: dict.items[2].description,
-      gradient: 'linear-gradient(135deg, #fef3ec 0%, #fff8f4 100%)',
-    },
+  const features = [
+    { Icon: IconMapPin, title: dict.items[0].title, description: dict.items[0].description },
+    { Icon: IconMessage, title: dict.items[1].title, description: dict.items[1].description },
+    { Icon: IconShieldCheck, title: dict.items[2].title, description: dict.items[2].description },
   ]
 
   return (
     <section className={`section--lg ${styles.features}`} aria-labelledby="features-title" id="diferenciais">
-      {/* Background decoration */}
-      <div className={styles.bgDecor} aria-hidden="true" />
+      <div className={styles.backdrop} aria-hidden="true">
+        <div className="tech-grid" />
+      </div>
 
       <div className="container">
-        <div className={styles.header}>
-          <span className={styles.badge}>{dict.badge}</span>
-          <h2 id="features-title" className={styles.title}>
-            {dict.title}
-          </h2>
-          <p className={styles.subtitle}>
-            {dict.subtitle}
-          </p>
-        </div>
+        <header className={styles.header} data-reveal>
+          <p className="eyebrow">{dict.badge}</p>
+          <h2 id="features-title" className={styles.title}>{dict.title}</h2>
+          <p className={styles.subtitle}>{dict.subtitle}</p>
+        </header>
 
-        <div className={styles.grid}>
-          {featuresData.map((feature, i) => (
-            <div
-              key={feature.title}
-              className={`${styles.card} animate-fade-in-up animate-delay-${i + 1}`}
+        <Spotlight className={styles.grid}>
+          {features.map(({ Icon, title, description }, i) => (
+            <article
+              key={title}
+              className={styles.card}
+              data-spotlight
+              data-reveal
+              style={{ '--reveal-delay': `${i * 90}ms` } as React.CSSProperties}
             >
-              <div className={styles.iconWrap} style={{ background: feature.gradient }}>
-                <span className={styles.icon}>{feature.icon}</span>
-              </div>
-              <h3 className={styles.cardTitle}>{feature.title}</h3>
-              <p className={styles.cardDesc}>{feature.description}</p>
-            </div>
+              <span className={styles.iconTile} aria-hidden="true">
+                <Icon size={20} />
+              </span>
+              <h3 className={styles.cardTitle}>{title}</h3>
+              <p className={styles.cardDesc}>{description}</p>
+            </article>
           ))}
-        </div>
+        </Spotlight>
       </div>
     </section>
   )

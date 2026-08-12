@@ -1,5 +1,5 @@
 /* ============================================================
-   Como Funciona — page styles
+   Como Funciona
    ============================================================ */
 
 .page {
@@ -8,30 +8,43 @@
 
 /* ---------- Intro ---------- */
 .intro {
-  padding: var(--space-16) 0 var(--space-10);
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: var(--space-16) 0 var(--space-12);
   text-align: center;
+  background: var(--grad-hero);
+  border-bottom: 1px solid var(--cor-linha);
+}
+
+.introBackdrop {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
 }
 
 .title {
-  margin-bottom: var(--space-6);
+  margin: var(--space-4) 0 var(--space-5);
+  font-size: var(--text-5xl);
 }
 
 .lead {
   font-size: var(--text-lg);
   color: var(--cor-texto-suave);
-  line-height: 1.8;
-  max-width: 560px;
+  line-height: 1.65;
+  max-width: 58ch;
   margin: 0 auto;
 }
 
-/* ---------- Content blocks ---------- */
+/* ---------- Blocos ---------- */
 .block {
-  padding: var(--space-10) 0;
+  padding: var(--space-12) 0;
 }
 
 .block p {
   font-size: var(--text-lg);
-  line-height: 1.8;
+  line-height: 1.7;
 }
 
 .blockAlt {
@@ -43,35 +56,61 @@
 .blockHeader {
   display: flex;
   align-items: center;
-  gap: var(--space-4);
-  margin-bottom: var(--space-6);
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-bottom: var(--space-5);
 }
 
-.blockEmoji {
-  font-size: 32px;
-  line-height: 1;
+.blockIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  border: 1px solid var(--cor-linha);
+  border-radius: var(--radius-lg);
+  background: var(--cor-superficie);
+  color: var(--cor-primario);
+  box-shadow: var(--shadow-sm);
+}
+
+.blockIndex {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.1em;
+  color: var(--cor-texto-fraco);
+  font-variant-numeric: tabular-nums;
 }
 
 .blockTitle {
-  font-size: var(--text-2xl);
+  font-size: var(--text-3xl);
+  letter-spacing: -0.03em;
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
-/* ---------- Honest note ---------- */
+/* ---------- Nota honesta ---------- */
 .honestNote {
-  background: var(--cor-primario-light);
-  border-top: 1px solid rgba(30, 107, 78, 0.15);
-  border-bottom: 1px solid rgba(30, 107, 78, 0.15);
+  background: linear-gradient(180deg, rgba(14, 164, 122, 0.05), rgba(14, 164, 122, 0.02));
+  border-top: 1px solid rgba(14, 164, 122, 0.18);
+  border-bottom: 1px solid rgba(14, 164, 122, 0.18);
 }
 
 .honestNote p {
-  color: var(--cor-tinta);
+  color: var(--cor-tinta-2);
 }
 
-/* ---------- Methods grid ---------- */
+.noteIcon {
+  border-color: rgba(14, 164, 122, 0.3);
+  background: var(--cor-superficie);
+}
+
+/* ---------- Métodos ---------- */
 .methodsGrid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--space-4);
+  gap: var(--space-3);
   margin-top: var(--space-6);
 }
 
@@ -79,23 +118,36 @@
   display: flex;
   align-items: flex-start;
   gap: var(--space-3);
-  padding: var(--space-5);
+  padding: var(--space-4) var(--space-5);
   background: var(--cor-superficie);
   border-radius: var(--radius-lg);
   border: 1px solid var(--cor-linha);
   font-size: var(--text-base);
   line-height: 1.6;
   color: var(--cor-texto-suave);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-base);
 }
 
-.methodEmoji {
-  font-size: 24px;
+.methodCard:hover {
+  border-color: var(--cor-linha-forte);
+  box-shadow: var(--shadow-md);
+}
+
+.methodIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
   flex-shrink: 0;
-  margin-top: 2px;
+  margin-top: 1px;
+  border-radius: var(--radius-md);
+  background: var(--cor-primario-light);
+  color: var(--cor-primario-dark);
 }
 
 .methodDash {
-  color: var(--cor-linha);
+  color: var(--cor-texto-fraco);
 }
 
 /* ---------- CTA ---------- */
@@ -108,10 +160,10 @@
   justify-content: center;
 }
 
-/* ---------- Responsive ---------- */
+/* ---------- Responsivo ---------- */
 @media (min-width: 768px) {
   .intro {
-    padding: var(--space-20) 0 var(--space-12);
+    padding: var(--space-20) 0 var(--space-16);
   }
 
   .block {
@@ -120,9 +172,5 @@
 
   .methodsGrid {
     grid-template-columns: 1fr 1fr;
-  }
-
-  .blockTitle {
-    font-size: var(--text-3xl);
   }
 }

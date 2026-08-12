@@ -89,7 +89,7 @@
 .content em {
   color: var(--cor-acao);
   font-style: normal;
-  background: #fef3ec;
+  background: rgba(234, 108, 11, 0.07);
   padding: var(--space-1) var(--space-2);
   border-radius: var(--radius-sm);
   font-size: var(--text-sm);

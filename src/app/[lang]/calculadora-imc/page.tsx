@@ -4,6 +4,7 @@ import { getDictionary } from '@/dictionaries'
 import { SITE_URL, APP_NAME } from '@/lib/constants'
 import ImcCalculator from '@/components/ImcCalculator'
 import AppCTA from '@/components/AppCTA'
+import { IconArrowRight, IconFlame, IconGauge, IconLeaf, IconPieChart } from '@/components/icons'
 import styles from './page.module.css'
 
 type PageProps = {
@@ -159,48 +160,48 @@ export default async function CalculadoraImcPage({ params }: PageProps) {
                 href={`/${lang}/calculadora-tmb`}
                 className={styles.crossLinkCard}
               >
-                <span className={styles.crossLinkIcon} aria-hidden="true">⚙️</span>
+                <span className={styles.crossLinkIcon} aria-hidden="true"><IconGauge size={20} /></span>
                 <div>
                   <strong className={styles.crossLinkName}>{t.crossLinks.tmb.name}</strong>
                   <p className={styles.crossLinkDesc}>{t.crossLinks.tmb.desc}</p>
                 </div>
-                <span className={styles.crossLinkArrow} aria-hidden="true">→</span>
+                <IconArrowRight size={18} className={styles.crossLinkArrow} />
               </Link>
 
               <Link
                 href={`/${lang}/calculadora-deficit-calorico`}
                 className={styles.crossLinkCard}
               >
-                <span className={styles.crossLinkIcon} aria-hidden="true">🔥</span>
+                <span className={styles.crossLinkIcon} aria-hidden="true"><IconFlame size={20} /></span>
                 <div>
                   <strong className={styles.crossLinkName}>{t.crossLinks.deficit.name}</strong>
                   <p className={styles.crossLinkDesc}>{t.crossLinks.deficit.desc}</p>
                 </div>
-                <span className={styles.crossLinkArrow} aria-hidden="true">→</span>
+                <IconArrowRight size={18} className={styles.crossLinkArrow} />
               </Link>
 
               <Link
                 href={`/${lang}/calculadora-calorias`}
                 className={styles.crossLinkCard}
               >
-                <span className={styles.crossLinkIcon} aria-hidden="true">🥗</span>
+                <span className={styles.crossLinkIcon} aria-hidden="true"><IconLeaf size={20} /></span>
                 <div>
                   <strong className={styles.crossLinkName}>{t.crossLinks.calories.name}</strong>
                   <p className={styles.crossLinkDesc}>{t.crossLinks.calories.desc}</p>
                 </div>
-                <span className={styles.crossLinkArrow} aria-hidden="true">→</span>
+                <IconArrowRight size={18} className={styles.crossLinkArrow} />
               </Link>
 
               <Link
                 href={`/${lang}/calculadora-macros`}
                 className={styles.crossLinkCard}
               >
-                <span className={styles.crossLinkIcon} aria-hidden="true">🥑</span>
+                <span className={styles.crossLinkIcon} aria-hidden="true"><IconPieChart size={20} /></span>
                 <div>
                   <strong className={styles.crossLinkName}>{t.crossLinks.macros.name}</strong>
                   <p className={styles.crossLinkDesc}>{t.crossLinks.macros.desc}</p>
                 </div>
-                <span className={styles.crossLinkArrow} aria-hidden="true">→</span>
+                <IconArrowRight size={18} className={styles.crossLinkArrow} />
               </Link>
             </div>
           </section>

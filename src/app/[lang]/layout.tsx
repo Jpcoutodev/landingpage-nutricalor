@@ -1,22 +1,21 @@
 import type { Metadata } from 'next'
-import { Sora, Inter } from 'next/font/google'
+import { Geist, Geist_Mono } from 'next/font/google'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { APP_NAME, SITE_URL } from '@/lib/constants'
 import { getDictionary } from '@/dictionaries'
 import '../globals.css'
 
-const sora = Sora({
+const geist = Geist({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-sora',
-  weight: ['400', '600', '700'],
+  variable: '--font-geist',
 })
 
-const inter = Inter({
+const geistMono = Geist_Mono({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-inter',
+  variable: '--font-geist-mono',
 })
 
 export async function generateStaticParams() {
@@ -75,7 +74,7 @@ export default async function RootLayout({
   const dict = await getDictionary(lang)
 
   return (
-    <html lang={lang === 'pt' ? 'pt-BR' : lang} className={`${sora.variable} ${inter.variable}`}>
+    <html lang={lang === 'pt' ? 'pt-BR' : lang} className={`${geist.variable} ${geistMono.variable}`}>
       <body>
         <a href="#main-content" className="skip-to-content">
           {dict.common.skipToContent}

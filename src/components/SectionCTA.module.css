@@ -1,138 +1,135 @@
 /* ============================================================
-   SectionCTA — Dramatic dark section
+   SectionCTA — painel escuro de fechamento
    ============================================================ */
 
 .cta {
-  background: var(--grad-dark);
-  border-radius: var(--radius-3xl);
-  margin: 0 var(--space-4) var(--space-8);
-  overflow: hidden;
-  position: relative;
-  isolation: isolate;
+  background: var(--cor-fundo);
 }
 
-/* ---------- Animated orbs ---------- */
-.orbWrap {
+.panel {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-radius: var(--radius-3xl);
+  background: var(--grad-dark);
+  padding: var(--space-12) var(--space-6);
+  text-align: center;
+  box-shadow: var(--shadow-2xl);
+}
+
+/* ---------- Fundo do painel ---------- */
+.panelBackdrop {
   position: absolute;
   inset: 0;
-  overflow: hidden;
+  z-index: -1;
   pointer-events: none;
 }
 
-.orb1 {
+.panelGrid {
   position: absolute;
-  top: -30%;
-  right: -10%;
-  width: 450px;
-  height: 450px;
-  background: radial-gradient(circle, rgba(30, 107, 78, 0.35) 0%, transparent 60%);
-  border-radius: 50%;
-  animation: float 8s ease-in-out infinite;
-  filter: blur(40px);
+  inset: 0;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 56px 56px;
+  -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 40%, #000 10%, transparent 72%);
+  mask-image: radial-gradient(ellipse 80% 80% at 50% 40%, #000 10%, transparent 72%);
 }
 
-.orb2 {
+.glowA,
+.glowB {
   position: absolute;
-  bottom: -40%;
-  left: -15%;
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, rgba(255, 107, 44, 0.2) 0%, transparent 60%);
   border-radius: 50%;
-  animation: float 10s ease-in-out 2s infinite reverse;
-  filter: blur(50px);
+  filter: blur(64px);
 }
 
-.orb3 {
-  position: absolute;
-  top: 30%;
-  left: 40%;
-  width: 200px;
-  height: 200px;
-  background: radial-gradient(circle, rgba(124, 111, 222, 0.15) 0%, transparent 60%);
-  border-radius: 50%;
-  animation: float 6s ease-in-out 1s infinite;
-  filter: blur(30px);
+.glowA {
+  top: -40%;
+  left: 12%;
+  width: min(520px, 70%);
+  height: min(520px, 70%);
+  background: radial-gradient(circle, rgba(14, 164, 122, 0.42) 0%, transparent 68%);
+  animation: aurora 15s ease-in-out infinite;
 }
 
-.inner {
+.glowB {
+  bottom: -50%;
+  right: 6%;
+  width: min(460px, 62%);
+  height: min(460px, 62%);
+  background: radial-gradient(circle, rgba(10, 163, 194, 0.30) 0%, transparent 68%);
+  animation: aurora 19s ease-in-out -5s infinite reverse;
+}
+
+/* ---------- Conteúdo ---------- */
+.panelContent {
   position: relative;
-  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-  gap: var(--space-6);
-  padding: var(--space-16) 0;
+  gap: var(--space-4);
+  max-width: 620px;
+  margin: 0 auto;
 }
 
 .eyebrow {
-  display: inline-block;
-  padding: var(--space-1) var(--space-4);
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 5px var(--space-3);
+  border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: var(--radius-full);
-  font-size: var(--text-sm);
-  font-weight: 500;
-  color: rgba(255, 255, 255, 0.7);
-  letter-spacing: 0.04em;
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.82);
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
   backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .title {
-  color: var(--cor-superficie);
-  max-width: 520px;
-  font-size: var(--text-4xl);
+  font-size: var(--text-5xl);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  color: #fff;
 }
 
 .highlight {
-  background: var(--grad-acao);
+  background: linear-gradient(110deg, #4ADEA8 0%, #48D3EC 100%);
+  background-size: 200% auto;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: shimmer 6s linear infinite;
 }
 
 .subtitle {
-  color: rgba(255, 255, 255, 0.6);
   font-size: var(--text-lg);
-  max-width: 440px;
-  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.66);
+  max-width: 48ch;
 }
 
-.ctaWrapper {
-  margin-top: var(--space-4);
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-3);
+  margin-top: var(--space-3);
 }
 
-/* AppCTA override for dark bg */
-.ctaWrapper > div {
-  background: rgba(255, 255, 255, 0.1) !important;
-  border-color: rgba(255, 255, 255, 0.2) !important;
-  color: var(--cor-superficie) !important;
-  backdrop-filter: blur(8px);
-}
-
-.ctaWrapper > div:hover {
-  background: rgba(255, 255, 255, 0.15) !important;
-  box-shadow: 0 8px 32px rgba(255, 255, 255, 0.08) !important;
-}
-
-/* ---------- Responsive ---------- */
+/* ---------- Responsivo ---------- */
 @media (min-width: 768px) {
-  .cta {
-    margin: 0 var(--space-8) var(--space-12);
-  }
-
-  .inner {
-    padding: var(--space-24) 0;
-  }
-
-  .title {
-    font-size: var(--text-5xl);
+  .panel {
+    padding: var(--space-20) var(--space-12);
   }
 }
 
-@media (min-width: 1024px) {
-  .cta {
-    margin: 0 var(--space-12) var(--space-16);
+@media (prefers-reduced-motion: reduce) {
+  .glowA,
+  .glowB {
+    animation: none;
   }
 }

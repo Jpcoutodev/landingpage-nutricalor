@@ -108,7 +108,7 @@
 .input:focus {
   outline: none;
   border-color: var(--cor-primario);
-  box-shadow: 0 0 0 3px rgba(30, 107, 78, 0.1);
+  box-shadow: 0 0 0 3px rgba(14, 164, 122, 0.1);
 }
 
 .inputUnit {
@@ -142,7 +142,7 @@
 .select:focus {
   outline: none;
   border-color: var(--cor-primario);
-  box-shadow: 0 0 0 3px rgba(30, 107, 78, 0.1);
+  box-shadow: 0 0 0 3px rgba(14, 164, 122, 0.1);
 }
 
 /* ---------- Submit ---------- */
@@ -217,7 +217,7 @@
 }
 
 .cardTarget {
-  border-color: rgba(30, 107, 78, 0.2);
+  border-color: rgba(14, 164, 122, 0.2);
   background: linear-gradient(180deg, var(--cor-primario-light) 0%, var(--cor-superficie) 100%);
 }
 
@@ -283,19 +283,19 @@
 }
 
 .macroProtein {
-  border-color: rgba(232, 93, 74, 0.2);
+  border-color: rgba(229, 72, 77, 0.2);
 }
-.macroProtein .macroGram { color: #E85D4A; }
+.macroProtein .macroGram { color: var(--cor-proteina); }
 
 .macroCarbs {
-  border-color: rgba(242, 169, 59, 0.2);
+  border-color: rgba(240, 160, 32, 0.2);
 }
-.macroCarbs .macroGram { color: #F2A93B; }
+.macroCarbs .macroGram { color: var(--cor-carbo); }
 
 .macroFat {
-  border-color: rgba(124, 111, 222, 0.2);
+  border-color: rgba(110, 86, 207, 0.2);
 }
-.macroFat .macroGram { color: #7C6FDE; }
+.macroFat .macroGram { color: var(--cor-gordura); }
 
 .macroLabel {
   font-family: var(--font-heading);
@@ -350,6 +350,12 @@
   font-size: var(--text-sm);
   color: var(--cor-tinta);
   line-height: 1.6;
+}
+
+.safetyIcon {
+  color: var(--cor-acao);
+  vertical-align: -3px;
+  flex-shrink: 0;
 }
 
 /* ============================================================

@@ -183,8 +183,22 @@
 }
 
 .crossLinkIcon {
-  font-size: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
   flex-shrink: 0;
+  border: 1px solid var(--cor-linha);
+  border-radius: var(--radius-lg);
+  background: var(--cor-superficie);
+  color: var(--cor-primario);
+  transition: border-color var(--transition-fast), color var(--transition-fast);
+}
+
+.crossLinkCard:hover .crossLinkIcon {
+  border-color: rgba(14, 164, 122, 0.35);
+  color: var(--cor-primario-dark);
 }
 
 .crossLinkName {
@@ -204,7 +218,6 @@
 
 .crossLinkArrow {
   margin-left: auto;
-  font-size: var(--text-xl);
   color: var(--cor-primario);
   flex-shrink: 0;
   transition: transform var(--transition-fast);

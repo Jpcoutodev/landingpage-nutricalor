@@ -7,6 +7,7 @@ import {
   type ActivityLevel,
   type NutritionResult,
 } from '@/lib/nutrition'
+import { IconAlert, IconFlame, IconScale, IconTrendingUp } from './icons'
 import styles from './TmbCalculator.module.css'
 
 type Dict = {
@@ -216,21 +217,21 @@ export default function TmbCalculator({ dict }: { dict: Dict }) {
           <h3 className={styles.goalTitle}>{dict.result.goalTitle}</h3>
           <div className={styles.goalCards}>
             <div className={`${styles.goalCard} ${styles.goalLose}`}>
-              <span className={styles.goalIcon} aria-hidden="true">🔥</span>
+              <span className={styles.goalIcon} aria-hidden="true"><IconFlame size={19} /></span>
               <span className={styles.goalLabel}>{dict.result.loseLabel}</span>
               <span className={styles.goalValue}>{result.goals.lose.toLocaleString('pt-BR')}</span>
               <span className={styles.goalUnit}>{dict.result.kcalUnit}</span>
               <span className={styles.goalDesc}>{dict.result.loseDesc}</span>
             </div>
             <div className={`${styles.goalCard} ${styles.goalMaintain}`}>
-              <span className={styles.goalIcon} aria-hidden="true">⚖️</span>
+              <span className={styles.goalIcon} aria-hidden="true"><IconScale size={19} /></span>
               <span className={styles.goalLabel}>{dict.result.maintainLabel}</span>
               <span className={styles.goalValue}>{result.goals.maintain.toLocaleString('pt-BR')}</span>
               <span className={styles.goalUnit}>{dict.result.kcalUnit}</span>
               <span className={styles.goalDesc}>{dict.result.maintainDesc}</span>
             </div>
             <div className={`${styles.goalCard} ${styles.goalGain}`}>
-              <span className={styles.goalIcon} aria-hidden="true">💪</span>
+              <span className={styles.goalIcon} aria-hidden="true"><IconTrendingUp size={19} /></span>
               <span className={styles.goalLabel}>{dict.result.gainLabel}</span>
               <span className={styles.goalValue}>{result.goals.gain.toLocaleString('pt-BR')}</span>
               <span className={styles.goalUnit}>{dict.result.kcalUnit}</span>
@@ -241,7 +242,7 @@ export default function TmbCalculator({ dict }: { dict: Dict }) {
           {/* Safety note */}
           {result.goals.lose === safetyFloor && (
             <p className={styles.safetyNote}>
-              ⚠️ {dict.result.safetyNote.replace('{floor}', safetyFloor.toLocaleString('pt-BR'))}
+              <IconAlert size={16} className={styles.safetyIcon} /> {dict.result.safetyNote.replace('{floor}', safetyFloor.toLocaleString('pt-BR'))}
             </p>
           )}
         </div>

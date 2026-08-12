@@ -11,6 +11,7 @@ import {
   type DeficitLevel,
   type DeficitResult,
 } from '@/lib/nutrition'
+import { IconAlert, IconFlame, IconTrendingDown } from './icons'
 import styles from './DeficitCalculator.module.css'
 
 type Dict = {
@@ -240,7 +241,7 @@ export default function DeficitCalculator({ dict }: { dict: Dict }) {
           {/* Secondary cards: Deficit + Weekly loss */}
           <div className={styles.secondaryCards}>
             <div className={`${styles.secondaryCard} ${styles.cardDeficit}`}>
-              <span className={styles.secIcon} aria-hidden="true">🔥</span>
+              <span className={styles.secIcon} aria-hidden="true"><IconFlame size={19} /></span>
               <div className={styles.secContent}>
                 <span className={styles.secLabel}>{dict.result.deficitLabel}</span>
                 <span className={styles.secValue}>
@@ -251,7 +252,7 @@ export default function DeficitCalculator({ dict }: { dict: Dict }) {
               </div>
             </div>
             <div className={`${styles.secondaryCard} ${styles.cardWeekly}`}>
-              <span className={styles.secIcon} aria-hidden="true">📉</span>
+              <span className={styles.secIcon} aria-hidden="true"><IconTrendingDown size={19} /></span>
               <div className={styles.secContent}>
                 <span className={styles.secLabel}>{dict.result.weeklyLabel}</span>
                 <span className={styles.secValue}>
@@ -266,7 +267,7 @@ export default function DeficitCalculator({ dict }: { dict: Dict }) {
           {/* Safety note */}
           {result.isFloored && (
             <p className={styles.safetyNote}>
-              ⚠️ {dict.result.safetyNote.replace('{floor}', safetyFloor.toLocaleString('pt-BR'))}
+              <IconAlert size={16} className={styles.safetyIcon} /> {dict.result.safetyNote.replace('{floor}', safetyFloor.toLocaleString('pt-BR'))}
             </p>
           )}
         </div>

@@ -108,7 +108,7 @@
 .input:focus {
   outline: none;
   border-color: var(--cor-primario);
-  box-shadow: 0 0 0 3px rgba(30, 107, 78, 0.1);
+  box-shadow: 0 0 0 3px rgba(14, 164, 122, 0.1);
 }
 
 .inputUnit {
@@ -142,7 +142,7 @@
 .select:focus {
   outline: none;
   border-color: var(--cor-primario);
-  box-shadow: 0 0 0 3px rgba(30, 107, 78, 0.1);
+  box-shadow: 0 0 0 3px rgba(14, 164, 122, 0.1);
 }
 
 /* ---------- Submit ---------- */
@@ -223,12 +223,12 @@
 }
 
 .cardBmr {
-  border-color: rgba(30, 107, 78, 0.2);
+  border-color: rgba(14, 164, 122, 0.2);
   background: linear-gradient(180deg, var(--cor-primario-light) 0%, var(--cor-superficie) 100%);
 }
 
 .cardTdee {
-  border-color: rgba(255, 107, 44, 0.2);
+  border-color: rgba(234, 108, 11, 0.2);
   background: linear-gradient(180deg, var(--cor-acao-light) 0%, var(--cor-superficie) 100%);
 }
 
@@ -305,8 +305,15 @@
 }
 
 .goalIcon {
-  font-size: 28px;
-  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-linha);
+  color: var(--cor-primario);
 }
 
 .goalLabel {
@@ -359,6 +366,12 @@
   font-size: var(--text-sm);
   color: var(--cor-tinta);
   line-height: 1.6;
+}
+
+.safetyIcon {
+  color: var(--cor-acao);
+  vertical-align: -3px;
+  flex-shrink: 0;
 }
 
 /* ============================================================

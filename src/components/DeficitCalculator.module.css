@@ -109,7 +109,7 @@
 .input:focus {
   outline: none;
   border-color: var(--cor-primario);
-  box-shadow: 0 0 0 3px rgba(30, 107, 78, 0.1);
+  box-shadow: 0 0 0 3px rgba(14, 164, 122, 0.1);
 }
 
 .inputUnit {
@@ -143,7 +143,7 @@
 .select:focus {
   outline: none;
   border-color: var(--cor-primario);
-  box-shadow: 0 0 0 3px rgba(30, 107, 78, 0.1);
+  box-shadow: 0 0 0 3px rgba(14, 164, 122, 0.1);
 }
 
 /* ---------- Submit ---------- */
@@ -224,11 +224,11 @@
 }
 
 .cardTdee {
-  border-color: rgba(92, 107, 98, 0.15);
+  border-color: rgba(10, 16, 32, 0.15);
 }
 
 .cardTarget {
-  border-color: rgba(255, 107, 44, 0.2);
+  border-color: rgba(234, 108, 11, 0.2);
   background: linear-gradient(180deg, var(--cor-acao-light) 0%, var(--cor-superficie) 100%);
 }
 
@@ -291,10 +291,16 @@
 }
 
 .secIcon {
-  font-size: 28px;
-  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
   flex-shrink: 0;
-  margin-top: var(--space-1);
+  border-radius: var(--radius-md);
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-linha);
+  color: var(--cor-primario);
 }
 
 .secContent {
@@ -350,6 +356,12 @@
   font-size: var(--text-sm);
   color: var(--cor-tinta);
   line-height: 1.6;
+}
+
+.safetyIcon {
+  color: var(--cor-acao);
+  vertical-align: -3px;
+  flex-shrink: 0;
 }
 
 /* ============================================================

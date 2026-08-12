@@ -1,150 +1,115 @@
 /* ============================================================
-   SectionSteps — Modern, vivid
+   SectionSteps — trilho numerado
    ============================================================ */
 
 .steps {
-  background: var(--cor-superficie);
-  position: relative;
-  overflow: hidden;
+  background: var(--cor-fundo);
 }
 
 .header {
-  text-align: center;
-  margin-bottom: var(--space-12);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--space-4);
-}
-
-.badge {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-2);
-  padding: var(--space-2) var(--space-5);
-  background: var(--cor-primario-light);
-  color: var(--cor-primario);
-  font-size: var(--text-sm);
-  font-weight: 600;
-  font-family: var(--font-heading);
-  border-radius: var(--radius-full);
-  letter-spacing: 0.02em;
+  gap: var(--space-3);
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto var(--space-12);
 }
 
 .title {
-  max-width: 480px;
+  font-size: var(--text-4xl);
 }
 
 .subtitle {
-  max-width: 440px;
-  font-size: var(--text-base);
+  font-size: var(--text-lg);
   color: var(--cor-texto-suave);
+  max-width: 52ch;
 }
 
-/* ---------- Cards Grid ---------- */
+/* ---------- Grade ---------- */
 .grid {
-  list-style: none;
   display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-6);
-  position: relative;
-  z-index: 1;
+  gap: var(--space-10);
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.card {
-  position: relative;
-  background: var(--cor-superficie);
-  border-radius: var(--radius-2xl);
-  border: 1px solid var(--cor-linha);
-  overflow: hidden;
-  transition: transform var(--transition-spring), box-shadow var(--transition-base);
-}
-
-.card:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: var(--shadow-xl);
-}
-
-.cardAccent {
-  height: 4px;
-  width: 100%;
-}
-
-.cardContent {
-  padding: var(--space-8);
+.step {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: var(--space-4);
 }
 
-.cardTop {
+/* ---------- Trilho ---------- */
+.rail {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: var(--space-4);
+  width: 100%;
 }
 
 .number {
-  display: flex;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: var(--cor-primario);
+  font-variant-numeric: tabular-nums;
+}
+
+.railLine {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, var(--cor-linha-forte), var(--cor-linha) 40%, transparent);
+}
+
+/* ---------- Ícone ---------- */
+.iconTile {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
-  color: var(--cor-superficie);
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: var(--text-lg);
+  width: 52px;
+  height: 52px;
+  border: 1px solid var(--cor-linha);
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-md);
+  background: var(--cor-superficie);
+  color: var(--cor-primario);
+  box-shadow: var(--shadow-sm);
+  transition:
+    border-color var(--transition-base),
+    box-shadow var(--transition-base),
+    transform var(--transition-base);
 }
 
-.emoji {
-  font-size: 36px;
-  line-height: 1;
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+.step:hover .iconTile {
+  border-color: rgba(14, 164, 122, 0.4);
+  box-shadow: var(--shadow-glow-green);
+  transform: translateY(-2px);
 }
 
-.cardTitle {
+/* ---------- Texto ---------- */
+.stepTitle {
   font-size: var(--text-xl);
-  letter-spacing: -0.01em;
+  letter-spacing: -0.025em;
 }
 
-.cardDesc {
+.stepDesc {
   font-size: var(--text-base);
-  line-height: 1.7;
+  color: var(--cor-texto-suave);
+  max-width: 42ch;
 }
 
-/* ---------- Connector (desktop) ---------- */
-.connector {
-  display: none;
-}
-
-/* ---------- Responsive ---------- */
+/* ---------- Responsivo ---------- */
 @media (min-width: 768px) {
   .grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-8);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-10) var(--space-8);
   }
 
-  .connector {
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 40px);
-    width: 60%;
-    z-index: 0;
-  }
-
-  .connectorLine {
-    height: 2px;
-    background: linear-gradient(90deg, var(--cor-primario), var(--cor-gordura), var(--cor-acao));
-    border-radius: var(--radius-full);
-    opacity: 0.4;
-  }
-}
-
-@media (min-width: 1024px) {
-  .cardContent {
-    padding: var(--space-10);
+  /* O último trilho não continua para lugar nenhum */
+  .step:last-child .railLine {
+    background: linear-gradient(to right, var(--cor-linha-forte), transparent 70%);
   }
 }

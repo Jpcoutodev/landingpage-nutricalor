@@ -66,7 +66,7 @@
 .input:focus {
   outline: none;
   border-color: var(--cor-primario);
-  box-shadow: 0 0 0 3px rgba(30, 107, 78, 0.1);
+  box-shadow: 0 0 0 3px rgba(14, 164, 122, 0.1);
 }
 
 .inputUnit {
@@ -155,7 +155,7 @@
 }
 
 .cardImc {
-  border-color: rgba(30, 107, 78, 0.2);
+  border-color: rgba(14, 164, 122, 0.2);
   background: linear-gradient(180deg, var(--cor-primario-light) 0%, var(--cor-superficie) 100%);
 }
 
@@ -165,28 +165,28 @@
 
 /* Colors for WHO classification */
 .classUnderweight {
-  border-color: rgba(242, 169, 59, 0.3); /* Yellowish */
+  border-color: rgba(240, 160, 32, 0.3); /* Yellowish */
 }
 .classUnderweight .cardClassificationValue {
   color: var(--cor-carbo); /* Yellow/Orange */
 }
 
 .classNormal {
-  border-color: rgba(30, 107, 78, 0.3); /* Green */
+  border-color: rgba(14, 164, 122, 0.3); /* Green */
 }
 .classNormal .cardClassificationValue {
   color: var(--cor-primario);
 }
 
 .classOverweight {
-  border-color: rgba(255, 107, 44, 0.3); /* Orange */
+  border-color: rgba(234, 108, 11, 0.3); /* Orange */
 }
 .classOverweight .cardClassificationValue {
   color: var(--cor-acao);
 }
 
 .classObesity {
-  border-color: rgba(232, 93, 74, 0.3); /* Red */
+  border-color: rgba(229, 72, 77, 0.3); /* Red */
 }
 .classObesity .cardClassificationValue {
   color: var(--cor-proteina);

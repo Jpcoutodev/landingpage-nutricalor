@@ -1,0 +1,160 @@
+/* ============================================================
+   PlateScan — área de captura com detecção
+   ============================================================ */
+
+.capture {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background:
+    radial-gradient(120% 90% at 50% 0%, #FFFFFF 0%, #F3F6FA 60%, #EDF1F7 100%);
+  border-bottom: 1px solid var(--cor-linha);
+}
+
+.plate {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* ---------- Caixas de detecção ---------- */
+.box {
+  position: absolute;
+  border: 1.5px solid var(--cor-primario);
+  border-radius: var(--radius-sm);
+  background: rgba(14, 164, 122, 0.06);
+  box-shadow: 0 0 0 3px rgba(14, 164, 122, 0.08);
+  opacity: 0;
+  animation: boxIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes boxIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.boxRice {
+  left: 22%;
+  top: 27%;
+  width: 33%;
+  height: 36%;
+}
+
+.boxChicken {
+  left: 47%;
+  top: 23%;
+  width: 25%;
+  height: 25%;
+}
+
+.boxBeans {
+  left: 44%;
+  top: 53%;
+  width: 27%;
+  height: 27%;
+}
+
+.boxLabel {
+  position: absolute;
+  top: 0;
+  left: -1.5px;
+  transform: translateY(-100%);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 2px 6px;
+  background: var(--cor-primario);
+  color: #fff;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  line-height: 1.5;
+  white-space: nowrap;
+  border-radius: 4px 4px 4px 0;
+}
+
+.boxGrams {
+  opacity: 0.75;
+  font-variant-numeric: tabular-nums;
+}
+
+/* A caixa do feijão fica embaixo: rótulo por dentro para não sair do card */
+.boxBeans .boxLabel {
+  top: auto;
+  bottom: 0;
+  transform: translateY(100%);
+  border-radius: 0 4px 4px 4px;
+}
+
+/* Rótulo à direita para não colidir com o do arroz, que fica ao lado */
+.boxChicken .boxLabel {
+  left: auto;
+  right: -1.5px;
+  border-radius: 4px 4px 0 4px;
+}
+
+/* ---------- Varredura ---------- */
+.scan {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 28%;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    rgba(14, 164, 122, 0) 0%,
+    rgba(14, 164, 122, 0.10) 65%,
+    rgba(14, 164, 122, 0.26) 96%,
+    rgba(14, 164, 122, 0.9) 100%
+  );
+  animation: scanline 4.6s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+
+/* ---------- Cantos de enquadramento ---------- */
+.brackets span {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: 1.5px solid var(--cor-primario);
+  opacity: 0.55;
+}
+
+.brackets span:nth-child(1) {
+  top: 12px;
+  left: 12px;
+  border-right: 0;
+  border-bottom: 0;
+  border-radius: 4px 0 0 0;
+}
+
+.brackets span:nth-child(2) {
+  top: 12px;
+  right: 12px;
+  border-left: 0;
+  border-bottom: 0;
+  border-radius: 0 4px 0 0;
+}
+
+.brackets span:nth-child(3) {
+  bottom: 12px;
+  right: 12px;
+  border-left: 0;
+  border-top: 0;
+  border-radius: 0 0 4px 0;
+}
+
+.brackets span:nth-child(4) {
+  bottom: 12px;
+  left: 12px;
+  border-right: 0;
+  border-top: 0;
+  border-radius: 0 0 0 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scan { display: none; }
+  .box { opacity: 1; }
+}

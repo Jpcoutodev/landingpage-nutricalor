@@ -47,7 +47,36 @@
       "food1": "Arroz branco",
       "food2": "Feijão carioca",
       "food3": "Frango grelhado",
-      "badge1": "IA identificou 3 itens"
+      "badge1": "IA identificou 3 itens",
+      "secondaryCta": "Ver como funciona",
+      "scanLabel": "Analisando prato",
+      "readoutLabel": "Resultado",
+      "stats": [
+        { "value": "~2s", "label": "por análise" },
+        { "value": "7 dias", "label": "grátis, sem cartão" },
+        { "value": "PT-BR", "label": "nativo, não traduzido" }
+      ]
+    },
+    "ticker": {
+      "label": "Reconhece",
+      "items": [
+        "feijoada",
+        "prato feito",
+        "marmita",
+        "açaí na tigela",
+        "pão na chapa",
+        "coxinha",
+        "tapioca",
+        "estrogonofe",
+        "farofa",
+        "cuscuz",
+        "moqueca",
+        "pastel de feira",
+        "baião de dois",
+        "pão de queijo",
+        "vaca atolada",
+        "escondidinho"
+      ]
     },
     "steps": {
       "badge": "Como funciona",

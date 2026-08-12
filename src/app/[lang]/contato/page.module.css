@@ -18,8 +18,16 @@
 }
 
 .icon {
-  font-size: 56px;
-  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border: 1px solid var(--cor-linha);
+  border-radius: var(--radius-xl);
+  background: var(--cor-superficie);
+  color: var(--cor-primario);
+  box-shadow: var(--shadow-sm);
 }
 
 .title {

@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import AppCTA from './AppCTA'
 import Logo from './Logo'
+import { IconChevronDown } from './icons'
 import styles from './Header.module.css'
 
 type HeaderProps = {
@@ -36,10 +37,21 @@ export default function Header({ dict, ctaDict }: HeaderProps) {
   const isHome = pathname === `/${locale}` || pathname === '/'
 
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 20)
+    const handleScroll = () => setIsScrolled(window.scrollY > 12)
+    handleScroll()
     window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+
+  // Trava a rolagem do fundo enquanto o menu mobile está aberto
+  useEffect(() => {
+    if (!isMobileMenuOpen) return
+    const previous = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    return () => {
+      document.body.style.overflow = previous
+    }
+  }, [isMobileMenuOpen])
 
   const closeMenu = () => {
     setIsMobileMenuOpen(false)
@@ -50,7 +62,7 @@ export default function Header({ dict, ctaDict }: HeaderProps) {
     <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
       <div className={`container ${styles.inner}`}>
         <Link href={`/${locale}`} className={styles.logo} onClick={closeMenu}>
-          <Logo className={styles.logoIcon} />
+          <Logo className={styles.logoIcon} size={28} />
           <span className={styles.logoText}>Nutricalor</span>
         </Link>
 
@@ -92,7 +104,7 @@ export default function Header({ dict, ctaDict }: HeaderProps) {
                   aria-expanded={isDropdownOpen}
                 >
                   {dict.calculators}
-                  <span className={styles.chevron}>▾</span>
+                  <IconChevronDown size={14} className={styles.chevron} />
                 </button>
                 
                 <ul className={`${styles.dropdownMenu} ${isDropdownOpen ? styles.dropdownOpen : ''}`}>

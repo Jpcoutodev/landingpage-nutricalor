@@ -4,6 +4,7 @@ import { getDictionary } from '@/dictionaries'
 import { SITE_URL, APP_NAME } from '@/lib/constants'
 import TmbCalculator from '@/components/TmbCalculator'
 import AppCTA from '@/components/AppCTA'
+import { IconArrowRight, IconFlame, IconLeaf } from '@/components/icons'
 import styles from './page.module.css'
 
 type PageProps = {
@@ -157,23 +158,23 @@ export default async function CalculadoraTmbPage({ params }: PageProps) {
                 href={`/${lang}/calculadora-deficit-calorico`}
                 className={styles.crossLinkCard}
               >
-                <span className={styles.crossLinkIcon} aria-hidden="true">🔥</span>
+                <span className={styles.crossLinkIcon} aria-hidden="true"><IconFlame size={20} /></span>
                 <div>
                   <strong className={styles.crossLinkName}>{t.crossLinks.deficit.name}</strong>
                   <p className={styles.crossLinkDesc}>{t.crossLinks.deficit.desc}</p>
                 </div>
-                <span className={styles.crossLinkArrow} aria-hidden="true">→</span>
+                <IconArrowRight size={18} className={styles.crossLinkArrow} />
               </Link>
               <Link
                 href={`/${lang}/calculadora-calorias`}
                 className={styles.crossLinkCard}
               >
-                <span className={styles.crossLinkIcon} aria-hidden="true">🥗</span>
+                <span className={styles.crossLinkIcon} aria-hidden="true"><IconLeaf size={20} /></span>
                 <div>
                   <strong className={styles.crossLinkName}>{t.crossLinks.calories.name}</strong>
                   <p className={styles.crossLinkDesc}>{t.crossLinks.calories.desc}</p>
                 </div>
-                <span className={styles.crossLinkArrow} aria-hidden="true">→</span>
+                <IconArrowRight size={18} className={styles.crossLinkArrow} />
               </Link>
             </div>
           </section>

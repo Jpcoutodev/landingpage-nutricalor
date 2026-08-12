@@ -7,6 +7,7 @@ import {
   calculateAll,
   SAFETY_FLOOR,
 } from '@/lib/nutrition'
+import { IconAlert } from './icons'
 import styles from './CaloriesCalculator.module.css'
 
 type GoalType = 'lose' | 'maintain' | 'gain'
@@ -233,7 +234,7 @@ export default function CaloriesCalculator({ dict }: CaloriesCalculatorProps) {
 
           {result.isFloored && (
             <div className={styles.safetyNote}>
-              <span className={styles.safetyIcon} aria-hidden="true">⚠️</span>
+              <IconAlert size={17} className={styles.safetyIcon} />
               <p>{dict.result.safetyNote.replace('{floor}', result.floor.toString())}</p>
             </div>
           )}

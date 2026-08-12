@@ -8,6 +8,7 @@ import {
   type ActivityLevel,
   type MacrosResult,
 } from '@/lib/nutrition'
+import { IconAlert } from './icons'
 import styles from './MacrosCalculator.module.css'
 
 type GoalLevel = 'lose' | 'maintain' | 'gain'
@@ -274,7 +275,7 @@ export default function MacrosCalculator({ dict }: { dict: Dict }) {
           {/* Safety note */}
           {showSafetyFloor && (
             <p className={styles.safetyNote}>
-              ⚠️ {dict.result.safetyNote.replace('{floor}', safetyFloor.toLocaleString('pt-BR'))}
+              <IconAlert size={16} className={styles.safetyIcon} /> {dict.result.safetyNote.replace('{floor}', safetyFloor.toLocaleString('pt-BR'))}
             </p>
           )}
         </div>

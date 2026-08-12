@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { CONTACT_EMAIL, SITE_URL, APP_NAME } from '@/lib/constants'
 import { getDictionary } from '@/dictionaries'
+import { IconMail } from '@/components/icons'
 import styles from './page.module.css'
 
 type PageProps = {
@@ -40,7 +41,7 @@ export default async function ContatoPage({ params }: PageProps) {
     <div className={styles.page}>
       <div className={`container container--narrow`}>
         <section className={styles.content} aria-labelledby="contato-title">
-          <span className={styles.icon} aria-hidden="true">✉️</span>
+          <span className={styles.icon} aria-hidden="true"><IconMail size={24} /></span>
           <h1 id="contato-title" className={styles.title}>{content.title}</h1>
           <p className={styles.description}>
             {content.description}

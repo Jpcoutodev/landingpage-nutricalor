@@ -1,45 +1,61 @@
-import React from 'react'
+type LogoProps = {
+  className?: string
+  size?: number
+}
 
-export default function Logo({ className }: { className?: string }) {
+/**
+ * Marca do Nutricalor: colchetes de enquadramento + tigela.
+ *
+ * Redesenhado para bater com o ícone do app (`src/app/icon.png`) — antes o
+ * header exibia um símbolo completamente diferente do favicon.
+ */
+export default function Logo({ className, size = 30 }: LogoProps) {
   return (
-    <svg 
-      width="32" 
-      height="32" 
-      viewBox="0 0 32 32" 
-      fill="none" 
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 32 32"
+      fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
+      aria-hidden="true"
+      focusable="false"
     >
-      {/* Background circle gradient */}
-      <circle cx="16" cy="16" r="16" fill="url(#bg_gradient)" />
-      
-      {/* Abstract overlapping N / leaf shapes */}
-      <path 
-        d="M21.5 9C21.5 9 17 8 13.5 11.5C10 15 11 20 11 20" 
-        stroke="white" 
-        strokeWidth="3.5" 
-        strokeLinecap="round" 
+      {/* Colchetes de enquadramento — o app "olhando" para o prato */}
+      <g
+        stroke="url(#nc-verde)"
+        strokeWidth="2.1"
+        strokeLinecap="round"
         strokeLinejoin="round"
+        className="logoBrackets"
+      >
+        <path d="M4 11.5V7.5A3.5 3.5 0 0 1 7.5 4h4" />
+        <path d="M20.5 4h4A3.5 3.5 0 0 1 28 7.5v4" />
+        <path d="M28 20.5v4a3.5 3.5 0 0 1-3.5 3.5h-4" />
+        <path d="M11.5 28h-4A3.5 3.5 0 0 1 4 24.5v-4" />
+      </g>
+
+      {/* Vapor / domo do prato */}
+      <path
+        d="M10.4 17.6a5.6 5.6 0 0 1 11.2 0"
+        stroke="url(#nc-laranja)"
+        strokeWidth="2.1"
       />
-      <path 
-        d="M10.5 23C10.5 23 15 24 18.5 20.5C22 17 21 12 21 12" 
-        stroke="url(#accent_gradient)" 
-        strokeWidth="3.5" 
-        strokeLinecap="round" 
-        strokeLinejoin="round"
-      />
-      
-      {/* Center connection dot */}
-      <circle cx="16" cy="16" r="2.5" fill="white" />
+
+      {/* Tigela */}
+      <path d="M8.2 17.6h15.6a7.8 7.8 0 0 1-15.6 0Z" fill="url(#nc-verde)" />
+
+      {/* Ponto de leitura */}
+      <circle cx="21.6" cy="10.4" r="1.2" fill="url(#nc-verde)" />
 
       <defs>
-        <linearGradient id="bg_gradient" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#10B981" />
-          <stop offset="1" stopColor="#059669" />
+        <linearGradient id="nc-verde" x1="4" y1="4" x2="28" y2="28" gradientUnits="userSpaceOnUse">
+          <stop stopColor="#0EA47A" />
+          <stop offset="1" stopColor="#065F46" />
         </linearGradient>
-        <linearGradient id="accent_gradient" x1="10.5" y1="23" x2="21" y2="12" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#F97316" />
-          <stop offset="1" stopColor="#EA580C" />
+        <linearGradient id="nc-laranja" x1="10.4" y1="17.6" x2="21.6" y2="12" gradientUnits="userSpaceOnUse">
+          <stop stopColor="#F0A020" />
+          <stop offset="1" stopColor="#EA6C0B" />
         </linearGradient>
       </defs>
     </svg>

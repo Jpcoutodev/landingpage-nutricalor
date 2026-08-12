@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import Logo from './Logo'
 import { CONTACT_EMAIL } from '@/lib/constants'
 import styles from './Footer.module.css'
 
@@ -26,58 +27,62 @@ export default function Footer({ dict }: FooterProps) {
   const pathname = usePathname()
   const locale = pathname.split('/')[1] || 'pt'
 
+  const tools = [
+    { href: `/${locale}/calculadora-tmb`, label: dict.tmbCalculator },
+    { href: `/${locale}/calculadora-deficit-calorico`, label: dict.deficitCalculator },
+    { href: `/${locale}/calculadora-calorias`, label: dict.caloriesCalculator },
+    { href: `/${locale}/calculadora-imc`, label: dict.imcCalculator },
+    { href: `/${locale}/calculadora-macros`, label: dict.macrosCalculator },
+  ].filter((tool) => Boolean(tool.label))
+
   return (
     <footer className={styles.footer}>
       <div className={`container ${styles.inner}`}>
         <div className={styles.main}>
           <div className={styles.brand}>
             <Link href={`/${locale}`} className={styles.logo}>
-              Nutricalor <span className={styles.dot}>.</span>
+              <Logo size={26} />
+              <span className={styles.logoText}>Nutricalor</span>
             </Link>
             <p className={styles.tagline}>{dict.tagline}</p>
           </div>
 
-          <div className={styles.links}>
+          <nav className={styles.links} aria-label="Rodapé">
             <div className={styles.linkGroup}>
-              <h3 className={styles.linkTitle}>Legal</h3>
+              <h2 className={styles.linkTitle}>Legal</h2>
               <Link href={`/${locale}/privacidade`}>{dict.privacy}</Link>
               <Link href={`/${locale}/termos`}>{dict.terms}</Link>
             </div>
+
             <div className={styles.linkGroup}>
-              <h3 className={styles.linkTitle}>{dict.contact}</h3>
+              <h2 className={styles.linkTitle}>{dict.contact}</h2>
               <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
               <Link href={`/${locale}/contato`}>Formulário</Link>
             </div>
-            {dict.tools && (
+
+            {dict.tools && tools.length > 0 && (
               <div className={styles.linkGroup}>
-                <h3 className={styles.linkTitle}>{dict.tools}</h3>
-                {dict.tmbCalculator && (
-                  <Link href={`/${locale}/calculadora-tmb`}>{dict.tmbCalculator}</Link>
-                )}
-                {dict.deficitCalculator && (
-                  <Link href={`/${locale}/calculadora-deficit-calorico`}>{dict.deficitCalculator}</Link>
-                )}
-                {dict.caloriesCalculator && (
-                  <Link href={`/${locale}/calculadora-calorias`}>{dict.caloriesCalculator}</Link>
-                )}
-                {dict.imcCalculator && (
-                  <Link href={`/${locale}/calculadora-imc`}>{dict.imcCalculator}</Link>
-                )}
-                {dict.macrosCalculator && (
-                  <Link href={`/${locale}/calculadora-macros`}>{dict.macrosCalculator}</Link>
-                )}
+                <h2 className={styles.linkTitle}>{dict.tools}</h2>
+                {tools.map((tool) => (
+                  <Link key={tool.href} href={tool.href}>
+                    {tool.label}
+                  </Link>
+                ))}
               </div>
             )}
-          </div>
+          </nav>
         </div>
 
         <div className={styles.bottom}>
-          <p>
+          <p className={styles.copy}>
             &copy; {currentYear} Nutricalor. {dict.rights}
+          </p>
+          <p className={styles.madeIn}>
+            <span className={styles.madeDot} />
+            Feito no Brasil
           </p>
         </div>
       </div>
     </footer>
   )
 }
-
