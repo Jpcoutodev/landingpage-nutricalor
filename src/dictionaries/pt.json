@@ -33,7 +33,7 @@
   "home": {
     "meta": {
       "title": "Nutricalor — Conte calorias por foto, feito para a comida brasileira",
-      "description": "Fotografe o prato e veja calorias e macros em segundos. O contador de calorias por foto pensado para a comida do Brasil. Em breve no Google Play."
+      "description": "Fotografe o prato e veja calorias e macros em segundos. O contador de calorias por foto pensado para a comida do Brasil. Já disponível no Google Play."
     },
     "hero": {
       "pill": "Feito para a comida brasileira",
@@ -117,10 +117,10 @@
       ]
     },
     "cta": {
-      "eyebrow": "Está quase lá",
+      "eyebrow": "Disponível agora",
       "titlePart1": "Comece a contar",
       "titlePart2": "sem contar.",
-      "subtitle": "O Nutricalor está chegando ao Google Play. Registre suas refeições no tempo de tirar uma foto."
+      "subtitle": "O Nutricalor já está no Google Play. Registre suas refeições no tempo de tirar uma foto."
     }
   },
   "howItWorks": {
